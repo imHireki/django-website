@@ -12,10 +12,23 @@
     {% include 'partials/_nav.html'%}
 
     <!-- Page Content -->
-    <div class="container">
-        <div class="row col-lg-10">
-            <div class="text-center">
-                {% block content %}{% endblock %}
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Div 100%-->
+            <div class="col-md-12">
+                
+                <!-- Div 66.6% -->
+                <div class="row">
+                    <div class="col-md-8">
+                        {% block 66 %}{% endblock %}
+                    </div>
+                    
+                    <!-- Div 33.3% -->
+                    <div class="col-md-4">
+                        {% block 33 %}{% endblock %}
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
