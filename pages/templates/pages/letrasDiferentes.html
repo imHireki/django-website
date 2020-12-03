@@ -1,50 +1,37 @@
 {% extends 'base.html' %}
-{% load hfilters %}
 {% load crispy_forms_tags %}
 
 
 {% block title %} Letras Diferentes {% endblock %}
 
-{% block global %}
-Letras diferentes
 
 {% block input %}
-<form method="post">{% csrf_token %}
+<form id="input_form" method="post" name="vaidarcerto">{% csrf_token %}
     {{ form|crispy }}
-
-    <div class="form-group">
-        <button type="submit" class="btn btn-secondary">
-            Submit
-        </button>
-    </div>
 </form>
 {% endblock %}
 
 {% block output %}
-<form action="" method="post">
+<form method="post">
     <div class="form-group">
         <label for="id_origin">Resultado</label>
-        <textarea class="form-control" id="id_origin" rows="5">{{ form.a|return_a }}</textarea>
+        <textarea class="form-control" id="id_origin" rows="5">{{ form.d }}</textarea>
     </div>
-    
 </form>
 {% endblock %}
 
 {% block buttons %}
-<div class="form-group">
-    <button type="submit" class="btn btn-secondary" value="a">
-        A
-    </button>
-    <button type="submit" class="btn btn-secondary" value="b">
-        B
-    </button>
-    <button type="submit" class="btn btn-secondary" value="c">
-        C
-    </button>
-    <button type="submit" class="btn btn-secondary" value="d">
-        D
-    </button>
-</div>
-
+<form method="post" name="vaidarcerto">{% csrf_token %}
+    <div class="form-group">
+        <button type="submit" class="btn btn-secondary" value="btn-a" name="submit" form="input_form">
+            A
+        </button>
+        <button type="btn-b" class="btn btn-secondary" value="b" name="btn-b">
+            B
+        </button>
+        <button type="btn-c" class="btn btn-secondary" value="c" name="btn-c">
+            C
+        </button>
+    </div>
+</form>
 {% endblock %}
-{% endblock global %}
