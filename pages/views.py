@@ -3,6 +3,100 @@ import re
 from pages.forms import InputForms
 
 
+def home(request):
+    return render(request, 'pages/home.html')
+
+
+def letras_diferentes(request):
+    # Form 
+    form = InputForms(request.POST or None)
+    context = {'form': form}
+
+    if form.is_valid():
+        form.d = form.cleaned_data['origin']
+
+    # Buttons
+    if(request.POST.get('submit')):
+        if (request.POST.get('submit')) == 'btn-a':
+            form.d_new = ''
+            for c in form.d:
+                if c in fraktur:
+                    c = fraktur[c]
+                form.d_new += c
+
+        elif (request.POST.get('submit')) == 'btn-b':
+            form.d_new = ''
+            for c in form.d:
+                if c in fraktur_b:
+                    c = fraktur_b[c]
+                form.d_new += c
+        
+        elif (request.POST.get('submit')) == 'btn-c':
+            form.d_new = ''
+            for c in form.d:
+                if c in monospace:
+                    c = monospace[c]
+                form.d_new += c        
+        
+        return render(request, 'pages/letrasDiferentes.html', context)
+
+    return render(request, 'pages/letrasDiferentes.html', context)
+
+monospace = {
+    'A': '\U0001D670',
+    'B': '\U0001D671',
+    'C': '\U0001D672',
+    'D': '\U0001D673',
+    'E': '\U0001D674',
+    'F': '\U0001D675',
+    'G': '\U0001D676',
+    'H': '\U0001D677',
+    'I': '\U0001D678',
+    'J': '\U0001D679',
+    'K': '\U0001D67A',
+    'L': '\U0001D67B',
+    'M': '\U0001D67C',
+    'N': '\U0001D67D',
+    'O': '\U0001D67E',
+    'P': '\U0001D67F',
+    'Q': '\U0001D680',
+    'R': '\U0001D681',
+    'S': '\U0001D682',
+    'T': '\U0001D683',
+    'U': '\U0001D684',
+    'V': '\U0001D685',
+    'W': '\U0001D686',
+    'X': '\U0001D687',
+    'Y': '\U0001D688',
+    'Z': '\U0001D689',
+    'a': '\U0001D68A',
+    'b': '\U0001D68B',
+    'c': '\U0001D68C',
+    'd': '\U0001D68D',
+    'e': '\U0001D68E',
+    'f': '\U0001D68F',
+    'g': '\U0001D690',
+    'h': '\U0001D691',
+    'i': '\U0001D692',
+    'j': '\U0001D693',
+    'k': '\U0001D694',
+    'l': '\U0001D695',
+    'm': '\U0001D696',
+    'n': '\U0001D697',
+    'o': '\U0001D698',
+    'p': '\U0001D699',
+    'q': '\U0001D69A',
+    'r': '\U0001D69B',
+    's': '\U0001D69C',
+    't': '\U0001D69D',
+    'u': '\U0001D69E',
+    'v': '\U0001D69F',
+    'w': '\U0001D6A0',
+    'x': '\U0001D6A1',
+    'y': '\U0001D6A2',
+    'z': '\U0001D6A3',    
+}
+
 fraktur = {
     'A': '\U0001D504',
     'B': '\U0001D505',
@@ -112,35 +206,3 @@ fraktur_b = {
     'y': '\U0001D59E',
     'z': '\U0001D59F',    
 }
-
-def home(request):
-    return render(request, 'pages/home.html')
-
-
-def letras_diferentes(request):
-    # Form 
-    form = InputForms(request.POST or None)
-    context = {'form': form}
-
-    if form.is_valid():
-        form.d = form.cleaned_data['origin']
-
-    # Buttons
-    if(request.POST.get('submit')):
-        if (request.POST.get('submit')) == 'btn-a':
-            form.d_new = ''
-            for c in form.d:
-                if c in fraktur:
-                    c = fraktur[c]
-                form.d_new += c
-
-        elif (request.POST.get('submit')) == 'btn-b':
-            form.d_new = ''
-            for c in form.d:
-                if c in fraktur_b:
-                    c = fraktur_b[c]
-                form.d_new += c
-        
-        return render(request, 'pages/letrasDiferentes.html', context)
-
-    return render(request, 'pages/letrasDiferentes.html', context)
