@@ -36,11 +36,85 @@ def letras_diferentes(request):
             for c in form.d:
                 if c in monospace:
                     c = monospace[c]
-                form.d_new += c        
-        
-        return render(request, 'pages/letrasDiferentes.html', context)
+                form.d_new += c
+
+        elif (request.POST.get('submit')) == 'btn-d':
+            form.d_new = ''
+            for c in form.d:
+                if c in double_struck:
+                    c = double_struck[c]
+                form.d_new += c
+
+        elif (request.POST.get('submit')) == 'btn-e':
+            form.d_new = ''
+            for c in form.d:
+                if c in script:
+                    c = script[c]
+                form.d_new += c
+
+        elif (request.POST.get('submit')) == 'btn-f':
+            form.d_new = ''
+            for c in form.d:
+                if c in script_b:
+                    c = script_b[c]
+                form.d_new += c
 
     return render(request, 'pages/letrasDiferentes.html', context)
+
+double_struck = {
+    'A': '\U0001D538',
+    'B': '\U0001D539',
+    'C': '\U00002102',
+    'D': '\U0001D53B',
+    'E': '\U0001D53C',
+    'F': '\U0001D53D',
+    'G': '\U0001D53E',
+    'H': '\U0000210D',
+    'I': '\U0001D540',
+    'J': '\U0001D541',
+    'K': '\U0001D542',
+    'L': '\U0001D543',
+    'M': '\U0001D544',
+    'N': '\U00002115',
+    'O': '\U0001D546',
+    'P': '\U00002119',
+    'Q': '\U0000211A',
+    'R': '\U0000211D',
+    'S': '\U0001D54A',
+    'T': '\U0001D54B',
+    'U': '\U0001D54C',
+    'V': '\U0001D54D',
+    'W': '\U0001D54E',
+    'X': '\U0001D54F',
+    'Y': '\U0001D550',
+    'Z': '\U00002124',
+    'a': '\U0001D552',
+    'b': '\U0001D553',
+    'c': '\U0001D554',
+    'd': '\U0001D555',
+    'e': '\U0001D556',
+    'f': '\U0001D557',
+    'g': '\U0001D558',
+    'h': '\U0001D559',
+    'i': '\U0001D55A',
+    'j': '\U0001D55B',
+    'k': '\U0001D55C',
+    'l': '\U0001D55D',
+    'm': '\U0001D55E',
+    'n': '\U0001D55F',
+    'o': '\U0001D560',
+    'p': '\U0001D561',
+    'q': '\U0001D562',
+    'r': '\U0001D563',
+    's': '\U0001D564',
+    't': '\U0001D565',
+    'u': '\U0001D566',
+    'v': '\U0001D567',
+    'w': '\U0001D568',
+    'x': '\U0001D569',
+    'y': '\U0001D56A',
+    'z': '\U0001D56B',    
+}
 
 monospace = {
     'A': '\U0001D670',
