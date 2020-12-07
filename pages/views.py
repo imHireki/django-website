@@ -36,11 +36,195 @@ def letras_diferentes(request):
             for c in form.d:
                 if c in monospace:
                     c = monospace[c]
-                form.d_new += c        
-        
-        return render(request, 'pages/letrasDiferentes.html', context)
+                form.d_new += c
+
+        elif (request.POST.get('submit')) == 'btn-d':
+            form.d_new = ''
+            for c in form.d:
+                if c in double_struck:
+                    c = double_struck[c]
+                form.d_new += c
+
+        elif (request.POST.get('submit')) == 'btn-e':
+            form.d_new = ''
+            for c in form.d:
+                if c in script:
+                    c = script[c]
+                form.d_new += c
+
+        elif (request.POST.get('submit')) == 'btn-f':
+            form.d_new = ''
+            for c in form.d:
+                if c in script_b:
+                    c = script_b[c]
+                form.d_new += c
 
     return render(request, 'pages/letrasDiferentes.html', context)
+
+script_b = {
+    'A': '\U0001D4D0',
+    'B': '\U0001D4D1',
+    'C': '\U0001D4D2',
+    'D': '\U0001D4D3',
+    'E': '\U0001D4D4',
+    'F': '\U0001D4D5',
+    'G': '\U0001D4D6',
+    'H': '\U0001D4D7',
+    'I': '\U0001D4D8',
+    'J': '\U0001D4D9',
+    'K': '\U0001D4DA',
+    'L': '\U0001D4DB',
+    'M': '\U0001D4DC',
+    'N': '\U0001D4DD',
+    'O': '\U0001D4DE',
+    'P': '\U0001D4DF',
+    'Q': '\U0001D4E0',
+    'R': '\U0001D4E1',
+    'S': '\U0001D4E2',
+    'T': '\U0001D4E3',
+    'U': '\U0001D4E4',
+    'V': '\U0001D4E5',
+    'W': '\U0001D4E6',
+    'X': '\U0001D4E7',
+    'Y': '\U0001D4E8',
+    'Z': '\U0001D4E9',
+    'a': '\U0001D4EA',
+    'b': '\U0001D4EB',
+    'c': '\U0001D4EC',
+    'd': '\U0001D4ED',
+    'e': '\U0001D4EE',
+    'f': '\U0001D4EF',
+    'g': '\U0001D4F0',
+    'h': '\U0001D4F1',
+    'i': '\U0001D4F2',
+    'j': '\U0001D4F3',
+    'k': '\U0001D4F4',
+    'l': '\U0001D4F5',
+    'm': '\U0001D4F6',
+    'n': '\U0001D4F7',
+    'o': '\U0001D4F8',
+    'p': '\U0001D4F9',
+    'q': '\U0001D4FA',
+    'r': '\U0001D4FB',
+    's': '\U0001D4FC',
+    't': '\U0001D4FD',
+    'u': '\U0001D4FE',
+    'v': '\U0001D4FF',
+    'w': '\U0001D500',
+    'x': '\U0001D501',
+    'y': '\U0001D502',
+    'z': '\U0001D503',
+}
+
+script = {
+    'A': '\U0001D49C',
+    'B': '\U0000212C',
+    'C': '\U0001D49E',
+    'D': '\U0001D49F',
+    'E': '\U00002130',
+    'F': '\U00002131',
+    'G': '\U0001D4A2',
+    'H': '\U0000210B',
+    'I': '\U00002110',
+    'J': '\U0001D4A5',
+    'K': '\U0001D4A6',
+    'L': '\U00002112',
+    'M': '\U00002133',
+    'N': '\U0001D4A9',
+    'O': '\U0001D4AA',
+    'P': '\U0001D4AB',
+    'Q': '\U0001D4AC',
+    'R': '\U0000211B',
+    'S': '\U0001D4AE',
+    'T': '\U0001D4AF',
+    'U': '\U0001D4B0',
+    'V': '\U0001D4B1',
+    'W': '\U0001D4B2',
+    'X': '\U0001D4B3',
+    'Y': '\U0001D4B4',
+    'Z': '\U0001D4B5',
+    'a': '\U0001D4B6',
+    'b': '\U0001D4B7',
+    'c': '\U0001D4B8',
+    'd': '\U0001D4B9',
+    'e': '\U0000212F',
+    'f': '\U0001D4BB',
+    'g': '\U0000210A',
+    'h': '\U0001D4BD',
+    'i': '\U0001D4BE',
+    'j': '\U0001D4BF',
+    'k': '\U0001D4C0',
+    'l': '\U0001D4C1',
+    'm': '\U0001D4C2',
+    'n': '\U0001D4C3',
+    'o': '\U00002134',
+    'p': '\U0001D4C5',
+    'q': '\U0001D4C6',
+    'r': '\U0001D4C7',
+    's': '\U0001D4C8',
+    't': '\U0001D4C9',
+    'u': '\U0001D4CA',
+    'v': '\U0001D4CB',
+    'w': '\U0001D4CC',
+    'x': '\U0001D4CD',
+    'y': '\U0001D4CE',
+    'z': '\U0001D4CF',
+}
+
+double_struck = {
+    'A': '\U0001D538',
+    'B': '\U0001D539',
+    'C': '\U00002102',
+    'D': '\U0001D53B',
+    'E': '\U0001D53C',
+    'F': '\U0001D53D',
+    'G': '\U0001D53E',
+    'H': '\U0000210D',
+    'I': '\U0001D540',
+    'J': '\U0001D541',
+    'K': '\U0001D542',
+    'L': '\U0001D543',
+    'M': '\U0001D544',
+    'N': '\U00002115',
+    'O': '\U0001D546',
+    'P': '\U00002119',
+    'Q': '\U0000211A',
+    'R': '\U0000211D',
+    'S': '\U0001D54A',
+    'T': '\U0001D54B',
+    'U': '\U0001D54C',
+    'V': '\U0001D54D',
+    'W': '\U0001D54E',
+    'X': '\U0001D54F',
+    'Y': '\U0001D550',
+    'Z': '\U00002124',
+    'a': '\U0001D552',
+    'b': '\U0001D553',
+    'c': '\U0001D554',
+    'd': '\U0001D555',
+    'e': '\U0001D556',
+    'f': '\U0001D557',
+    'g': '\U0001D558',
+    'h': '\U0001D559',
+    'i': '\U0001D55A',
+    'j': '\U0001D55B',
+    'k': '\U0001D55C',
+    'l': '\U0001D55D',
+    'm': '\U0001D55E',
+    'n': '\U0001D55F',
+    'o': '\U0001D560',
+    'p': '\U0001D561',
+    'q': '\U0001D562',
+    'r': '\U0001D563',
+    's': '\U0001D564',
+    't': '\U0001D565',
+    'u': '\U0001D566',
+    'v': '\U0001D567',
+    'w': '\U0001D568',
+    'x': '\U0001D569',
+    'y': '\U0001D56A',
+    'z': '\U0001D56B',    
+}
 
 monospace = {
     'A': '\U0001D670',
