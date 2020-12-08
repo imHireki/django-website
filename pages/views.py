@@ -67,8 +67,17 @@ def letras_diferentes(request):
                     c = circled_n[c]
                 form.d_new += c
 
+        elif (request.POST.get('submit')) == 'btn-h':
+            form.d_new = ''
+            for c in form.d:
+                if c in circled:
+                    c = circled[c]
+                form.d_new += c
+
     return render(request, 'pages/letrasDiferentes.html', context)
 
+
+# template to squared, negative squared regional indicator 
 circled_n = {
     'A': '\U0001F150',
     'B': '\U0001F151',
@@ -96,7 +105,62 @@ circled_n = {
     'X': '\U0001F167',
     'Y': '\U0001F168',
     'Z': '\U0001F169',
-} 
+}
+
+circled = {
+    'A': u'\u24B6',
+    'B': u'\u24B7',
+    'C': u'\u24B8',
+    'D': u'\u24B9',
+    'E': u'\u24BA',
+    'F': u'\u24BB',
+    'G': u'\u24BC',
+    'H': u'\u24BD',
+    'I': u'\u24BE',
+    'J': u'\u24BF',
+    'K': u'\u24C0',
+    'L': u'\u24C1',
+    'M': u'\u24C2',
+    'N': u'\u24C3',
+    'O': u'\u24C4',
+    'P': u'\u24C5',
+    'Q': u'\u24C6',
+    'R': u'\u24C7',
+    'S': u'\u24C8',
+    'T': u'\u24C9',
+    'U': u'\u24CA',
+    'V': u'\u24CB',
+    'W': u'\u24CC',
+    'X': u'\u24CD',
+    'Y': u'\u24CE',
+    'Z': u'\u24CF',
+    'a': u'\u24D0',
+    'b': u'\u24D1',
+    'c': u'\u24D2',
+    'd': u'\u24D3',
+    'e': u'\u24D4',
+    'f': u'\u24D5',
+    'g': u'\u24D6',
+    'h': u'\u24D7',
+    'i': u'\u24D8',
+    'j': u'\u24D9',
+    'k': u'\u24DA',
+    'l': u'\u24DB',
+    'm': u'\u24DC',
+    'n': u'\u24DD',
+    'o': u'\u24DE',
+    'p': u'\u24DF',
+    'q': u'\u24E0',
+    'r': u'\u24E1',
+    's': u'\u24E2',
+    't': u'\u24E3',
+    'u': u'\u24E4',
+    'v': u'\u24E5',
+    'w': u'\u24E6',
+    'x': u'\u24E7',
+    'y': u'\u24E8',
+    'z': u'\u24E9',
+}
 
 script_b = {
     'A': '\U0001D4D0',
