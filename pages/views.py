@@ -59,7 +59,44 @@ def letras_diferentes(request):
                     c = script_b[c]
                 form.d_new += c
 
+        elif (request.POST.get('submit')) == 'btn-g':
+            form.d_new = ''
+            for c in form.d:
+                c = c.upper()
+                if c in circled_n:
+                    c = circled_n[c]
+                form.d_new += c
+
     return render(request, 'pages/letrasDiferentes.html', context)
+
+circled_n = {
+    'A': '\U0001F150',
+    'B': '\U0001F151',
+    'C': '\U0001F152',
+    'D': '\U0001F153',
+    'E': '\U0001F154',
+    'F': '\U0001F155',
+    'G': '\U0001F156',
+    'H': '\U0001F157',
+    'I': '\U0001F158',
+    'J': '\U0001F159',
+    'K': '\U0001F15A',
+    'L': '\U0001F15B',
+    'M': '\U0001F15C',
+    'N': '\U0001F15D',
+    'O': '\U0001F15E',
+    'P': '\U0001F15F',
+    'Q': '\U0001F160',
+    'R': '\U0001F161',
+    'S': '\U0001F162',
+    'T': '\U0001F163',
+    'U': '\U0001F164',
+    'V': '\U0001F165',
+    'W': '\U0001F166',
+    'X': '\U0001F167',
+    'Y': '\U0001F168',
+    'Z': '\U0001F169',
+} 
 
 script_b = {
     'A': '\U0001D4D0',
