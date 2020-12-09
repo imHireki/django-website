@@ -82,10 +82,49 @@ def letras_diferentes(request):
                     c = squared[c]
                 form.d_new += c
 
+        elif (request.POST.get('submit')) == 'btn-j':
+            form.d_new = ''
+            for c in form.d:
+                c = c.lower()
+                if c in squared_n:
+                    c = squared_n[c]
+                form.d_new += c
+
     return render(request, 'pages/letrasDiferentes.html', context)
 
 
 # template to squared, negative squared regional indicator
+
+# A, B, O, P problems
+squared_n = {
+    'a': '\U0001F170',
+    'b': '\U0001F171',
+    'c': '\U0001F172',
+    'd': '\U0001F173',
+    'e': '\U0001F174',
+    'f': '\U0001F175',
+    'g': '\U0001F176',
+    'h': '\U0001F177',
+    'i': '\U0001F178',
+    'j': '\U0001F179',
+    'k': '\U0001F17A',
+    'l': '\U0001F17B',
+    'm': '\U0001F17C',
+    'n': '\U0001F17D',
+    'o': '\U0001F17E',
+    'p': '\U0001F17F',
+    'q': '\U0001F180',
+    'r': '\U0001F181',
+    's': '\U0001F182',
+    't': '\U0001F183',
+    'u': '\U0001F184',
+    'v': '\U0001F185',
+    'w': '\U0001F186',
+    'x': '\U0001F187',
+    'y': '\U0001F188',
+    'z': '\U0001F189',
+}
+
 squared = {
     'a': '\U0001F130',
     'b': '\U0001F131',
@@ -144,6 +183,7 @@ circled_n = {
     'Z': '\U0001F169',
 }
 
+# M problems
 circled = {
     'A': u'\u24B6',
     'B': u'\u24B7',
