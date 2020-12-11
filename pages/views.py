@@ -139,8 +139,70 @@ def letras_diferentes(request):
                     c = sans_serif_ib[c]
                 form.d_new += c
 
+        elif (request.POST.get('submit')) == 'btn-r':
+            form.d_new = ''
+            form.d = form.d[::-1]
+            for c in form.d:
+                if c in inverted:
+                    c = inverted[c]
+                form.d_new += c
+
     return render(request, 'pages/letrasDiferentes.html', context)
 
+inverted = {
+    'A': u'\u2200',
+    'B': u'\u1660',
+    'C': u'\u0186',
+    'D': u'\u15E1',
+    'E': u'\u018E',
+    'F': u'\u2132',
+    'G': u'\u2141',
+    'H': 'H',
+    'I': 'I',
+    'J': u'\u017F',
+    'K': u'\u029E',
+    'L': u'\u02E5',
+    'M': 'W',
+    'N': 'N',
+    'O': 'O',
+    'P': u'\u0500',
+    'Q': 'b',
+    'R': u'\u1D1A',
+    'S': 'S',
+    'T': u'\u22A5',
+    'U': u'\u2229',
+    'V': u'\u039B',
+    'W': 'M',
+    'X': 'X',
+    'Y': u'\u2144',
+    'Z': 'Z',
+    'a': u'\u0250',
+    'b': 'q',
+    'c': u'\u0254',
+    'd': 'p',
+    'e': u'\u01DD',
+    'f': u'\u025F',
+    'g': u'\u0183',
+    'h': u'\u0265',
+    'i': u'\u0131',
+    'j': u'\u027E',
+    'k': u'\u029E',
+    'l': u'\u05DF',
+    'm': u'\u026F',
+    'n': 'u',
+    'o': 'o',
+    'p': 'd',
+    'q': 'b',
+    'r': u'\u0279',
+    's': 's',
+    't': u'\u0287',
+    'u': 'n',
+    'v': u'\u028C',
+    'w': u'\u028D',
+    'x': 'x',
+    'y': u'\u028E',
+    'z': 'z',
+}
 
 sans_serif_ib = {
     'A': '\U0001D63C',
