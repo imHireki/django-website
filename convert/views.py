@@ -1,18 +1,15 @@
 from django.shortcuts import render
-from pages.forms import InputForms
+from convert.forms import InputForms
 
 
-def home(request):
-    return render(request, 'pages/home.html')
-
-def letras_diferentes(request):
+def convert(request):
     # Form 
     form = InputForms(request.POST or None)
     context = {'form': form}
     submit = (request.POST.get('submit'))
 
     if form.is_valid():
-        form.d = form.cleaned_data['origin']
+        form.d = form.cleaned_data['input_txt']
 
     form.d_new = ''
 
