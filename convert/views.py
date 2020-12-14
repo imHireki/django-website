@@ -127,7 +127,7 @@ def convert(request):
                     c = inverted[c]
                 form.d_new += c
 
-    return render(request, 'pages/letrasDiferentes.html', context)
+    return render(request, 'convert/letrasDiferentes.html', context)
 
 inverted = {
     'a': u'\u0250',
