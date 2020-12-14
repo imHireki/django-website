@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home.apps.HomeConfig',
     'emoji.apps.EmojiConfig',
+    'textemoji.apps.TextemojiConfig',
     'convert.apps.ConvertConfig',
     'crispy_forms',
 ]

@@ -20,7 +20,7 @@ from django.urls import path, include
 urlpatterns = [
     path('', include('home.urls')),
     path('letras-diferentes/', include('convert.urls')),
-
+    path('text-emoji/', include('textemoji.urls')),
     path('emoji/', include('emoji.urls')),
     path('admin/', admin.site.urls),
 ]
