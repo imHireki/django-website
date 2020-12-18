@@ -23,5 +23,12 @@
             <button type="button" class="btn btn-outline-info" data-toggle="popover" data-clipboard-text="{{ x }}" data-content="Copiado!">{{ x }}</button>
         {% endfor %} 
     </div>
+    
+    People
+    <div class="card-body">
+        {% for x in people  %}
+            <button type="button" class="btn btn-outline-info" data-toggle="popover" data-clipboard-text="{{ x }}" data-content="Copiado!">{{ x }}</button>
+        {% endfor %} 
+    </div>
 </div>
 {% endblock %}
