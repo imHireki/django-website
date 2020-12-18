@@ -17,13 +17,16 @@
             <!-- Div 100%-->
             <div class="col-md-11">
 
-                <!-- Div 50% a -->
+              <!-- Content -->
+              {% block content %}{% endblock %}
+
+                <!-- Input -->
                 <div class="row">
                     <div class="col-md-6">
                         {% block input %}{% endblock %}
                     </div>
                     
-                    <!-- Div 50% b -->
+                    <!-- Output-->
                     <div class="col-md-6">
                         {% block output %}{% endblock %}
                     </div>
@@ -37,8 +40,6 @@
 
             </div>
         
-    
-
         <!-- Footer -->
         {% include 'partials/_footer.html' %}
         </div>
@@ -47,6 +48,8 @@
     <script src="{% static 'vendor/jquery/jquery.slim.min.js'%}"></script>
     <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
     <script src="{% static 'vendor/darkmode/js/dark-mode-switch.min.js'%}"></script>
+    <script src="{% static 'vendor/clipboardjs/dist/clipboard.min.js'%}"></script>
+    <script src="{% static 'vendor/hireki/customjs.js'%}"></script>
 </body>
 
 </html>
