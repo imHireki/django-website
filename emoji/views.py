@@ -12,7 +12,6 @@ def emoji(request):
         u'\U0001f9d1'+ u'\U0000200d'+ u'\U0001f384', u'\U0001f6d0',
         u'\U00002603'+ u'\U0000fe0f'
     ]
-
     faces = [
         u'\U0001f600', u'\U0001f601', u'\U0001f602', u'\U0001f603',
         u'\U0001f604', u'\U0001f605', u'\U0001f606', u'\U0001f923', 
@@ -44,6 +43,23 @@ def emoji(request):
         u'\U0001f638', u'\U0001f639', u'\U0001f63b', u'\U0001f63c',
         u'\U0001f63d', u'\U0001f640', u'\U0001f63f', u'\U0001f63e'
     ]
+    gestures =  [
+        u'\U0001f44b', u'\U0001f91a', u'\U0001f590', u'\U0000270b',
+        u'\U0001f596', u'\U0001f44c', u'\U0001f90c', u'\U0001f90f',
+        u'\U0001f91e', u'\U0001f91f', u'\U0001f918', u'\U0001f919',
+        u'\U0001f448', u'\U0001f449', u'\U0001f446', u'\U0001f595',
+        u'\U0001f447', u'\U0001f44d', u'\U0001f44e', u'\U0000270a',
+        u'\U0001f44a', u'\U0001f91b', u'\U0001f91c', u'\U0001f44f',
+        u'\U0001f64c', u'\U0001f450', u'\U0001f932', u'\U0001f91d',
+        u'\U0001f64f', u'\U0001f485', u'\U0001f933', u'\U0001f4aa',
+        u'\U0001f9be', u'\U0001f9b5', u'\U0001f9bf', u'\U0001f9b6',
+        u'\U0001f463', u'\U0001f442', u'\U0001f9bb', u'\U0001f443',
+        u'\U0001fac0', u'\U0001fac1', u'\U0001f9e0', u'\U0001f9b7',
+        u'\U0001f9b4', u'\U0001f440', u'\U0001f441', u'\U0001f445',
+        u'\U0001f444', u'\U0001f48b', u'\U0000270c'+ u'\U0000fe0f', 
+        u'\U0000261d'+ u'\U0000fe0f', u'\U0000270d'+ u'\U0000fe0f',
+        u'\U0001fa78', 
+    ]
     
     return render(request, 'emoji/emoji.html',
-    {'christmas': christmas, 'faces': faces})
+    {'christmas': christmas, 'faces': faces, 'gestures': gestures})
