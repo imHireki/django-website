@@ -137,6 +137,15 @@
     </div>
     {% endif %}
 
+    {% if color3 %}
+    Color 3
+    <div class="card-body">
+        {% for x in color3  %}
+            <button type="button" class="btn btn-outline-info" data-toggle="popover" data-clipboard-text="{{ x }}" data-content="Copiado!">{{ x }}</button>
+        {% endfor %} 
+    </div>
+    {% endif %}
+
 
 </div>
 {% endblock %}
