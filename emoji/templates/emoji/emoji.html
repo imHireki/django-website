@@ -58,5 +58,12 @@
         {% endfor %} 
     </div>
 
+    Objects
+    <div class="card-body">
+        {% for x in objects  %}
+            <button type="button" class="btn btn-outline-info" data-toggle="popover" data-clipboard-text="{{ x }}" data-content="Copiado!">{{ x }}</button>
+        {% endfor %} 
+    </div>
+
 </div>
 {% endblock %}
