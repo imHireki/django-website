@@ -2,68 +2,96 @@
 
 {% block content %}
 <div class="card bg-dark">
+    {% if christmas %}  
     Emoji Natal
     <div class="card-body">
         {% for x in christmas  %}
             <button type="button" class="btn btn-outline-info" data-toggle="popover" data-clipboard-text="{{ x }}" data-content="Copiado!">{{ x }}</button>
         {% endfor %}
     </div>
-    
+    {% endif %}
+
+    {% if faces %}
     Faces
     <div class="card-body">
         {% for x in faces  %}
             <button type="button" class="btn btn-outline-info" data-toggle="popover" data-clipboard-text="{{ x }}" data-content="Copiado!">{{ x }}</button>
         {% endfor %} 
     </div>
-    
+    {% endif %}
+
+    {% if gestures %}
     Gesture and body parts
     <div class="card-body">
         {% for x in gestures  %}
             <button type="button" class="btn btn-outline-info" data-toggle="popover" data-clipboard-text="{{ x }}" data-content="Copiado!">{{ x }}</button>
         {% endfor %} 
     </div>
-    
+    {% endif %}
+
+    {% if people %}
     People
     <div class="card-body">
         {% for x in people  %}
             <button type="button" class="btn btn-outline-info" data-toggle="popover" data-clipboard-text="{{ x }}" data-content="Copiado!">{{ x }}</button>
         {% endfor %} 
     </div>
+    {% endif %}
 
+    {% if nature %}
     Animals and Nature
     <div class="card-body">
         {% for x in nature  %}
             <button type="button" class="btn btn-outline-info" data-toggle="popover" data-clipboard-text="{{ x }}" data-content="Copiado!">{{ x }}</button>
         {% endfor %} 
     </div>
+    {% endif %}
 
+    {% if food %}
     Food and Drink
     <div class="card-body">
         {% for x in food  %}
             <button type="button" class="btn btn-outline-info" data-toggle="popover" data-clipboard-text="{{ x }}" data-content="Copiado!">{{ x }}</button>
         {% endfor %} 
     </div>
+    {% endif %}
 
+    {% if activity %}
     Activity and Sports
     <div class="card-body">
         {% for x in activity  %}
             <button type="button" class="btn btn-outline-info" data-toggle="popover" data-clipboard-text="{{ x }}" data-content="Copiado!">{{ x }}</button>
         {% endfor %} 
     </div>
+    {% endif %}
 
+    {% if travel %}
     Travel and Places
     <div class="card-body">
         {% for x in travel  %}
             <button type="button" class="btn btn-outline-info" data-toggle="popover" data-clipboard-text="{{ x }}" data-content="Copiado!">{{ x }}</button>
         {% endfor %} 
     </div>
+    {% endif %}
 
+    {% if objects %}
     Objects
     <div class="card-body">
         {% for x in objects  %}
             <button type="button" class="btn btn-outline-info" data-toggle="popover" data-clipboard-text="{{ x }}" data-content="Copiado!">{{ x }}</button>
         {% endfor %} 
     </div>
+    {% endif %}
+
+    {% if symbols %}
+    Symbols
+    <div class="card-body">
+        {% for x in symbols  %}
+            <button type="button" class="btn btn-outline-info" data-toggle="popover" data-clipboard-text="{{ x }}" data-content="Copiado!">{{ x }}</button>
+        {% endfor %} 
+    </div>
+    {% endif %}
+
 
 </div>
 {% endblock %}
