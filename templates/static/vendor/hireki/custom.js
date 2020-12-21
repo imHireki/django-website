@@ -1,7 +1,15 @@
 // Popover toggler
-$(function () {
-    $('[data-toggle="popover"]').popover()
-})
+$('.btn').popover({
+    content:"Copy ;)",
+    placement:"top",
+
+    }).click(function (
+        ){
+        setTimeout(function () {
+            $('.btn').popover('hide');
+        }, 500);
+ 
+});
 
 // ClipboardJs toggler
-new ClipboardJS('.btn');
+new ClipboardJS('.btn');    
