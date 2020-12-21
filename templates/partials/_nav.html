@@ -1,47 +1,28 @@
 {% load static %}
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark static-top">  
+<nav class="navbar navbar-expand-lg navbar-dark static-top">  
 
-    <!-- toggle main menu button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="navbar-toggler-icon"></span>
-    </button> <a class="navbar-brand" href="{% url 'home' %}">HOME</a>
+	<!-- toggle main menu button -->
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		<span class="navbar-toggler-icon"></span>
+	</button> <a class="navbar-brand" href="{% url 'home' %}">HOME</a>
 
-    <!-- div collapse navbar -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<!-- div collapse navbar -->
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-        <!-- Links -->
-        <ul class="navbar-nav ml-md-auto">
-            <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'letrasDiferentes' %}">LINK</a>
-            </li>
-            <li class="nav-item">
-                    <a class="nav-link" href="{% url 'letrasDiferentes' %}">LINK</a>
-            </li>
+		<!-- Links -->
+		<ul class="navbar-nav ml-md-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="{% url 'letrasDiferentes' %}">LETRAS DIFERENTES</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="{% url 'emoji' %}">EMOJIS</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="{% url 'letrasDiferentes' %}">EMOJI TEXTO</a>
+			</li>
+		</ul>
 
-            <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'letrasDiferentes' %}">LINK</a>
-            </li>
-        </ul>
-        <!-- DarkSwitch-->
-        <nav class="navbar justify-content-end">
-            <nav class="navbar-nav">
-                <div class="nav-link">
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="darkSwitch">
-                        <label for="darkSwitch" class="custom-control-label"> Dark Switch </label>
-                    </div>
-                </div>
-            </nav>
-        </nav>
-
-        <!-- Searchbar -->
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="text" /> 
-            <button class="btn btn-primary my-2 my-sm-0" type="submit">
-                Search
-            </button>
-        </form>
-    </div>
+	</div>
 
 </nav>

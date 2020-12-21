@@ -3,53 +3,51 @@
 <html lang="pt">
 
 <head>
-    {% include 'partials/_head.html'%}
-    <title>{% block title %}{% endblock %}</title>
+  {% include 'partials/_head.html'%}
+  <title>{% block title %}{% endblock %}</title>
 </head>
 
 <body>
+  <!-- Page Content -->
+  <div class="container">
     <!-- Navigator -->
     {% include 'partials/_nav.html'%}
+    <div class="card">
+      <div class="card-body">
 
-    <!-- Page Content -->
-    <div class="container-fluid">
+        <!-- Div 100%-->
         <div class="row justify-content-center">    
-            <!-- Div 100%-->
-            <div class="col-md-11">
-
-              <!-- Content -->
-              {% block content %}{% endblock %}
-
-                <!-- Input -->
-                <div class="row">
-                    <div class="col-md-6">
-                        {% block input %}{% endblock %}
-                    </div>
-                    
-                    <!-- Output-->
-                    <div class="col-md-6">
-                        {% block output %}{% endblock %}
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        {% block buttons %}{% endblock%}
-                    </div>
-                </div>
-
-            </div>
-        
-        <!-- Footer -->
-        {% include 'partials/_footer.html' %}
+          <!-- Content -->
+          {% block content %}{% endblock %}
+          <!-- Input -->
+          <div class="col-md-6 mt-2"  >
+            {% block input %}{% endblock %}
+          </div>
+          <!-- Output-->
+          <div class="col-md-6 mt-2">
+            {% block output %}{% endblock %}
+          </div>
         </div>
-    </div>
-    <!-- Bootstrap core JavaScript -->
-    <script src="{% static 'vendor/jquery/jquery.slim.min.js'%}"></script>
-    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
-    <script src="{% static 'vendor/darkmode/js/dark-mode-switch.min.js'%}"></script>
-    <script src="{% static 'vendor/clipboardjs/dist/clipboard.min.js'%}"></script>
-    <script src="{% static 'vendor/hireki/customjs.js'%}"></script>
+        
+        <div class="row justify-content-center">
+          <div class="col-md-auto mt-2">
+            {% block buttons%}{% endblock %}
+          </div>
+        </div>
+
+      </div>
+    </div> 
+
+  {% lorem 5 p %}
+  </div>
+
+  {% include 'partials/_footer.html' %}
+  
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.slim.min.js'%}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'vendor/clipboardjs/dist/clipboard.min.js'%}"></script>
+  <script src="{% static 'vendor/hireki/custom.js'%}"></script>
 </body>
 
 </html>
