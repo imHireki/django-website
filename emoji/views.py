@@ -338,13 +338,13 @@ def emoji(request):
         u'\U0001f467' + u'\U0000200d' +
         u'\U0001f467', u'\U0001f5e3', u'\U0001f464', u'\U0001f465', u'\U0001fac2',
     ]
-
+    
     return render(request, 'emoji/emoji.html',
                   {
                       'christmas': christmas,
-                    #   'faces': faces,
+                      'faces': faces,
                     #   'gestures': gestures,
-                    #   'people': people,
+                      'people': people,
                     #   'nature': nature,
                     #   'food': food,
                     #   'activity': activity,
@@ -352,7 +352,7 @@ def emoji(request):
                     #   'objects': objects,
                     #   'symbols': symbols,
                     #   'flags': flags,
-                      'newemojis': newemojis,
+                    #   'newemojis': newemojis,
                     #   'color0': color0,
                     #   'color1': color1,
                     #   'color2': color2,

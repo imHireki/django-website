@@ -6,15 +6,21 @@
 .card {
   background-color: rgb(25, 25, 25);
 }
+
 .card-body {
   background-color: rgb(58, 58, 58);
   ;
+}
+
+.emoji {
+  font-size: 3.5em
 }
 
 .btn {
   color:lightgray;
   background-color: rgb(58, 58, 58);
 }
+
 body {
   background-color: #111;
   color: lightgray;
