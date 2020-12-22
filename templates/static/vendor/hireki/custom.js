@@ -2,13 +2,11 @@
 $('.btn').popover({
     content:"Copy ;)",
     placement:"top",
-
     }).click(function (
         ){
         setTimeout(function () {
             $('.btn').popover('hide');
-        }, 500);
- 
+        }, 1000);
 });
 
 // ClipboardJs toggler

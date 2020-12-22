@@ -352,7 +352,7 @@ def emoji(request):
                     #   'objects': objects,
                     #   'symbols': symbols,
                     #   'flags': flags,
-                    #   'newemojis': newemojis,
+                      'newemojis': newemojis,
                     #   'color0': color0,
                     #   'color1': color1,
                     #   'color2': color2,
