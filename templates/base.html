@@ -12,29 +12,29 @@
   <div class="container">
     <!-- Navigator -->
     {% include 'partials/_nav.html'%}
-
-    <!-- Div 100%-->
-    <div class="row justify-content-center">   
-      <!-- Content -->
-      <div class="col-md-10">
-      {% block content %}{% endblock %}
+    <div class="card">
+      <!-- Div 100%-->
+      <div class="row justify-content-center">   
+        <!-- Content -->
+        <div class="col-md-10">
+          {% block content %}{% endblock %}
+        </div>
+        <!-- Input -->
+        <div class="col-md-6 mt-2"  >
+          {% block input %}{% endblock %}
+        </div>
+        <!-- Output-->
+        <div class="col-md-6 mt-2">
+          {% block output %}{% endblock %}
+        </div>
       </div>
-      <!-- Input -->
-      <div class="col-md-6 mt-2"  >
-      {% block input %}{% endblock %}
+      
+      <div class="row justify-content-center">
+        <div class="col-md-auto mt-2">
+          {% block buttons%}{% endblock %}
+        </div>
       </div>
-      <!-- Output-->
-      <div class="col-md-6 mt-2">
-      {% block output %}{% endblock %}
-      </div>
-    </div>
-    
-    <div class="row justify-content-center">
-      <div class="col-md-auto mt-2">
-      {% block buttons%}{% endblock %}
-      </div>
-    </div>
-
+  </div>
   {% lorem 5 p %}
   </div>
   {% include 'partials/_footer.html' %}

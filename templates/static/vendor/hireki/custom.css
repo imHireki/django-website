@@ -3,6 +3,9 @@
   text-align: center;
 }
 
+body {
+  background-color: darkgrey;
+}
 .card {
   background-color: rgb(25, 25, 25);
 }
@@ -19,9 +22,4 @@
 .btn {
   color:lightgray;
   background-color: rgb(58, 58, 58);
-}
-
-body {
-  background-color: #111;
-  color: lightgray;
 }
