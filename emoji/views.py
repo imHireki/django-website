@@ -99,7 +99,7 @@ def emoji(request):
         u'\U0001f600', u'\U0001f601', u'\U0001f602', u'\U0001f603',
         u'\U0001f604', u'\U0001f605', u'\U0001f606', u'\U0001f923',
         u'\U0001f60A', u'\U0001f607', u'\U0001f972', u'\U0001f642',
-        u'\U0001f643', u'\U0001f609', u'\U0001f60c',
+        u'\U0000263a', u'\U0001f643', u'\U0001f609', u'\U0001f60c',
         u'\U0001f60d', u'\U0001f970', u'\U0001f618', u'\U0001f617',
         u'\U0001f619', u'\U0001f61a', u'\U0001f60b', u'\U0001f61b',
         u'\U0001f61d', u'\U0001f61c', u'\U0001f92a', u'\U0001f928',
@@ -339,25 +339,23 @@ def emoji(request):
         u'\U0001f467', u'\U0001f5e3', u'\U0001f464', u'\U0001f465', u'\U0001fac2',
     ]
     
-    return render(
-        request,
-        'emoji/emoji.html',
-        {
-            'christmas': christmas,
-            'faces': faces,
-            'gestures': gestures,
-            'people': people,
-            'nature': nature,
-            'food': food,
-            'activity': activity,
-            'travel': travel,
-            'objects': objects,
-            'symbols': symbols,
-            'flags': flags,
-            'newemojis': newemojis,
-            'color0': color0,
-            'color1': color1,
-            'color2': color2,
-            'color3': color3,
-            'color4': color4
-        })
+    return render(request, 'emoji/emoji.html',
+                  {
+                      'christmas': christmas,
+                      'faces': faces,
+                    #   'gestures': gestures,
+                      'people': people,
+                    #   'nature': nature,
+                    #   'food': food,
+                    #   'activity': activity,
+                    #   'travel': travel,
+                    #   'objects': objects,
+                    #   'symbols': symbols,
+                    #   'flags': flags,
+                    #   'newemojis': newemojis,
+                    #   'color0': color0,
+                    #   'color1': color1,
+                    #   'color2': color2,
+                    #   'color3': color3,
+                    #   'color4': color4
+                  })
