@@ -1,27 +1,41 @@
-/* Footer */
-#contact-area {
-  text-align: center;
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: #222222;
 }
 
-.card {
-  background-color: rgb(25, 25, 25);
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: auto}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  padding-top: 20px;
+  background-color: #171717;
+  height: auto;  /* 100% */
 }
 
-.card-body {
-  background-color: rgb(58, 58, 58);
-  ;
+#main {
+  color: whitesmoke;
+  background-color: #111111;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #222222;
+  color: white;
+  padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height:auto;} 
 }
 
 .emoji {
   font-size: 3.5em
-}
-
-.btn {
-  color:lightgray;
-  background-color: rgb(58, 58, 58);
-}
-
-body {
-  background-color: #111;
-  color: lightgray;
 }

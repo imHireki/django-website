@@ -8,43 +8,44 @@
 </head>
 
 <body>
-  <!-- Page Content -->
-  <div class="container">
-    <!-- Navigator -->
-    {% include 'partials/_nav.html'%}
-
-    <!-- Div 100%-->
-    <div class="row justify-content-center">   
-      <!-- Content -->
-      <div class="col-md-10">
-      {% block content %}{% endblock %}
+{% include 'partials/_nav.html'%}
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav" id="side-left">
+      {% block side_left %}{% endblock %}
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+    </div>
+    <div class="col-sm-8 text-left" id="main">
+      {% block main %}{% endblock %}
+      <h1>Welcome</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <hr>
+      <h3>Test</h3>
+      <p>Lorem ipsum...</p>
+      {% lorem 5 p %}
+    </div>
+    <div class="col-sm-2 sidenav" id="side-right">
+      {% block side_right %}{% endblock %}
+      <div class="well">
+        <p class="text-primary">ADS</p>
       </div>
-      <!-- Input -->
-      <div class="col-md-6 mt-2"  >
-      {% block input %}{% endblock %}
-      </div>
-      <!-- Output-->
-      <div class="col-md-6 mt-2">
-      {% block output %}{% endblock %}
+      <div class="well">
+        <p class="text-primary">ADS</p>
+			</div>
+			<div class="well">
+        <p class="text-primary">ADS</p>
       </div>
     </div>
-    
-    <div class="row justify-content-center">
-      <div class="col-md-auto mt-2">
-      {% block buttons%}{% endblock %}
-      </div>
-    </div>
-
-  {% lorem 5 p %}
   </div>
-  {% include 'partials/_footer.html' %}
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="{% static 'vendor/jquery/jquery.slim.min.js'%}"></script>
-  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
-  <script src="{% static 'vendor/clipboardjs/dist/clipboard.min.js'%}"></script>
-  <script src="{% static 'vendor/hireki/custom.js'%}"></script>
-
+</div>
+{% include 'partials/_footer.html' %}
+<!-- Bootstrap core JavaScript -->
+<script src="{% static 'vendor/jquery/jquery.slim.min.js'%}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+<script src="{% static 'vendor/clipboardjs/dist/clipboard.min.js'%}"></script>
+<script src="{% static 'vendor/hireki/custom.js'%}"></script>
 </body>
 
 </html>
