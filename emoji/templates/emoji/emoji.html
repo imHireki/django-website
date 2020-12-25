@@ -1,13 +1,33 @@
 {% extends 'base.html' %}
 {% block title %}Emoji{% endblock %}
 
+{% block side_left%}
+<p><a href="#christmas">Link</a></p>
+<p><a href="#1">Link</a></p>
+<p><a href="#2">Link</a></p>
+<p><a href="#3">Link</a></p>
+<p><a href="#4">Link</a></p>
+<p><a href="#5">Link</a></p>
+<p><a href="#6">Link</a></p>
+<p><a href="#7">Link</a></p>
+<p><a href="#8">Link</a></p>
+<p><a href="#9">Link</a></p>
+<p><a href="#10">Link</a></p>
+<p><a href="#11">Link</a></p>
+<p><a href="#12">Link</a></p>
+<p><a href="#13">Link</a></p>
+<p><a href="#14">Link</a></p>
+<p><a href="#15">Link</a></p>
+<p><a href="#16">Link</a></p>
+{% endblock %}
+
 {% block main %}
 <div class="row">
-  {% if christmas %}
-  <a id="0">Emojis Natalinos</a>
+  {% if faces %}
+  <a id="0">christmas</a> 
   <p>
     <span class="emoji" data-clipboard-text="{{ x }}">
-      {% for x in emoji %}{{ x }}{% endfor %}
+      {% for x in christmas %}{{ x }}{% endfor %}
     </span>
   </p>
   {% endif %}
@@ -79,7 +99,7 @@
   <a id="8">Objects</a>
   <p>
     <span class="emoji" data-clipboard-text="{{ x }}">
-      {% for x in objects %}{{ x }}{% endfor %}
+      {% for x in travel %}{{ x }}{% endfor %}
     </span>
   </p>
   {% endif %}
@@ -87,8 +107,10 @@
   {% if symbols %}
   <a id="9">Symbols</a>
   <p>
-    <span class="emoji" data-clipboard-text="{{ x }}">
-      {% for x in symbols %}{{ x }}{% endfor %}
+    <span id="fix">
+      {% for x in symbols %}
+      <span class="emoji" data-clipboard-text="{{ x }}">{{ x }}</span>
+      {% endfor %}
     </span>
   </p>
   {% endif %}
