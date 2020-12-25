@@ -2,6 +2,18 @@
 {% load crispy_forms_tags %}
 {% block title %} Letras Diferentes {% endblock %}
 
+{% block side_left %}
+<div class="well">
+	<p class="text-primary">ADS</p>
+</div>
+<div class="well">
+	<p class="text-primary">ADS</p>
+</div>
+<div class="well">
+	<p class="text-primary">ADS</p>
+</div>
+{% endblock %}
+
 {% block main %}
 <h3>Letras Diferentes</h3>
 <div id="io_forms" class="row">
@@ -14,62 +26,61 @@
 		<textarea class="copy form-control" id="id_origin" rows="5" data-clipboard-text="{{ form.d_new }}">{{ form.d_new }}</textarea>
 	</div>
 </div>
-
 <div class="row">
 	<form method="post" name="vaidarcerto">{% csrf_token %}
 		<div class="form-group text-center">
-			<button type="submit" class="btn btn-outline-secondary btn-lg" value="btn-a" name="submit" form="input_form">
+			<button type="submit" class="btn btn-outline-info btn-lg mb-1" value="btn-a" name="submit" form="input_form">
 				𝔉𝔯𝔞𝔨𝔱𝔲𝔯
 			</button>
-			<button type="submit" class="btn btn-outline-secondary btn-lg" value="btn-b" name="submit" form="input_form">
+			<button type="submit" class="btn btn-outline-info btn-lg mb-1" value="btn-b" name="submit" form="input_form">
 				𝕱𝖗𝖆𝖐𝖙𝖚𝖗 𝕭𝖔𝖑𝖉
 			</button>
-			<button type="submit" class="btn btn-outline-secondary btn-lg" value="btn-c" name="submit" form="input_form">
+			<button type="submit" class="btn btn-outline-info btn-lg mb-1" value="btn-c" name="submit" form="input_form">
 				𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎
 			</button>
-			<button type="submit" class="btn btn-outline-secondary btn-lg" value="btn-d" name="submit" form="input_form">
+			<button type="submit" class="btn btn-outline-info btn-lg mb-1" value="btn-d" name="submit" form="input_form">
 				𝔻𝕠𝕦𝕓𝕝𝕖 𝕊𝕥𝕣𝕦𝕔𝕜
 			</button>
-			<button type="submit" class="btn btn-outline-secondary btn-lg" value="btn-e" name="submit" form="input_form">
+			<button type="submit" class="btn btn-outline-info btn-lg mb-1" value="btn-e" name="submit" form="input_form">
 				𝒮𝒸𝓇𝒾𝓅𝓉
 			</button>
-			<button type="submit" class="btn btn-outline-secondary btn-lg" value="btn-f" name="submit" form="input_form">
+			<button type="submit" class="btn btn-outline-info btn-lg mb-1" value="btn-f" name="submit" form="input_form">
 				𝓢𝓬𝓻𝓲𝓹𝓽 𝓑𝓸𝓵𝓭
 			</button>
-			<button type="submit" class="btn btn-outline-secondary btn-lg" value="btn-g" name="submit" form="input_form">
+			<button type="submit" class="btn btn-outline-info btn-lg mb-1" value="btn-g" name="submit" form="input_form">
 				🅝🅔🅖🅐🅣🅘🅥🅔 🅒🅘🅡🅒🅛🅔🅓
 			</button>
-			<button type="submit" class="btn btn-outline-secondary btn-lg" value="btn-h" name="submit" form="input_form">
+			<button type="submit" class="btn btn-outline-info btn-lg mb-1" value="btn-h" name="submit" form="input_form">
 				🅒🅘🅡🅒🅛🅔🅓
 			</button>
-			<button type="submit" class="btn btn-outline-secondary btn-lg" value="btn-i" name="submit" form="input_form">
+			<button type="submit" class="btn btn-outline-info btn-lg mb-1" value="btn-i" name="submit" form="input_form">
 				🅂🅀🅄🄰🅁🄴🄳
 			</button>
-			<button type="submit" class="btn btn-outline-secondary btn-lg" value="btn-j" name="submit" form="input_form">
+			<button type="submit" class="btn btn-outline-info btn-lg mb-1" value="btn-j" name="submit" form="input_form">
 				🆂🆀🆄🅰🆁🅴🅳 🅽🅴🅶🅰🆃🅸🆅🅴
 			</button>
-			<button type="submit" class="btn btn-outline-secondary btn-lg" value="btn-k" name="submit" form="input_form">
+			<button type="submit" class="btn btn-outline-info btn-lg mb-1" value="btn-k" name="submit" form="input_form">
 				𝐒𝐞𝐫𝐢𝐟 𝐁𝐨𝐥𝐝
 			</button>
-			<button type="submit" class="btn btn-outline-secondary btn-lg" value="btn-l" name="submit" form="input_form">
+			<button type="submit" class="btn btn-outline-info btn-lg mb-1" value="btn-l" name="submit" form="input_form">
 				𝑆𝑒𝑟𝑖𝑓 𝐼𝑡𝑎𝑙𝑖𝑐
 			</button>
-			<button type="submit" class="btn btn-outline-secondary btn-lg" value="btn-m" name="submit" form="input_form">
+			<button type="submit" class="btn btn-outline-info btn-lg mb-1" value="btn-m" name="submit" form="input_form">
 				𝑺𝒆𝒓𝒊𝒇 𝑩𝒐𝒍𝒅 𝑰𝒕𝒂𝒍𝒊𝒄
 			</button>
-			<button type="submit" class="btn btn-outline-secondary btn-lg" value="btn-n" name="submit" form="input_form">
+			<button type="submit" class="btn btn-outline-info btn-lg mb-1" value="btn-n" name="submit" form="input_form">
 				𝖲𝖺𝗇𝗌-𝗌𝖾𝗋𝗂𝖿
 			</button>
-			<button type="submit" class="btn btn-outline-secondary btn-lg" value="btn-o" name="submit" form="input_form">
+			<button type="submit" class="btn btn-outline-info btn-lg mb-1" value="btn-o" name="submit" form="input_form">
 				𝗦𝗮𝗻𝘀-𝘀𝗲𝗿𝗶𝗳 𝗕𝗼𝗹𝗱
 			</button>
-			<button type="submit" class="btn btn-outline-secondary btn-lg" value="btn-p" name="submit" form="input_form">
+			<button type="submit" class="btn btn-outline-info btn-lg mb-1" value="btn-p" name="submit" form="input_form">
 				𝘚𝘢𝘯𝘴-𝘴𝘦𝘳𝘪𝘧 𝘐𝘵𝘢𝘭𝘪𝘤
 			</button>
-			<button type="submit" class="btn btn-outline-secondary btn-lg" value="btn-q" name="submit" form="input_form">
+			<button type="submit" class="btn btn-outline-info btn-lg mb-1" value="btn-q" name="submit" form="input_form">
 				𝙎𝙖𝙣𝙨-𝙨𝙚𝙧𝙞𝙛 𝘽𝙤𝙡𝙙 𝙄𝙩𝙖𝙡𝙞𝙘
 			</button>
-			<button type="submit" class="btn btn-outline-secondary btn-lg" value="btn-r" name="submit" form="input_form">
+			<button type="submit" class="btn btn-outline-info btn-lg mb-1" value="btn-r" name="submit" form="input_form">
 				pǝʇɹǝʌuI
 			</button>
 		</div>
