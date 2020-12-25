@@ -36,6 +36,8 @@ footer {
   .row.content {height:auto;} 
 }
 
-.emoji {
-  font-size: 3.5em
+span.emoji {
+  text-align: center;
+  font-size: 3em;
+
 }
