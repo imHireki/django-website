@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
-{% block title %}Emoji{% endblock %}
+{% block title %}emoji copy{% endblock %}
 
 {% block side_left%}
-<p><a href="#christmas">Link</a></p>
+<p><a href="#0">Link</a></p>
 <p><a href="#1">Link</a></p>
 <p><a href="#2">Link</a></p>
 <p><a href="#3">Link</a></p>
@@ -27,7 +27,7 @@
   <a id="0">christmas</a> 
   <p>
     {% for x in christmas %}
-    <span class="emoji" data-clipboard-text="{{ x }}">{{ x }}</span>
+    <span class="emoji copy" data-clipboard-text="{{ x }}">{{ x }}</span>
     {% endfor %}
   </p>
   {% endif %}
@@ -36,7 +36,7 @@
   <a id="1">Faces</a> 
   <p>
     {% for x in faces %}
-    <span class="emoji" data-clipboard-text="{{ x }}">{{ x }}</span>
+    <span class="emoji copy" data-clipboard-text="{{ x }}">{{ x }}</span>
     {% endfor %}
   </p>
   {% endif %}
@@ -45,7 +45,7 @@
   <a id="2">Gesture and body parts</a>
   <p> 
     {% for x in gestures %}
-    <span class="emoji" data-clipboard-text="{{ x }}">{{ x }}</span>
+    <span class="emoji copy" data-clipboard-text="{{ x }}">{{ x }}</span>
     {% endfor %}
   </p> 
   {% endif %}
@@ -54,7 +54,7 @@
   <a id="3">People</a>
   <p>
     {% for x in people %}
-    <span class="emoji" data-clipboard-text="{{ x }}">{{ x }}</span>
+    <span class="emoji copy" data-clipboard-text="{{ x }}">{{ x }}</span>
     {% endfor %}
   </p> 
   {% endif %}
@@ -63,7 +63,7 @@
   <a id="4">Animals and Nature</a>
   <p> 
     {% for x in nature %}
-    <span class="emoji" data-clipboard-text="{{ x }}">{{ x }}</span>
+    <span class="emoji copy" data-clipboard-text="{{ x }}">{{ x }}</span>
     {% endfor %}
   </p>
   {% endif %}
@@ -72,7 +72,7 @@
   <a id="5">Food and Drink</a>
   <p>
     {% for x in food %}
-    <span class="emoji" data-clipboard-text="{{ x }}">{{ x }}</span>
+    <span class="emoji copy" data-clipboard-text="{{ x }}">{{ x }}</span>
     {% endfor %}
   </p>
   {% endif %}
@@ -81,7 +81,7 @@
   <a id="6">Activity and Sports</a>
   <p>
     {% for x in activity %}
-    <span class="emoji" data-clipboard-text="{{ x }}">{{ x }}</span>
+    <span class="emoji copy" data-clipboard-text="{{ x }}">{{ x }}</span>
     {% endfor %}
   </p>
   {% endif %}
@@ -90,7 +90,7 @@
   <a id="7">Travel and Places</a>
   <p>
     {% for x in travel %}
-    <span class="emoji" data-clipboard-text="{{ x }}">{{ x }}</span>
+    <span class="emoji copy" data-clipboard-text="{{ x }}">{{ x }}</span>
     {% endfor %}
   </p>
   {% endif %}
@@ -99,7 +99,7 @@
   <a id="8">Objects</a>
   <p>
     {% for x in objects %}
-    <span class="emoji" data-clipboard-text="{{ x }}">{{ x }}</span>
+    <span class="emoji copy" data-clipboard-text="{{ x }}">{{ x }}</span>
     {% endfor %}
   </p>
   {% endif %}
@@ -109,7 +109,7 @@
   <p>
     <span id="fix">
       {% for x in symbols %}
-      <span class="emoji" data-clipboard-text="{{ x }}">{{ x }}</span>
+      <span class="emoji copy" data-clipboard-text="{{ x }}">{{ x }}</span>
       {% endfor %}
     </span>
   </p>
@@ -119,16 +119,16 @@
   <a id="10">Flags</a>
   <p>
     {% for x in flags %}
-    <span class="emoji" data-clipboard-text="{{ x }}">{{ x }}</span>
+    <span class="emoji copy" data-clipboard-text="{{ x }}">{{ x }}</span>
     {% endfor %}
   </p>
   {% endif %}
 
   {% if newemojis %}
-  <a id="11">New Emojis</a>
+  <a id="11">New emojis</a>
   <p>
     {% for x in newemojis %}
-    <span class="emoji" data-clipboard-text="{{ x }}">{{ x }}</span>
+    <span class="emoji copy" data-clipboard-text="{{ x }}">{{ x }}</span>
     {% endfor %}
   </p>
   {% endif %}
@@ -137,7 +137,7 @@
   <a id="12">Color 0</a>
   <p>
     {% for x in color0 %}
-    <span class="emoji" data-clipboard-text="{{ x }}">{{ x }}</span>
+    <span class="emoji copy" data-clipboard-text="{{ x }}">{{ x }}</span>
     {% endfor %}
   </p>
   {% endif %}
@@ -146,7 +146,7 @@
   <a id="13">Color 1</a>
   <p>
     {% for x in color1 %}
-    <span class="emoji" data-clipboard-text="{{ x }}">{{ x }}</span>
+    <span class="emoji copy" data-clipboard-text="{{ x }}">{{ x }}</span>
     {% endfor %}
   </p>
   {% endif %}
@@ -155,7 +155,7 @@
   <a id="14">Color 2</a>
   <p>
     {% for x in color2 %}
-    <span class="emoji" data-clipboard-text="{{ x }}">{{ x }}</span>
+    <span class="emoji copy" data-clipboard-text="{{ x }}">{{ x }}</span>
     {% endfor %}
   </p>
   {% endif %}
@@ -164,7 +164,7 @@
   <a id="15">Color 3</a>
   <p>
     {% for x in color3 %}
-    <span class="emoji" data-clipboard-text="{{ x }}">{{ x }}</span>
+    <span class="emoji copy" data-clipboard-text="{{ x }}">{{ x }}</span>
     {% endfor %}
   </p>
   {% endif %}
@@ -173,7 +173,7 @@
   <a id="16">Color 4</a>
   <p>
     {% for x in color4 %}
-    <span class="emoji" data-clipboard-text="{{ x }}">{{ x }}</span>
+    <span class="emoji copy" data-clipboard-text="{{ x }}">{{ x }}</span>
     {% endfor %}
   </p>
   {% endif %}

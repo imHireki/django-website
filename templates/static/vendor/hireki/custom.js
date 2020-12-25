@@ -1,13 +1,13 @@
 // Popover toggler
-$('.emoji').popover({
+$('.copy').popover({
     content:"Copiado xD",
     placement:"top",
     }).click(function (
         ){
         setTimeout(function () {
-            $('.emoji').popover('hide');
+            $('.copy').popover('hide');
         }, 1000);
 });
 
 // ClipboardJs toggler
-new ClipboardJS('.emoji');    
+new ClipboardJS('.copy');    
