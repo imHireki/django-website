@@ -35,11 +35,10 @@ footer {
   }
   .row.content {height:auto;} 
 }
-span#fix {
-  text-align: center;
-}
 
-span.emoji {
+p.emoji {
+  padding-left: 1%;
+  padding-right: 1%;
   text-align: center;
-  font-size: 3em;
+  font-size: 2.7em;
 }
