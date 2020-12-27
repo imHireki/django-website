@@ -1,1 +1,17 @@
 {% extends 'base.html' %}
+{% block side_left %}
+<p><a href="#0">Christmas</a></p>
+<p><a href="#1">Faces</a></p>
+<p><a href="#2">Gestures & Bodyparts</a></p>
+{% endblock %}
+
+{% block main %}
+<div class="row">
+  <h2 id="0">Clássicos Ascii</h2> 
+  <p class="emoticon">
+  {% for x in classicos %}
+  {{ x }}
+  {% endfor %}
+  </p>
+</div>
+{% endblock %}
