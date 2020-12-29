@@ -2,13 +2,15 @@ from django.shortcuts import render
 
 
 def emoticon(request):
-    return render(request, 'emoticon/emoticon.html',
-                  {'classicos': classicos_ascii,
-                  'feliz': feliz,
-                  'triste': triste,
-                  'nervoso': nervoso,
-                  'surpresa': surpresa,
-                  'saudacao': saudacao})
+    return render(request, 'emoticon/emoticon.html', {
+                'classicos': classicos_ascii,
+                'feliz': feliz,
+                'triste': triste,
+                'nervoso': nervoso,
+                'surpresa': surpresa,
+                'saudacao': saudacao,
+                'fofos': fofos
+                })
 
 classicos_ascii = [
     ';)',
@@ -257,4 +259,27 @@ saudacao = [
     '~\(≧▽≦)/~',
     'b(￣▽￣)d',
     '(☞ﾟヮﾟ)☞☜(ﾟヮﾟ☜)'
+    ]
+
+fofos = [
+    '(✿◡‿◡)',
+    '(=^ ◡ ^=)',
+    '(=^･ω･^=)',
+    'V●ᴥ●V',
+    '(･ω<)☆',
+    '(づ◡﹏◡)づ',
+    '(* ^ ω ^)',
+    '(´｡• ω •｡`)',
+    '(o･ω･o)',
+    '(´• ω •`)',
+    '(.❛ ᴗ ❛.)',
+    '(=∩ω∩=)',
+    '(⁄ ⁄•⁄ω⁄•⁄ ⁄)',
+    '(・3・)',
+    '(„• ֊ •„)',
+    '(°ε° )',
+    '(๑˃ᴗ˂)ﻭ',
+    '(˃ᆺ˂)',
+    "(-'_'-)",
+    'ฅ^•ﻌ•^ฅ'
     ]
