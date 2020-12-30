@@ -126,7 +126,16 @@ def convert(request):
                 if c in inverted:
                     c = inverted[c]
                 form.d_new += c
-
+        
+        elif submit == 'btn-s':
+            form.d_new = form.d.upper()
+        
+        elif submit == 'btn-t':
+            form.d_new = form.d.title()
+        
+        elif submit == 'btn-u':
+            form.d_new = form.d.lower()
+        
     return render(request, 'convert/letrasDiferentes.html', context)
 
 inverted = {
@@ -181,8 +190,8 @@ inverted = {
     'W': 'M',
     'X': 'X',
     'Y': u'\u2144',
-    'Z': 'Z'
-}
+    'Z': 'Z',
+    }
 
 sans_serif_ib = {
     'a': '\U0001D656',
@@ -236,8 +245,8 @@ sans_serif_ib = {
     'W': '\U0001D652',
     'X': '\U0001D653',
     'Y': '\U0001D654',
-    'Z': '\U0001D655'
-}
+    'Z': '\U0001D655',
+    }
 
 sans_serif_i = {
     'a': '\U0001D622',
@@ -291,8 +300,8 @@ sans_serif_i = {
     'W': '\U0001D61E',
     'X': '\U0001D61F',
     'Y': '\U0001D620',
-    'Z': '\U0001D621'
-}
+    'Z': '\U0001D621',
+    }
 
 sans_serif_b = {
     'a': '\U0001D5EE',
@@ -346,8 +355,8 @@ sans_serif_b = {
     'W': '\U0001D5EA',
     'X': '\U0001D5EB',
     'Y': '\U0001D5EC',
-    'Z': '\U0001D5ED'
-}
+    'Z': '\U0001D5ED',
+    }
 
 sans_serif = {
     'a': '\U0001D5BA',
@@ -401,8 +410,8 @@ sans_serif = {
     'W': '\U0001D5B6',
     'X': '\U0001D5B7',
     'Y': '\U0001D5B8',
-    'Z': '\U0001D5B9'
-}
+    'Z': '\U0001D5B9',
+    }
 
 serif_ib = {
     'a': '\U0001D482',
@@ -456,8 +465,8 @@ serif_ib = {
     'W': '\U0001D47E',
     'X': '\U0001D47F',
     'Y': '\U0001D480',
-    'Z': '\U0001D481'
-}
+    'Z': '\U0001D481',
+    }
 
 serif_i = {
     'a': '\U0001D44E',
@@ -511,8 +520,8 @@ serif_i = {
     'W': '\U0001D44A',
     'X': '\U0001D44B',
     'Y': '\U0001D44C',
-    'Z': '\U0001D44D'
-}
+    'Z': '\U0001D44D',
+    }
 
 serif_b = {
     'a': '\U0001D41A',
@@ -566,8 +575,8 @@ serif_b = {
     'W': '\U0001D416',
     'X': '\U0001D417',
     'Y': '\U0001D418',
-    'Z': '\U0001D419'
-}
+    'Z': '\U0001D419',
+    }
 
 squared_n = {
     'a': '\U0001F170' + '\U0000fe0e',
@@ -596,7 +605,7 @@ squared_n = {
     'x': '\U0001F187',
     'y': '\U0001F188',
     'z': '\U0001F189',
-}
+    }
 
 squared = {
     'a': '\U0001F130',
@@ -625,7 +634,7 @@ squared = {
     'x': '\U0001F147',
     'y': '\U0001F148',
     'z': '\U0001F149',
-}
+    }
 
 circled_n = {
     'A': '\U0001F150',
@@ -654,7 +663,7 @@ circled_n = {
     'X': '\U0001F167',
     'Y': '\U0001F168',
     'Z': '\U0001F169',
-}
+    }
 
 circled = {
     'a': u'\u24D0',
@@ -708,8 +717,8 @@ circled = {
     'W': u'\u24CC',
     'X': u'\u24CD',
     'Y': u'\u24CE',
-    'Z': u'\u24CF'
-}
+    'Z': u'\u24CF',
+    }
 
 script_b = {
     'a': '\U0001D4EA',
@@ -763,8 +772,8 @@ script_b = {
     'W': '\U0001D4E6',
     'X': '\U0001D4E7',
     'Y': '\U0001D4E8',
-    'Z': '\U0001D4E9'
-}
+    'Z': '\U0001D4E9',
+    }
 
 script = {
     'a': '\U0001D4B6',
@@ -818,8 +827,8 @@ script = {
     'W': '\U0001D4B2',
     'X': '\U0001D4B3',
     'Y': '\U0001D4B4',
-    'Z': '\U0001D4B5'
-}
+    'Z': '\U0001D4B5',
+    }
 
 double_struck = {
     'a': '\U0001D552',
@@ -847,7 +856,7 @@ double_struck = {
     'w': '\U0001D568',
     'x': '\U0001D569',
     'y': '\U0001D56A',
-    'z': '\U0001D56B',  
+    'z': '\U0001D56B',
     'A': '\U0001D538',
     'B': '\U0001D539',
     'C': '\U00002102',
@@ -873,8 +882,8 @@ double_struck = {
     'W': '\U0001D54E',
     'X': '\U0001D54F',
     'Y': '\U0001D550',
-    'Z': '\U00002124'  
-}
+    'Z': '\U00002124',
+    }
 
 monospace = {
     'a': '\U0001D68A',
@@ -902,7 +911,7 @@ monospace = {
     'w': '\U0001D6A0',
     'x': '\U0001D6A1',
     'y': '\U0001D6A2',
-    'z': '\U0001D6A3', 
+    'z': '\U0001D6A3',
     'A': '\U0001D670',
     'B': '\U0001D671',
     'C': '\U0001D672',
@@ -928,8 +937,8 @@ monospace = {
     'W': '\U0001D686',
     'X': '\U0001D687',
     'Y': '\U0001D688',
-    'Z': '\U0001D689'   
-}
+    'Z': '\U0001D689',
+    }
 
 fraktur = {
     'a': '\U0001D51E',
@@ -983,8 +992,8 @@ fraktur = {
     'W': '\U0001D51A',
     'X': '\U0001D51B',
     'Y': '\U0001D51C',
-    'Z': '\U00002128'
-}
+    'Z': '\U00002128',
+    }
 
 fraktur_b = {
     'a': '\U0001D586',
@@ -1038,5 +1047,5 @@ fraktur_b = {
     'W': '\U0001D582',
     'X': '\U0001D583',
     'Y': '\U0001D584',
-    'Z': '\U0001D585'
-}
+    'Z': '\U0001D585',
+    }

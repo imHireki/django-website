@@ -1,33 +1,25 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt">
-
 <head>
   {% include 'partials/_head.html'%}
   <title>{% block title %}{% endblock %}</title>
 </head>
-
 <body>
 {% include 'partials/_nav.html'%}
 <div class="container-fluid text-center">    
   <div class="row content">
-    <div class="col-sm-2 sidenav d-none d-sm-block" id="side-left">
+    <div class="col-sm-2 sidenav" id="side-left">
+      <!-- Left -->
       {% block side_left %}{% endblock %}
-      <!-- links -->
     </div>
-    <div class="col-sm-8" id="main"> <!-- text-left -->
+    <div class="col-sm-8" id="main"> 
+      <!-- Main -->
       {% block main %}{% endblock %}
-      <h1>Welcome</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <hr>
-      <h3>Test</h3>
-      <p>Lorem ipsum...</p>
     </div>
     <div class="col-sm-2 sidenav" id="side-right">
+      <!-- Right-->
       {% block side_right %}{% endblock %}
-      <div class="well">
-        <p class="text-primary">ADS</p>
-      </div>
       <div class="well">
         <p class="text-primary">ADS</p>
 			</div>
@@ -38,7 +30,6 @@
   </div>
 </div>
 {% include 'partials/_footer.html' %}
-<!-- Bootstrap core JavaScript -->
 <script src="{% static 'vendor/jquery/jquery.slim.min.js'%}"></script>
 <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
 <script src="{% static 'vendor/clipboardjs/dist/clipboard.min.js'%}"></script>

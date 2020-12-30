@@ -1,128 +1,54 @@
 {% extends 'base.html' %}
-{% block title %}emoji copy{% endblock %}
-
+{% block title %}Emoji{% endblock %}
 {% block side_left%}
-<p><a href="#0">Christmas</a></p>
-<p><a href="#1">Faces</a></p>
-<p><a href="#2">Gestures & Bodyparts</a></p>
-<p><a href="#3">People</a></p>
-<p><a href="#4">Animals & Nature</a></p>
-<p><a href="#5">Food & Drink</a></p>
-<p><a href="#6">Activity & Sports</a></p>
-<p><a href="#7">Travel & Places</a></p>
-<p><a href="#8">Objects</a></p>
-<p><a href="#9">Symbols</a></p>
-<p><a href="#10">Flags</a></p>
-<p><a href="#11">New Emojis</a></p>
-<p><a href="#12">Color 0</a></p>
-<p><a href="#13">Color 1</a></p>
-<p><a href="#14">Color 2</a></p>
-<p><a href="#15">Color 3</a></p>
-<p><a href="#16">Color 4</a></p>
+<p><a href="#0">New Emojis</a></p>
+<p><a href="#1">Faces and Gestures</a></p>
+<p><a href="#2">People and Activity</a></p>
+<p><a href="#3">Symbols and Objects</a></p>
+<p><a href="#4">Travel and Flags</a></p>
 {% endblock %}
-
 {% block main %}
 <div class="row">
-  <h2 id="0">christmas</h2> 
-  <p class="emoji">
-  {% for x in christmas %}
-  {{ x }}
-  {% endfor %}
-  </p>
-  <h2 id="1">Faces</h2> 
-  <p class="emoji">
-  {% for x in faces %}
-  {{ x }}
-  {% endfor %}
-  </p>
-  <h2 id="2">Gesture and body parts</h2>
-  <p class="emoji"> 
-  {% for x in gestures %}
-  {{ x }}
-  {% endfor %}
-  </p> 
-  <h2 id="3">People</h2>
-  <p class="emoji">
-  {% for x in people %}
-  {{ x }}
-  {% endfor %}
-  </p> 
-  <h2 id="4">Animals and Nature</h2>
-  <p class="emoji"> 
-  {% for x in nature %}
-  {{ x }}
-  {% endfor %}
-  </p>
-  <h2 id="5">Food and Drink</h2>
-  <p class="emoji">
-  {% for x in food %}
-  {{ x }}
-  {% endfor %}
-  </p>
-  <h2 id="6">Activity and Sports</h2>
-  <p class="emoji">
-  {% for x in activity %}
-  {{ x }}
-  {% endfor %}
-  </p>
-  <h2 id="7">Travel and Places</h2>
-  <p class="emoji">
-  {% for x in travel %}
-  {{ x }}
-  {% endfor %}
-  </p>
-  <h2 id="8">Objects</h2>
-  <p class="emoji">
-  {% for x in objects %}
-  {{ x }}
-  {% endfor %}
-  </p>
-  <h2 id="9">Symbols</h2>
-  <p class="emoji">
-  {% for x in symbols %}
-  {{ x }}
-  {% endfor %}
-  </p>
-  <h2 id="10">Flags</h2>
-  <p class="emoji">
-  {% for x in flags %}
-  {{ x }}
-  {% endfor %}
-  </p>
-  <h2 id="11">New emojis</h2>
+  <h2 id="0">New Emojis</h2>
   <p class="emoji">
   {% for x in newemojis %}
   {{ x }}
   {% endfor %}
   </p>
-  <h2 id="12">Color 0</h2>
+  <h2 id="1">Faces and Gestures</h2> 
   <p class="emoji">
-  {% for x in color0 %}
+  {% for x in faces%}
   {{ x }}
   {% endfor %}
-  </p>
-  <h2 id="13">Color 1</h2>
-  <p class="emoji">
-  {% for x in color1 %}
-  {{ x }}
+  {% for y in gestures %}
+  {{ y }}
   {% endfor %}
   </p>
-  <h2 id="14">Color 2</h2>
-  <p class="emoji">
-  {% for x in color2 %}
+  <h2 id="2">People and Activity</h2>
+  <p class="emoji"> 
+  {% for x in people%}
   {{ x }}
   {% endfor %}
-  </p>
-  <h2 id="15">Color 3</h2>
+  {% for y in activity %}
+  {{ y }}
+  {% endfor %}
+  </p> 
+  <h2 id="3">Symbols and Objects</h2>
   <p class="emoji">
-  {% for x in color3 %}
+  {% for x in symbols %}
   {{ x }}
   {% endfor %}
-  </p>
-  <h2 id="16">Color 4</h2>
-  <p class="emoji">
-  {% for x in color4 %}
+  {% for y in objects %}
+  {{ y }}
+  {% endfor %}
+  </p> 
+  <h2 id="4">Travel and Flags</h2>
+  <p class="emoji"> 
+  {% for x in travel %}
   {{ x }}
+  {% endfor %}
+  {% for y in flags %}
+  {{ y }}
   {% endfor %}
   </p>
 </div>
