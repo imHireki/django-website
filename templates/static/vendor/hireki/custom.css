@@ -36,6 +36,10 @@ footer {
   .row.content {height:auto;} 
 }
 
+.table td {
+  border-top: none;
+}
+
 p.emoji {
   padding-left: 1%;
   padding-right: 1%;
