@@ -3,5 +3,5 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.convert, name='letrasDiferentes'),
+    path('', views.convert, name='convert_case'),
 ]

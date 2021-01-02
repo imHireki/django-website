@@ -136,7 +136,7 @@ def convert(request):
         elif submit == 'btn-u':
             form.d_new = form.d.lower()
         
-    return render(request, 'convert/letrasDiferentes.html', context)
+    return render(request, 'convert/convert_case.html', context)
 
 inverted = {
     'a': u'\u0250',

@@ -33,17 +33,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # 'home.apps.HomeConfig',
+    'emoji.apps.EmojiConfig',
+    'emoticon.apps.EmoticonConfig',
+    'convert.apps.ConvertConfig',
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home.apps.HomeConfig',
-    'emoji.apps.EmojiConfig',
-    'emoticon.apps.EmoticonConfig',
-    'convert.apps.ConvertConfig',
-    'crispy_forms',
 ]
 
 MIDDLEWARE = [

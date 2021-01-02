@@ -36,9 +36,17 @@ footer {
   .row.content {height:auto;} 
 }
 
+h2 {
+  font-size: 20;
+  font-weight: bolder;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
 .table td {
   border-top: none;
-  color: aliceblue;
+  color: gainsboro;
   font-weight: bold; 
 }
 
@@ -46,6 +54,11 @@ footer {
   align-content: right;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+p#center {
+  display: block;
+  text-align: center;
 }
 
 p.emoji {

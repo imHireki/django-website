@@ -1,4 +1,9 @@
 {% load static %}
 <footer class="container-fluid text-center">
-  <p class="text-secondary mb-0">Developed by Hireki</p>
+  <p class="text-secondary">
+    <a href="{% url 'convert_case' %}">Convert Case</a> |
+    <a href="{% url 'emoji' %}">Emojis</a> |
+    <a href="{% url 'emoticon' %}">Emoticons</a>
+  </p>
+  <p class="text-secondary mb-0">Developed with &#128153; by Hireki</p>
 </footer>
