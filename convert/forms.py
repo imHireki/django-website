@@ -6,7 +6,7 @@ class InputForms(forms.Form):
         widget=forms.Textarea(
             attrs={
                 "rows":5,
-                "placeholder": 'Input your text here :D',
+                "placeholder": 'Please, input your text here.\nThen click in the buttons below :D',
                 "autofocus": True
                 }
             ), required=False, label='', )

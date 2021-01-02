@@ -18,7 +18,7 @@ from django.urls import path, include
 
 
 urlpatterns = [
-    # path('', include('home.urls')),
+    path('', include('home.urls')),
     path('convert-case', include('convert.urls')),
     path('emoticon', include('emoticon.urls')),
     path('emoji', include('emoji.urls')),
