@@ -15,6 +15,12 @@
   height: auto;  /* 100% */
 }
 
+#site-title {
+  margin-bottom: 0%;
+  font-family: monospace;
+  font-size: 25px;
+}
+
 #main {
   color: whitesmoke;
   background-color: #111111;
@@ -38,10 +44,16 @@ footer {
 
 h2 {
   font-size: 20;
-  font-weight: bolder;
   margin-left: 30px;
   margin-bottom: 10px;
   margin-top: 10px;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 3px solid  #171717;
 }
 
 .table td {

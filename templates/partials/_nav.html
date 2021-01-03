@@ -3,18 +3,18 @@
 	<div class="container-fluid">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 			<span class="navbar-toggler-icon"></span>
-		</button> <a class="navbar-brand" href="#">Home</a>
+		</button><p id="site-title" class="text-light">&#128526; SHADESEMOJI</p>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="navbar-nav ml-md-auto">
 				<li class="nav-item active">
-						<a class="nav-link active" href="{% url 'convert_case' %}">Convert Case</a>
+					<a class="nav-link" href="{% url 'emoji' %}">EMOJIS</a>	
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link" href="{% url 'emoji' %}">Emojis</a>
-			</li>
-			<li class="nav-item active">
-					<a class="nav-link" href="{% url 'emoticon' %}">Emoticons</a>
-			</li>
+					<a class="nav-link" href="{% url 'emoticon' %}">EMOTICONS</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link active" href="{% url 'convert_case' %}">CONVERT CASE</a>
+				</li>
 			</ul>
 		</div>
 	</div>

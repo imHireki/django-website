@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}Emoji{% endblock %}
+{% block title %}Emojis{% endblock %}
 {% block side_left%}
 <p><a href="#0">New Emojis</a></p>
 <p><a href="#1">Faces and Gestures</a></p>
@@ -8,6 +8,7 @@
 <p><a href="#4">Travel and Flags</a></p>
 {% endblock %}
 {% block main %}
+<h3>Emoji</h3>
 <div class="row">
   <h2 id="0">New Emojis</h2>
   <p class="emoji">
@@ -15,6 +16,9 @@
   {{ x }}
   {% endfor %}
   </p>
+  <div class="col"><hr></div>
+</div>
+<div class="row">
   <h2 id="1">Faces and Gestures</h2> 
   <p class="emoji">
   {% for x in faces%}
@@ -24,6 +28,10 @@
   {{ y }}
   {% endfor %}
   </p>
+  <div class="col"><hr></div>
+</div>
+<div class="row">
+  </p>
   <h2 id="2">People and Activity</h2>
   <p class="emoji"> 
   {% for x in people%}
@@ -32,6 +40,10 @@
   {% for y in activity %}
   {{ y }}
   {% endfor %}
+  </p>
+  <div class="col"><hr></div>
+</div>
+<div class="row">
   </p> 
   <h2 id="3">Symbols and Objects</h2>
   <p class="emoji">
@@ -41,7 +53,10 @@
   {% for y in objects %}
   {{ y }}
   {% endfor %}
-  </p> 
+  </p>
+  <div class="col"><hr></div>
+</div>
+<div class="row">
   <h2 id="4">Travel and Flags</h2>
   <p class="emoji"> 
   {% for x in travel %}
@@ -50,6 +65,16 @@
   {% for y in flags %}
   {{ y }}
   {% endfor %}
+  </p>
+  <div class="col"><hr></div>
+</div>
+<div class="row justify-content-center">
+  <p>
+    <a href="#0">New Emojis</a> |
+    <a href="#1">Faces and Gestures</a> |
+    <a href="#2">People and Activity</a> |
+    <a href="#3">Symbols and Objects</a> |
+    <a href="#4">Travel and Flags</a>
   </p>
 </div>
 {% endblock %}

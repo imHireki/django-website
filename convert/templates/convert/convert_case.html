@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
-{% block title %} Letras Diferentes {% endblock %}
-
+{% block title %}Convert Case{% endblock %}
 {% block side_left %}
 <div class="well">
 	<p class="text-primary">ADS</p>
@@ -13,9 +12,8 @@
 	<p class="text-primary">ADS</p>
 </div>
 {% endblock %}
-
 {% block main %}
-<h3>Letras Diferentes</h3>
+<h3>Convert Case</h3>
 <div id="io_forms" class="row">
 	<div class="col-sm-6"> <!-- input -->
 		<form id="input_form" method="post" name="vaidarcerto">{% csrf_token %}
