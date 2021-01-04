@@ -3,17 +3,17 @@
 	<div class="container-fluid">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 			<span class="navbar-toggler-icon"></span>
-		</button><p id="site-title" class="text-light">&#128526; SHADESEMOJI</p>
+		</button><h3 class="text-light mb-0">&#128526; SHADESAPPS</h3>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="navbar-nav ml-md-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="{% url 'emoji' %}">EMOJIS</a>	
+					<a id="link-nav" class="nav-link" href="{{ nav.nav_emoji }}">EMOJIS</a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link" href="{% url 'emoticon' %}">EMOTICONS</a>
+					<a id="link-nav" class="nav-link" href="{{ nav.nav_emoticon }}">EMOTICONS</a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link active" href="{% url 'convert_case' %}">CONVERT CASE</a>
+					<a id="link-nav" class="nav-link active" href="{{ nav.nav_convert }}">CONVERT CASE</a>
 				</li>
 			</ul>
 		</div>

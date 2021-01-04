@@ -2,7 +2,8 @@ from django.shortcuts import render
 
 
 def emoji(request):
-    return render(request, 'emoji/emoji.html', {
+    # Page Render
+    emojis = {
         'faces': faces,
         'gestures': gestures,
         'people': people,
@@ -14,7 +15,18 @@ def emoji(request):
         'symbols': symbols,
         'flags': flags,
         'newemojis': newemojis,
-        })
+        }
+    if request.path == '/emoji/emoji':
+        nav = {'nav_emoji': '/en/emoji', 'nav_convert': '/en/convert-case',
+            'nav_emoticon': '/en/emoticon'}
+        return render(request, 'emoji/en_emoji.html',
+                    {'nav': nav, 'emojis': emojis})
+
+    elif request.path == '/pt/emoji':
+        nav = {'nav_emoji': '/pt/emoji', 'nav_convert': '/pt/convert-case',
+            'nav_emoticon': '/pt/emoticon'}
+        return render(request, 'emoji/pt_emoji.html',
+                        {'nav': nav, 'emojis': emojis})
 
 faces = [
     u'\U0001f600',

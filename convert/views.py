@@ -7,12 +7,10 @@ def convert(request):
     form = InputForms(request.POST or None)
     context = {'form': form}
     submit = (request.POST.get('submit'))
-
     if form.is_valid():
         form.d = form.cleaned_data['input_txt']
-
     form.d_new = ''
-
+    
     # Buttons
     if submit:
         if submit == 'btn-a':
@@ -135,8 +133,19 @@ def convert(request):
         
         elif submit == 'btn-u':
             form.d_new = form.d.lower()
-        
-    return render(request, 'convert/convert_case.html', context)
+    
+    # Template render
+    if request.path == '/en/convert-case':
+        nav = {'nav_emoji': '/en/emoji', 'nav_convert': '/en/convert-case',
+            'nav_emoticon': '/en/emoticon'}
+        return render(request, 'convert/en_convert_case.html',
+                    {'context': context, 'nav': nav})
+    elif request.path == '/pt/convert-case':
+        nav = {'nav_emoji': '/pt/emoji', 'nav_convert': '/pt/convert-case',
+            'nav_emoticon': '/pt/emoticon'}
+        return render(request, 'convert/pt_convert_case.html',
+                    {'context': context, 'nav': nav})
+
 
 inverted = {
     'a': u'\u0250',

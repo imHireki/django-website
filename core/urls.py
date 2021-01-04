@@ -19,8 +19,11 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('home.urls')),
-    path('convert-case', include('convert.urls')),
-    path('emoticon', include('emoticon.urls')),
-    path('emoji', include('emoji.urls')),
+    path('en/convert-case', include('convert.urls')),
+    path('pt/convert-case', include('convert.urls')),
+    path('en/emoji', include('emoji.urls')),
+    path('pt/emoji', include('emoji.urls')),
+    path('en/emoticon', include('emoticon.urls')),
+    path('pt/emoticon', include('emoticon.urls')),
     path('admin/', admin.site.urls),
 ]

@@ -15,12 +15,6 @@
   height: auto;  /* 100% */
 }
 
-#site-title {
-  margin-bottom: 0%;
-  font-family: monospace;
-  font-size: 25px;
-}
-
 #main {
   color: whitesmoke;
   background-color: #111111;
@@ -42,11 +36,9 @@ footer {
   .row.content {height:auto;} 
 }
 
-h2 {
-  font-size: 20;
-  margin-left: 30px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cantata One', serif;
+  font-weight: 400;
 }
 
 hr {
@@ -78,4 +70,9 @@ p.emoji {
   padding-right: 1%;
   text-align: center;
   font-size: 2.7em;
+}
+
+a#link-nav {
+  font-family: 'Cantata One', serif;
+  font-size: 18px;
 }

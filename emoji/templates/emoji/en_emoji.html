@@ -12,7 +12,7 @@
 <div class="row">
   <h2 id="0">New Emojis</h2>
   <p class="emoji">
-  {% for x in newemojis %}
+  {% for x in emojis.newemojis %}
   {{ x }}
   {% endfor %}
   </p>
@@ -21,10 +21,10 @@
 <div class="row">
   <h2 id="1">Faces and Gestures</h2> 
   <p class="emoji">
-  {% for x in faces%}
+  {% for x in emojis.faces%}
   {{ x }}
   {% endfor %}
-  {% for y in gestures %}
+  {% for y in emojis.gestures %}
   {{ y }}
   {% endfor %}
   </p>
@@ -34,10 +34,10 @@
   </p>
   <h2 id="2">People and Activity</h2>
   <p class="emoji"> 
-  {% for x in people%}
+  {% for x in emojis.people%}
   {{ x }}
   {% endfor %}
-  {% for y in activity %}
+  {% for y in emojis.activity %}
   {{ y }}
   {% endfor %}
   </p>
@@ -47,10 +47,10 @@
   </p> 
   <h2 id="3">Symbols and Objects</h2>
   <p class="emoji">
-  {% for x in symbols %}
+  {% for x in emojis.symbols %}
   {{ x }}
   {% endfor %}
-  {% for y in objects %}
+  {% for y in emojis.objects %}
   {{ y }}
   {% endfor %}
   </p>
@@ -59,10 +59,10 @@
 <div class="row">
   <h2 id="4">Travel and Flags</h2>
   <p class="emoji"> 
-  {% for x in travel %}
+  {% for x in emojis.travel %}
   {{ x }}
   {% endfor %}
-  {% for y in flags %}
+  {% for y in emojis.flags %}
   {{ y }}
   {% endfor %}
   </p>

@@ -3,4 +3,4 @@ from django.http import HttpResponseRedirect
 
 
 def home(request):
-    return HttpResponseRedirect('/convert-case')
+    return HttpResponseRedirect('en/convert-case')

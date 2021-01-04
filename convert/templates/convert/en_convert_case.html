@@ -17,7 +17,7 @@
 <div id="io_forms" class="row">
 	<div class="col-sm-6"> <!-- input -->
 		<form id="input_form" method="post" name="vaidarcerto">{% csrf_token %}
-			{{ form|crispy }}
+			{{ context.form|crispy }}
 		</form>
 	</div>
 	<div class="col-sm-6 mb-2"> <!--output-->
