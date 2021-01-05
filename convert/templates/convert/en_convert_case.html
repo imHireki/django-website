@@ -14,15 +14,17 @@
 {% endblock %}
 {% block main %}
 <h3>Convert Case</h3>
-<div id="io_forms" class="row">
-	<div class="col-sm-6"> <!-- input -->
+<div id="io_forms" class="row justify-content-center">
+	<div class="col-sm-6">
 		<form id="input_form" method="post" name="vaidarcerto">{% csrf_token %}
 			{{ context.form|crispy }}
 		</form>
 	</div>
-	<div class="col-sm-6 mb-2"> <!--output-->
-		<textarea class="form-control" id="id_origin" rows="5">{{ form.d_new }}</textarea>
+{% if context.form.d_new %}
+	<div class="col-sm-6 mb-2">
+		<textarea class="form-control" id="id_origin" rows="5">{{ context.form.d_new }}</textarea>
 	</div>
+{% endif %}
 </div>
 <div class="row">
 	<form method="post" name="vaidarcerto">{% csrf_token %}

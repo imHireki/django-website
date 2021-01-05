@@ -136,15 +136,30 @@ def convert(request):
     
     # Template render
     if request.path == '/en/convert-case':
-        nav = {'nav_emoji': '/en/emoji', 'nav_convert': '/en/convert-case',
-            'nav_emoticon': '/en/emoticon'}
-        return render(request, 'convert/en_convert_case.html',
-                    {'context': context, 'nav': nav})
+        links = {
+            'nav_emoji': '/en/emoji',
+            'nav_convert': '/en/convert-case',
+            'nav_emoticon': '/en/emoticon'
+            }
+        transl = {
+            'name_c': 'CONVERT CASE',
+            'dev': 'Developed with \U0001F499 by Hireki'
+            }
+        return render(request, 'convert/en_convert_case.html', {
+            'links': links, 'context': context, 'transl': transl})
+
     elif request.path == '/pt/convert-case':
-        nav = {'nav_emoji': '/pt/emoji', 'nav_convert': '/pt/convert-case',
-            'nav_emoticon': '/pt/emoticon'}
-        return render(request, 'convert/pt_convert_case.html',
-                    {'context': context, 'nav': nav})
+        links = {
+            'nav_emoji': '/pt/emoji',
+            'nav_convert': '/pt/convert-case',
+            'nav_emoticon': '/pt/emoticon'
+            }
+        transl = {
+            'name_c': 'LETRAS DIFERENTES',
+            'dev':'Desenvolvido com \U0001F499 por Hireki'
+            }
+        return render(request, 'convert/pt_convert_case.html', {
+            'links': links, 'context': context, 'transl': transl})
 
 
 inverted = {

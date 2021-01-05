@@ -16,17 +16,32 @@ def emoji(request):
         'flags': flags,
         'newemojis': newemojis,
         }
-    if request.path == '/emoji/emoji':
-        nav = {'nav_emoji': '/en/emoji', 'nav_convert': '/en/convert-case',
-            'nav_emoticon': '/en/emoticon'}
-        return render(request, 'emoji/en_emoji.html',
-                    {'nav': nav, 'emojis': emojis})
+
+    if request.path == '/en/emoji':
+        links = {
+            'nav_emoji': '/en/emoji',
+            'nav_convert': '/en/convert-case',
+            'nav_emoticon': '/en/emoticon',
+            }
+        transl = {
+            'name_c': 'CONVERT CASE',
+            'dev': 'Developed with \U0001F499 by Hireki'
+            }
+        return render(request, 'emoji/en_emoji.html', {
+            'links': links, 'emojis': emojis, 'transl': transl})
 
     elif request.path == '/pt/emoji':
-        nav = {'nav_emoji': '/pt/emoji', 'nav_convert': '/pt/convert-case',
-            'nav_emoticon': '/pt/emoticon'}
-        return render(request, 'emoji/pt_emoji.html',
-                        {'nav': nav, 'emojis': emojis})
+        links = {
+            'nav_emoji': '/pt/emoji',
+            'nav_convert': '/pt/convert-case',
+            'nav_emoticon': '/pt/emoticon',
+            }
+        transl = {
+            'name_c': 'LETRAS DIFERENTES',
+            'dev':'Desenvolvido com \U0001F499 por Hireki'
+            }
+        return render(request, 'emoji/pt_emoji.html', {
+            'links': links, 'transl': transl, 'emojis': emojis})
 
 faces = [
     u'\U0001f600',

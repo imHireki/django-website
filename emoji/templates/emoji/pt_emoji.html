@@ -1,4 +1,80 @@
 {% extends 'base.html' %}
-{% block main %} 
-bbbbbbbbbb
+{% block title %}Emojis{% endblock %}
+{% block side_left%}
+<p><a href="#0">Novos Emojis</a></p>
+<p><a href="#1">Carinhas e Gestos</a></p>
+<p><a href="#2">Pessoas e Atividades</a></p>
+<p><a href="#3">Simbolos e Objetos</a></p>
+<p><a href="#4">Viajem e Bandeiras</a></p>
+{% endblock %}
+{% block main %}
+<h3>Emojis</h3>
+<div class="row">
+  <h2 id="0">Novos Emojis</h2>
+  <p class="emoji">
+  {% for x in emojis.newemojis %}
+  {{ x }}
+  {% endfor %}
+  </p>
+  <div class="col"><hr></div>
+</div>
+<div class="row">
+  <h2 id="1">Carinhas e Gestos</h2> 
+  <p class="emoji">
+  {% for x in emojis.faces%}
+  {{ x }}
+  {% endfor %}
+  {% for y in emojis.gestures %}
+  {{ y }}
+  {% endfor %}
+  </p>
+  <div class="col"><hr></div>
+</div>
+<div class="row">
+  </p>
+  <h2 id="2">Pessoas e Atividades</h2>
+  <p class="emoji"> 
+  {% for x in emojis.people%}
+  {{ x }}
+  {% endfor %}
+  {% for y in emojis.activity %}
+  {{ y }}
+  {% endfor %}
+  </p>
+  <div class="col"><hr></div>
+</div>
+<div class="row">
+  </p> 
+  <h2 id="3">Simbolos e Objetos</h2>
+  <p class="emoji">
+  {% for x in emojis.symbols %}
+  {{ x }}
+  {% endfor %}
+  {% for y in emojis.objects %}
+  {{ y }}
+  {% endfor %}
+  </p>
+  <div class="col"><hr></div>
+</div>
+<div class="row">
+  <h2 id="4">Viajem e Bandeiras</h2>
+  <p class="emoji"> 
+  {% for x in emojis.travel %}
+  {{ x }}
+  {% endfor %}
+  {% for y in emojis.flags %}
+  {{ y }}
+  {% endfor %}
+  </p>
+  <div class="col"><hr></div>
+</div>
+<div class="row justify-content-center">
+  <p>
+    <a href="#0">Novos Emojis</a> |
+    <a href="#1">Carinhas e Gestos</a> |
+    <a href="#2">Pessoas e Atividades</a> |
+    <a href="#3">Simbolos e Objetos</a> |
+    <a href="#4">Viajem e Bandeiras</a>
+  </p>
+</div>
 {% endblock %}
