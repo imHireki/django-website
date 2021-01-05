@@ -33,7 +33,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'home.apps.HomeConfig',
     'emoji.apps.EmojiConfig',
     'emoticon.apps.EmoticonConfig',
     'convert.apps.ConvertConfig',

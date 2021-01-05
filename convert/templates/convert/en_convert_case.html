@@ -15,7 +15,13 @@
 {% block main %}
 <h3>Convert Case</h3>
 <div id="io_forms" class="row justify-content-center">
+{% if not context.form.d_new %}
+	{% with val="12"%}
+	<div class="col-sm-{{val}}">
+	{% endwith %}
+{% else %}
 	<div class="col-sm-6">
+{% endif %}
 		<form id="input_form" method="post" name="vaidarcerto">{% csrf_token %}
 			{{ context.form|crispy }}
 		</form>

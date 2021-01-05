@@ -66,6 +66,11 @@ hr {
   margin-right: 10px;
 }
 
+#text-complement {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: left;
+}
+
 p#center {
   display: block;
   text-align: center;

@@ -16,7 +16,7 @@ def emoji(request):
         'flags': flags,
         'newemojis': newemojis,
         }
-
+    
     if request.path == '/en/emoji':
         links = {
             'nav_emoji': '/en/emoji',
@@ -29,7 +29,7 @@ def emoji(request):
             }
         return render(request, 'emoji/en_emoji.html', {
             'links': links, 'emojis': emojis, 'transl': transl})
-
+        
     elif request.path == '/pt/emoji':
         links = {
             'nav_emoji': '/pt/emoji',

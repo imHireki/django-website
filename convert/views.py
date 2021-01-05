@@ -1,6 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from convert.forms import InputForms
 
+
+def redi(request):
+    if request.path == '/en/' or request.path == '/':  # só retorna para en
+        return redirect('/en/convert-case')
+    elif request.path == '/pt/':
+        return redirect('/pt/convert-case')
 
 def convert(request):
     # Form 
@@ -14,125 +20,105 @@ def convert(request):
     # Buttons
     if submit:
         if submit == 'btn-a':
+            form.d_new = form.d.upper()
+        elif submit == 'btn-b':
+            form.d_new = form.d.title()
+        elif submit == 'btn-c':
+            form.d_new = form.d.lower()
+        elif submit == 'btn-d':
             for c in form.d:
                 if c in fraktur:
                     c = fraktur[c]
                 form.d_new += c
-
-        elif submit == 'btn-b':
+        elif submit == 'btn-e':
             for c in form.d:
                 if c in fraktur_b:
                     c = fraktur_b[c]
                 form.d_new += c
-        
-        elif submit == 'btn-c':
+        elif submit == 'btn-f':
             for c in form.d:
                 if c in monospace:
                     c = monospace[c]
                 form.d_new += c
-
-        elif submit == 'btn-d':
+        elif submit == 'btn-g':
             for c in form.d:
                 if c in double_struck:
                     c = double_struck[c]
                 form.d_new += c
-
-        elif submit == 'btn-e':
+        elif submit == 'btn-h':
             for c in form.d:
                 if c in script:
                     c = script[c]
                 form.d_new += c
-
-        elif submit == 'btn-f':
+        elif submit == 'btn-i':
             for c in form.d:
                 if c in script_b:
                     c = script_b[c]
                 form.d_new += c
-
-        elif submit == 'btn-g':
+        elif submit == 'btn-j':
             for c in form.d:
                 c = c.upper()
                 if c in circled_n:
                     c = circled_n[c]
                 form.d_new += c
-
-        elif submit == 'btn-h':
+        elif submit == 'btn-k':
             for c in form.d:
                 if c in circled:
                     c = circled[c]
                 form.d_new += c
-
-        elif submit == 'btn-i':
+        elif submit == 'btn-l':
             for c in form.d:
                 c = c.lower()
                 if c in squared:
                     c = squared[c]
                 form.d_new += c
-
-        elif submit == 'btn-j':
+        elif submit == 'btn-m':
             for c in form.d:
                 c = c.lower()
                 if c in squared_n:
                     c = squared_n[c]
                 form.d_new += c
-
-        elif submit == 'btn-k':
+        elif submit == 'btn-n':
             for c in form.d:
                 if c in serif_b:
                     c = serif_b[c]
                 form.d_new += c
-
-        elif submit == 'btn-l':
+        elif submit == 'btn-o':
             for c in form.d:
                 if c in serif_i:
                     c = serif_i[c]
                 form.d_new += c
-        
-        elif submit == 'btn-m':
+        elif submit == 'btn-p':
             for c in form.d:
                 if c in serif_ib:
                     c = serif_ib[c]
                 form.d_new += c
-
-        elif submit == 'btn-n':
+        elif submit == 'btn-q':
             for c in form.d:
                 if c in sans_serif:
                     c = sans_serif[c]
                 form.d_new += c
-
-        elif submit == 'btn-o':
+        elif submit == 'btn-r':
             for c in form.d:
                 if c in sans_serif_b:
                     c = sans_serif_b[c]
                 form.d_new += c
-
-        elif submit == 'btn-p':
+        elif submit == 'btn-s':
             for c in form.d:
                 if c in sans_serif_i:
                     c = sans_serif_i[c]
                 form.d_new += c
-
-        elif submit == 'btn-q':
+        elif submit == 'btn-t':
             for c in form.d:
                 if c in sans_serif_ib:
                     c = sans_serif_ib[c]
                 form.d_new += c
-
-        elif submit == 'btn-r':
+        elif submit == 'btn-u':
             form.d = form.d[::-1]
             for c in form.d:
                 if c in inverted:
                     c = inverted[c]
                 form.d_new += c
-        
-        elif submit == 'btn-s':
-            form.d_new = form.d.upper()
-        
-        elif submit == 'btn-t':
-            form.d_new = form.d.title()
-        
-        elif submit == 'btn-u':
-            form.d_new = form.d.lower()
     
     # Template render
     if request.path == '/en/convert-case':
@@ -214,7 +200,7 @@ inverted = {
     'W': 'M',
     'X': 'X',
     'Y': u'\u2144',
-    'Z': 'Z',
+    'Z': 'Z'
     }
 
 sans_serif_ib = {
@@ -269,7 +255,7 @@ sans_serif_ib = {
     'W': '\U0001D652',
     'X': '\U0001D653',
     'Y': '\U0001D654',
-    'Z': '\U0001D655',
+    'Z': '\U0001D655'
     }
 
 sans_serif_i = {
@@ -324,7 +310,7 @@ sans_serif_i = {
     'W': '\U0001D61E',
     'X': '\U0001D61F',
     'Y': '\U0001D620',
-    'Z': '\U0001D621',
+    'Z': '\U0001D621'
     }
 
 sans_serif_b = {
@@ -379,7 +365,7 @@ sans_serif_b = {
     'W': '\U0001D5EA',
     'X': '\U0001D5EB',
     'Y': '\U0001D5EC',
-    'Z': '\U0001D5ED',
+    'Z': '\U0001D5ED'
     }
 
 sans_serif = {
@@ -434,7 +420,7 @@ sans_serif = {
     'W': '\U0001D5B6',
     'X': '\U0001D5B7',
     'Y': '\U0001D5B8',
-    'Z': '\U0001D5B9',
+    'Z': '\U0001D5B9'
     }
 
 serif_ib = {
@@ -489,7 +475,7 @@ serif_ib = {
     'W': '\U0001D47E',
     'X': '\U0001D47F',
     'Y': '\U0001D480',
-    'Z': '\U0001D481',
+    'Z': '\U0001D481'
     }
 
 serif_i = {
@@ -544,7 +530,7 @@ serif_i = {
     'W': '\U0001D44A',
     'X': '\U0001D44B',
     'Y': '\U0001D44C',
-    'Z': '\U0001D44D',
+    'Z': '\U0001D44D'
     }
 
 serif_b = {
@@ -599,7 +585,7 @@ serif_b = {
     'W': '\U0001D416',
     'X': '\U0001D417',
     'Y': '\U0001D418',
-    'Z': '\U0001D419',
+    'Z': '\U0001D419'
     }
 
 squared_n = {
@@ -628,7 +614,7 @@ squared_n = {
     'w': '\U0001F186',
     'x': '\U0001F187',
     'y': '\U0001F188',
-    'z': '\U0001F189',
+    'z': '\U0001F189'
     }
 
 squared = {
@@ -657,7 +643,7 @@ squared = {
     'w': '\U0001F146',
     'x': '\U0001F147',
     'y': '\U0001F148',
-    'z': '\U0001F149',
+    'z': '\U0001F149'
     }
 
 circled_n = {
@@ -686,7 +672,7 @@ circled_n = {
     'W': '\U0001F166',
     'X': '\U0001F167',
     'Y': '\U0001F168',
-    'Z': '\U0001F169',
+    'Z': '\U0001F169'
     }
 
 circled = {
@@ -741,7 +727,7 @@ circled = {
     'W': u'\u24CC',
     'X': u'\u24CD',
     'Y': u'\u24CE',
-    'Z': u'\u24CF',
+    'Z': u'\u24CF'
     }
 
 script_b = {
@@ -796,7 +782,7 @@ script_b = {
     'W': '\U0001D4E6',
     'X': '\U0001D4E7',
     'Y': '\U0001D4E8',
-    'Z': '\U0001D4E9',
+    'Z': '\U0001D4E9'
     }
 
 script = {
@@ -851,7 +837,7 @@ script = {
     'W': '\U0001D4B2',
     'X': '\U0001D4B3',
     'Y': '\U0001D4B4',
-    'Z': '\U0001D4B5',
+    'Z': '\U0001D4B5'
     }
 
 double_struck = {
@@ -906,7 +892,7 @@ double_struck = {
     'W': '\U0001D54E',
     'X': '\U0001D54F',
     'Y': '\U0001D550',
-    'Z': '\U00002124',
+    'Z': '\U00002124'
     }
 
 monospace = {
@@ -961,7 +947,7 @@ monospace = {
     'W': '\U0001D686',
     'X': '\U0001D687',
     'Y': '\U0001D688',
-    'Z': '\U0001D689',
+    'Z': '\U0001D689'
     }
 
 fraktur = {
@@ -1016,7 +1002,7 @@ fraktur = {
     'W': '\U0001D51A',
     'X': '\U0001D51B',
     'Y': '\U0001D51C',
-    'Z': '\U00002128',
+    'Z': '\U00002128'
     }
 
 fraktur_b = {
@@ -1071,5 +1057,5 @@ fraktur_b = {
     'W': '\U0001D582',
     'X': '\U0001D583',
     'Y': '\U0001D584',
-    'Z': '\U0001D585',
+    'Z': '\U0001D585'
     }
