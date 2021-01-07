@@ -27,5 +27,4 @@ urlpatterns = [
     path('pt/emoji', include('emoji.urls')),
     path('en/emoticon', include('emoticon.urls')),
     path('pt/emoticon', include('emoticon.urls')),
-    path('admin/', admin.site.urls),
 ]

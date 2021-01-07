@@ -1,8 +1,12 @@
 /* Remove the navbar's default margin-bottom and rounded borders */ 
 .navbar {
-  margin-bottom: 0;
-  border-radius: 0;
-  background-color: #222222;
+  background-color: rgb(36,37,38);
+  padding: auto;
+  border-bottom: 2px solid rgb(58,59,60);
+}
+
+body {
+  background-color: rgb(24,25,26);
 }
 
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
@@ -10,14 +14,39 @@
 
 /* Set gray background color and 100% height */
 .sidenav {
-  padding-top: 20px;
-  background-color: #171717;
+  padding: 10px;
+  background-color: rgb(24,25,26);
   height: auto;  /* 100% */
 }
 
 #main {
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
   color: whitesmoke;
-  background-color: #111111;
+  background-color: rgb(36,37,38);
+  border-color:  rgb(24,25,26);
+  border-radius: 20px;
+}
+
+.side-block {
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: whitesmoke;
+  background-color: rgb(36,37,38);
+  border-color:  rgb(24,25,26);
+  border-radius: 20px;
+  padding: 0.25em;
+  margin-top: 0%;
+  
+}
+
+#id_input_txt, #id_origin {
+  color: whitesmoke;
+  background-color: rgb(78,79,80);
+  border-radius: 10px;
+  border: none;
 }
 
 
@@ -32,9 +61,10 @@
 
 /* Set black background color, white text and some padding */
 footer {
-  background-color: #222222;
+  background-color: rgb(36,37,38);
   color: white;
   padding: 15px;
+  border-top: 2px solid rgb(58,59,60);
 }
 
 a#link-nav {
@@ -51,7 +81,7 @@ hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
-  border-top: 3px solid  #171717;
+  border-top: 3px solid  rgb(24,25,26);
 }
 
 .table td {
@@ -69,6 +99,7 @@ hr {
 #text-complement {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: left;
+  padding: 12px;
 }
 
 p#center {
