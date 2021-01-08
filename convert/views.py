@@ -3,7 +3,7 @@ from convert.forms import InputForms
 
 
 def redi(request):
-    if request.path == '/en/' or request.path == '/':  # só retorna para en
+    if request.path == '/en/' or request.path == '/':
         return redirect('/en/convert-case')
     elif request.path == '/pt/':
         return redirect('/pt/convert-case')

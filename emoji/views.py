@@ -43,6 +43,7 @@ def emoji(request):
         return render(request, 'emoji/pt_emoji.html', {
             'links': links, 'transl': transl, 'emojis': emojis})
 
+
 faces = [
     u'\U0001f600',
     u'\U0001f601',
