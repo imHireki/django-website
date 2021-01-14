@@ -27,7 +27,7 @@ SECRET_KEY = '#vn$!%7_)o)q7k6g0n8g!#=%&$0zzr=w)&&rze2pbz%8q=_*6j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['shadesapps.com','www.shadesapps.com']
 
 
 # Application definition
@@ -129,3 +129,7 @@ STATICFILES_DIRS = [
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 STATIC_ROOT = os.path.join('static')
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
