@@ -18,7 +18,7 @@ from django.urls import path, include
 
 
 urlpatterns = [
-    path('', include('convert.urls')),
+    path('', include('home.urls')),
     path('en/', include('convert.urls')),
     path('pt/', include('convert.urls')),
     path('en/convert-case', include('convert.urls')),

@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['shadesapps.com','www.shadesapps.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'home.apps.HomeConfig',
     'emoji.apps.EmojiConfig',
     'emoticon.apps.EmoticonConfig',
     'convert.apps.ConvertConfig',

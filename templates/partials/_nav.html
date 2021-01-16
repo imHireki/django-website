@@ -5,7 +5,7 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<a class="navbar-brand p-0"><img src="{% static 'vendor/favicon.svg' %}" width="45" height="45" class="d-inline-block align-top"></a>
-		<h3 class="text-white mb-0">SHADESAPPS</h3>
+		<a href="/" style="text-decoration:none"><h3 class="text-white mb-0">SHADESAPPS</h3></a>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="navbar-nav ml-md-auto">
 				<li class="nav-item active">
@@ -15,7 +15,7 @@
 					<a id="link-nav" class="nav-link" href="{{ links.nav_emoticon }}">EMOTICONS</a>
 				</li>
 				<li class="nav-item active">
-					<a id="link-nav" class="nav-link active" href="{{ links.nav_convert }}">{{ transl.name_c }}</a>
+					<a id="link-nav" class="nav-link" href="{{ links.nav_convert }}">{{ transl.name_c }}</a>
 				</li>
 			</ul>
 		</div>
