@@ -13,8 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include 
+from core.views import robots_txt
+from django.urls import path, include
+from django.views.generic.base import TemplateView
+from . import views
 
 
 urlpatterns = [
@@ -27,4 +29,6 @@ urlpatterns = [
     path('pt/emoji', include('emoji.urls')),
     path('en/emoticon', include('emoticon.urls')),
     path('pt/emoticon', include('emoticon.urls')),
+    path('robots.txt', views.robots_txt, name='robots'),
+    path('sitemap.xml', views.sitemap_xml, name='sitemap')
 ]

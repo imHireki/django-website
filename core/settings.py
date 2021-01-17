@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'emoticon.apps.EmoticonConfig',
     'convert.apps.ConvertConfig',
     'crispy_forms',
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',

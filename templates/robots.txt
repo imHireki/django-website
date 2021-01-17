@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /pt/convert-case
+Allow: /pt/emoji
+Allow: /pt/emoticon
+Allow: /en/convert-case
+Allow: /en/emoji
+Allow: /en/emoticon
+
+Sitemap: https://www.google.com/sitemap.xml
