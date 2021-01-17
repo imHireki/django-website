@@ -32,12 +32,16 @@ body {
   justify-content: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  color: whitesmoke;
+  color: rgb(66, 147, 245);
   background-color: rgb(36,37,38);
   border-color:  rgb(24,25,26);
   border-radius: 20px;
   padding: 0.25em;
   margin-top: 0%;
+}
+
+.side-block:hover {
+  background-color: rgb(78,79,80);
 }
 
 #id_input_txt, #id_origin {
@@ -71,18 +75,25 @@ footer {
   padding: 0.25em;
   margin-top: 0%;
 }
-
 .card:hover {
   background-color: rgb(78,79,80);
 }
 
-a#link-nav {
+#link-nav {
   font-family: 'Cantata One', serif;
   font-size: 18px;
 }
+#link-nav:hover {
+  color: rgb(66, 147, 245);
+}
 
-a#link-nav:hover {
-  color: rgb(0,123,255);
+#name-brand {
+  font-size: x-large;
+  text-decoration: none;
+  color: aliceblue;
+}
+#name-brand:hover {
+  color: rgb(66, 147, 245);
 }
 
 h1, h2, h3, h4, h5, h6 {
