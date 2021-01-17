@@ -3,7 +3,7 @@ from convert.forms import InputForms
 
 
 def redi(request):
-    if request.path == '/en/' or request.path == '/':
+    if request.path == '/en/':
         return redirect('/en/convert-case')
     elif request.path == '/pt/':
         return redirect('/pt/convert-case')
@@ -129,7 +129,8 @@ def convert(request):
             }
         transl = {
             'name_c': 'CONVERT CASE',
-            'dev': 'Developed with \U0001F499 by Hireki'
+            'dev': 'Developed with \U0001F499 by Hireki',
+            'desc': 'You can easily generate different styles of text, including UPPERCASE, lowercase and Title Case for fancy Youtube titles, and even cool fonts.'
             }
         return render(request, 'convert/en_convert_case.html', {
             'links': links, 'context': context, 'transl': transl})
@@ -142,7 +143,8 @@ def convert(request):
             }
         transl = {
             'name_c': 'LETRAS DIFERENTES',
-            'dev':'Desenvolvido com \U0001F499 por Hireki'
+            'dev':'Desenvolvido com \U0001F499 por Hireki',
+            'desc': 'Converta seu texto com fontes de letras diferentes, legais e personalizadas, além de títulos para o Youtube automáticos em MAIÚSCULO, minúsculo e Título.'
             }
         return render(request, 'convert/pt_convert_case.html', {
             'links': links, 'context': context, 'transl': transl})

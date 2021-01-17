@@ -25,7 +25,8 @@ def emoji(request):
             }
         transl = {
             'name_c': 'CONVERT CASE',
-            'dev': 'Developed with \U0001F499 by Hireki'
+            'dev': 'Developed with \U0001F499 by Hireki',
+            'desc': 'You will find here lists with emojis for copy and paste. Covering new emojis, faces, gestures, symbols, heart emoji, sad emoji and so many others.'
             }
         return render(request, 'emoji/en_emoji.html', {
             'links': links, 'emojis': emojis, 'transl': transl})
@@ -38,7 +39,8 @@ def emoji(request):
             }
         transl = {
             'name_c': 'LETRAS DIFERENTES',
-            'dev':'Desenvolvido com \U0001F499 por Hireki'
+            'dev':'Desenvolvido com \U0001F499 por Hireki',
+            'desc': 'Encontre aqui listas com novos emojis, carinhas, sinais, gestos, emojis de coração, de animais, símbolos, objetos e bandeiras para copiar e colar.'
             }
         return render(request, 'emoji/pt_emoji.html', {
             'links': links, 'transl': transl, 'emojis': emojis})

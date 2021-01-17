@@ -29,7 +29,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['shadesapps.com','www.shadesapps.com']
 
-
 # Application definition
 
 INSTALLED_APPS = [
