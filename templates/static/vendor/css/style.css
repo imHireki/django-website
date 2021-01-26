@@ -1,4 +1,3 @@
-/* Remove the navbar's default margin-bottom and rounded borders */ 
 .navbar {
   background-color: rgb(36,37,38);
   padding: auto;
@@ -9,14 +8,12 @@ body {
   background-color: rgb(24,25,26);
 }
 
-/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 .row.content {height: auto}
 
-/* Set gray background color and 100% height */
 .sidenav {
   padding: 15px;
   background-color: rgb(24,25,26);
-  height: auto;  /* 100% */
+  height: auto;
 }
 
 #main {
@@ -26,6 +23,28 @@ body {
   color: whitesmoke;
   background-color: rgb(36,37,38);
   border-radius: 20px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height:auto;}
+}
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: rgb(36,37,38);
+  color: white;
+  padding: 15px;
+  border-top: 2px solid rgb(58,59,60);
+}
+
+@font-face {
+  font-family: Noto Color Emoji;
+  src: url('fonts/NotoColorEmoji.ttf');
 }
 
 .side-block {
@@ -40,7 +59,19 @@ body {
   margin-top: 0%;
 }
 
-.side-block:hover {
+.side-block-emoji {
+  font-family: "Noto Color Emoji", serif;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: rgb(66, 147, 245);
+  background-color: rgb(36,37,38);
+  border-color:  rgb(24,25,26);
+  border-radius: 20px;
+  padding: 0.25em;
+  margin-top: 0%;
+}
+.side-block:hover, .side-block-emoji:hover {
   background-color: rgb(78,79,80);
 }
 
@@ -49,23 +80,6 @@ body {
   background-color: rgb(78,79,80);
   border-radius: 10px;
   border: none;
-}
-
-/* On small screens, set height to 'auto' for sidenav and grid */
-@media screen and (max-width: 767px) {
-  .sidenav {
-    height: auto;
-    padding: 15px;
-  }
-  .row.content {height:auto;} 
-}
-
-/* Set black background color, white text and some padding */
-footer {
-  background-color: rgb(36,37,38);
-  color: white;
-  padding: 15px;
-  border-top: 2px solid rgb(58,59,60);
 }
 
 .card {
@@ -80,7 +94,7 @@ footer {
 }
 
 #link-nav {
-  font-family: 'Cantata One', serif;
+  font-family: Arial, serif;
   font-size: 18px;
 }
 #link-nav:hover {
@@ -88,7 +102,9 @@ footer {
 }
 
 #name-brand {
-  font-size: x-large;
+  font-family: Arial, serif;
+  height: 45px;
+  font-size: 30px;
   text-decoration: none;
   color: aliceblue;
 }
@@ -97,12 +113,12 @@ footer {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Cantata One', serif;
+  font-family: Arial, serif;
   font-weight: 400;
 }
 
 #text-complement {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: sans-serif;
   text-align: left;
   padding: 12px;
 }
@@ -117,7 +133,7 @@ hr {
 .table td {
   border-top: none;
   color: gainsboro;
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 .table {
@@ -132,6 +148,7 @@ p#center {
 }
 
 p.emoji {
+  font-family: "Noto Color Emoji", serif;
   padding-left: 1%;
   padding-right: 1%;
   text-align: center;
