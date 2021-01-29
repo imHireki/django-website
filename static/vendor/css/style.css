@@ -42,11 +42,6 @@ footer {
   border-top: 2px solid rgb(58,59,60);
 }
 
-@font-face {
-  font-family: Noto Color Emoji;
-  src: url('fonts/NotoColorEmoji.ttf');
-}
-
 .side-block {
   justify-content: center;
   margin-top: 10px;
@@ -59,19 +54,7 @@ footer {
   margin-top: 0%;
 }
 
-.side-block-emoji {
-  font-family: "Noto Color Emoji", serif;
-  justify-content: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: rgb(66, 147, 245);
-  background-color: rgb(36,37,38);
-  border-color:  rgb(24,25,26);
-  border-radius: 20px;
-  padding: 0.25em;
-  margin-top: 0%;
-}
-.side-block:hover, .side-block-emoji:hover {
+.side-block:hover {
   background-color: rgb(78,79,80);
 }
 
@@ -148,7 +131,7 @@ p#center {
 }
 
 p.emoji {
-  font-family: "Noto Color Emoji", serif;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji";
   padding-left: 1%;
   padding-right: 1%;
   text-align: center;
