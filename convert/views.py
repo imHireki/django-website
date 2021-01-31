@@ -120,6 +120,11 @@ def convert(request):
                     c = inverted[c]
                 form.d_new += c
     
+    html_lang = {
+        'hreflang0': '<link rel="alternate" hreflang="en" href="https://www.shadesapps.com/en/convert-case" />',
+        'hreflang1': '<link rel="alternate" hreflang="pt" href="https://www.shadesapps.com/pt/convert-case" />',
+        'hreflang2': '<link rel="alternate" hreflang="x-default" href="https://www.shadesapps.com/en/convert-case" />'
+        }
     # Template render
     if request.path == '/en/convert-case':
         links = {
@@ -133,7 +138,7 @@ def convert(request):
             'desc': 'You can easily generate different styles of text, including UPPERCASE, lowercase and Title Case for fancy Youtube titles, and even cool fonts.'
             }
         return render(request, 'convert/en_convert_case.html', {
-            'links': links, 'context': context, 'transl': transl})
+            'links': links, 'context': context, 'transl': transl, 'html_lang': html_lang})
 
     elif request.path == '/pt/convert-case':
         links = {
@@ -147,7 +152,7 @@ def convert(request):
             'desc': 'Converta seu texto com fontes de letras diferentes, legais e personalizadas, além de títulos para o Youtube automáticos em MAIÚSCULO, minúsculo e Título.'
             }
         return render(request, 'convert/pt_convert_case.html', {
-            'links': links, 'context': context, 'transl': transl})
+            'links': links, 'context': context, 'transl': transl, 'html_lang': html_lang})
 
 
 inverted = {

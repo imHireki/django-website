@@ -17,6 +17,12 @@ def emoji(request):
         'newemojis': newemojis,
         }
     
+    html_lang = {
+    'hreflang0': '<link rel="alternate" hreflang="en" href="https://www.shadesapps.com/en/emoji" />',
+    'hreflang1': '<link rel="alternate" hreflang="pt" href="https://www.shadesapps.com/pt/emoji" />',
+    'hreflang2': '<link rel="alternate" hreflang="x-default" href="https://www.shadesapps.com/en/emoji" />'
+    }
+    
     if request.path == '/en/emoji':
         links = {
             'nav_emoji': '/en/emoji',
@@ -29,7 +35,7 @@ def emoji(request):
             'desc': 'You will find here lists with emojis for copy and paste. Covering new emojis, faces, gestures, symbols, heart emoji, sad emoji and so many others.'
             }
         return render(request, 'emoji/en_emoji.html', {
-            'links': links, 'emojis': emojis, 'transl': transl})
+            'links': links, 'emojis': emojis, 'transl': transl, 'html_lang': html_lang})
         
     elif request.path == '/pt/emoji':
         links = {
@@ -43,7 +49,7 @@ def emoji(request):
             'desc': 'Encontre aqui listas com novos emojis, carinhas, sinais, gestos, emojis de coração, de animais, símbolos, objetos e bandeiras para copiar e colar.'
             }
         return render(request, 'emoji/pt_emoji.html', {
-            'links': links, 'transl': transl, 'emojis': emojis})
+            'links': links, 'transl': transl, 'emojis': emojis, 'html_lang': html_lang})
 
 
 faces = [
