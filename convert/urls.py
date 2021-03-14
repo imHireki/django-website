@@ -3,6 +3,6 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.redi, name='redi'),
-    path('convert-case', views.convert, name='convert_case'),
+    # path('', views.redi, name='redi'),
+    path('convert-case', views.Convert.as_view()),
 ]

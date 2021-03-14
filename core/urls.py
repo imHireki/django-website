@@ -21,8 +21,10 @@ from . import views
 
 urlpatterns = [
     path('', include('home.urls')),
+    # TODO: Fix redirect
     path('en/', include('convert.urls')),
     path('pt/', include('convert.urls')),
+    
     path('en/convert-case', include('convert.urls')),
     path('pt/convert-case', include('convert.urls')),
     path('en/emoji', include('emoji.urls')),
