@@ -3,7 +3,7 @@ from django.views.generic.base import View
 from utils import emoji_dicts
 
 class Emoji(View):
-    template_name = 'emoji/en_emoji.html'
+    template_name = 'emoji/emoji.html'
     
     def get(self, request, *args, **kwargs):
         emojis = {
