@@ -13,24 +13,28 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.shortcuts import redirect
 from core.views import robots_txt
 from django.urls import path, include
 from django.views.generic.base import TemplateView
 from . import views
-
+import re
 
 urlpatterns = [
     path('', include('home.urls')),
     # TODO: Fix redirect
-    path('en/', include('convert.urls')),
-    path('pt/', include('convert.urls')),
+    path('en/', include('home.urls')),
+    path('pt/', include('home.urls')),
     
     path('en/convert-case', include('convert.urls')),
     path('pt/convert-case', include('convert.urls')),
+    
     path('en/emoji', include('emoji.urls')),
     path('pt/emoji', include('emoji.urls')),
+    
     path('en/emoticon', include('emoticon.urls')),
     path('pt/emoticon', include('emoticon.urls')),
+    
     path('robots.txt', views.robots_txt, name='robots'),
     path('sitemap.xml', views.sitemap_xml, name='sitemap')
 ]
