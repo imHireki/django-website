@@ -1,14 +1,7 @@
 {% load static %}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-{% if transl.desc %}
-<meta name="description" content="{{ transl.desc }}">
-{% endif %}
-{% if html_lang.hreflang0 %}
-{{ html_lang.hreflang0|safe }}
-{{ html_lang.hreflang1|safe }}
-{{ html_lang.hreflang2|safe }}
-{% endif %}
+<!-- TODO: add meta desc and hreflang -->
 <link rel="shortcut icon" href="{% static 'vendor/favicon.svg' %}" type="image/x-icon">
 <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
 <link href="{% static 'vendor/css/style.css'%}" rel="stylesheet">

@@ -1,7 +1,7 @@
 from django.urls import path
-from . import views
+from .views import Emoji
 
 
 urlpatterns = [
-    path('', views.emoji, name='emoji'),
+    path('', Emoji.as_view()),
 ]

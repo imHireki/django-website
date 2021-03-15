@@ -130,10 +130,10 @@ p#center {
   text-align: center;
 }
 
-p.emoji {
+.emoji {
   font-family: "Apple Color Emoji", "Segoe UI Emoji";
-  padding-left: 1%;
-  padding-right: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
   text-align: center;
   font-size: 2.7em;
 }
