@@ -1,7 +1,47 @@
 {% load static %}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- TODO: add meta desc and hreflang -->
+<meta name="robots" content="index, follow, max-snippet:-1">
+{% if request.path == '/' %}
+<link rel="canonical" href="https://www.shadesapps.com/">
+<meta name="description" content="Find here emojis, emoticons, kaomoji and convert your text for different letter cases or fancy fonts">
+{% elif request.path == '/en/emoji/'%}
+<link rel="canonical" href="https://www.shadesapps.com/en/emoji/">
+<meta name="description" content="You will find here lists with emojis for copy and paste. Covering new emojis, faces, gestures, symbols, heart emoji, sad emoji and so many others.">
+<link rel="alternate" hreflang="en" href="https://www.shadesapps.com/en/emoji/">
+<link rel="alternate" hreflang="pt-br" href="https://www.shadesapps.com/pt/emoji/">
+<link rel="alternate" hreflang="x-default" href="https://www.shadesapps.com/en/emoji/">
+{% elif request.path == '/pt/emoji/' %}
+<link rel="canonical" href="https://www.shadesapps.com/pt/emoji/">
+<meta name="description" content="Encontre aqui listas com novos emojis, carinhas, sinais, gestos, emojis de coraçao, de animais, símbolos, objetos e bandeiras para copiar e colar.">
+<link rel="alternate" hreflang="en" href="https://www.shadesapps.com/en/emoji/">
+<link rel="alternate" hreflang="pt-br" href="https://www.shadesapps.com/pt/emoji/">
+<link rel="alternate" hreflang="x-default" href="https://www.shadesapps.com/en/emoji/">
+{% elif request.path == '/en/emoticon/' %}
+<link rel="canonical" href="https://www.shadesapps.com/en/emoticon/">
+<meta name="description" content="You will find here lists with emoticons, kaomojis, Japanese emoticons and ASCII Japanese emojis, happy, sad, anger, shrug and cute emojis, for copy and paste.">
+<link rel="alternate" hreflang="en" href="https://www.shadesapps.com/en/emoticon/">
+<link rel="alternate" hreflang="pt-br" href="https://www.shadesapps.com/pt/emoticon/">
+<link rel="alternate" hreflang="x-default" href="https://www.shadesapps.com/en/emoticon/">
+{% elif request.path == '/pt/emoticon/' %}
+<link rel="canonical" href="https://www.shadesapps.com/pt/emoticon/">
+<meta name="description" content="Encontre aqui listas de reações kaomoji, emojis e emoticons Japoneses em ASCII, feliz, triste, com raiva, e fofos, além de Lenny Face e outros.">
+<link rel="alternate" hreflang="en" href="https://www.shadesapps.com/en/emoticon/">
+<link rel="alternate" hreflang="pt-br" href="https://www.shadesapps.com/pt/emoticon/">
+<link rel="alternate" hreflang="x-default" href="https://www.shadesapps.com/en/emoticon/">
+{% elif request.path == '/en/convert-case/'%}
+<link rel="canonical" href="https://www.shadesapps.com/en/convert-case/">
+<meta name="description" content="You can easily generate different styles of text, including UPPERCASE, lowercase and Title Case for fancy Youtube titles, and even cool fonts.">
+<link rel="alternate" hreflang="en" href="https://www.shadesapps.com/en/convert-case/">
+<link rel="alternate" hreflang="pt-br" href="https://www.shadesapps.com/pt/convert-case/">
+<link rel="alternate" hreflang="x-default" href="https://www.shadesapps.com/en/convert-case/">
+{% elif request.path == '/pt/convert-case/'%}
+<link rel="canonical" href="https://www.shadesapps.com/pt/convert-case/">
+<meta name="description" content="Converta seu texto com fontes de letras diferentes, legais e personalizadas, além de títulos para o Youtube automáticos em MAIÚSCULO, minúsculo e Título.">
+<link rel="alternate" hreflang="en" href="https://www.shadesapps.com/en/convert-case/">
+<link rel="alternate" hreflang="pt-br" href="https://www.shadesapps.com/pt/convert-case/">
+<link rel="alternate" hreflang="x-default" href="https://www.shadesapps.com/en/convert-case/">
+{% endif %}
 <link rel="shortcut icon" href="{% static 'vendor/favicon.svg' %}" type="image/x-icon">
 <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
 <link href="{% static 'vendor/css/style.css'%}" rel="stylesheet">

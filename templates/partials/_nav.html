@@ -7,7 +7,20 @@
 		<a href="/" class="navbar-brand p-0"><img src="{% static 'vendor/favicon.svg' %}" width="45" height="45" class="d-inline-block align-top"></a>
 		<a href="/" id="name-brand"><p class="mb-0">SHADESAPPS</p></a>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		{% if '/en/' in request.path or request.path == '/' %}
+		{% if request.path == '/' and 'pt' in request.META.HTTP_ACCEPT_LANGUAGE %}
+			<ul class="navbar-nav ml-md-auto">
+				<li class="nav-item active">
+					<a id="link-nav" class="nav-link" href="/pt/emoji">EMOJIS</a>
+				</li>
+				<li class="nav-item active">
+					<a id="link-nav" class="nav-link" href="/pt/emoticon">EMOTICONS</a>
+				</li>
+				<li class="nav-item active">
+					<a id="link-nav" class="nav-link" href="/pt/convert-case">LETRAS DIFERENTES</a>
+				</li>
+			</ul>		
+		{% else %}
+			{% if '/en/' in request.path %}
 			<ul class="navbar-nav ml-md-auto">
 				<li class="nav-item active">
 					<a id="link-nav" class="nav-link" href="/en/emoji">EMOJIS</a>
@@ -19,7 +32,7 @@
 					<a id="link-nav" class="nav-link" href="/en/convert-case">CONVERT CASE</a>
 				</li>
 			</ul>
-		{% else %}
+			{% else %}
 			<ul class="navbar-nav ml-md-auto">
 				<li class="nav-item active">
 					<a id="link-nav" class="nav-link" href="/pt/emoji">EMOJIS</a>
@@ -31,6 +44,7 @@
 					<a id="link-nav" class="nav-link" href="/pt/convert-case">LETRAS DIFERENTES</a>
 				</li>
 			</ul>
+			{% endif %}
 		{% endif %}
 		</div>
 	</div>

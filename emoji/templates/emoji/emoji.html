@@ -22,7 +22,11 @@
 
 {% block main %}
 <h1 class="mt-2">Emojis</h1>
+{% if '/en/' in request.path %}
 <h2 class="ml-4 text-left" id="0">Faces and Gestures</h2>
+{% else %}
+<h2 class="ml-4 text-left" id="0">Carinhas e Gestos</h2>
+{% endif %}
 <div class="row">
   <div class="col-lg emoji">
     {% for x in emojis.faces%}
@@ -34,7 +38,11 @@
   </div>
 </div>
 <div class="col"><hr></div>
+{% if '/en/' in request.path %}
 <h2 class="ml-4 text-left" id="1">People and Activity</h2>
+{% else %}
+<h2 class="ml-4 text-left" id="1">Pessoas e Atividades</h2>
+{% endif %}
 <div class="row">
   <div class="col-lg emoji">
     {% for x in emojis.people%}
@@ -46,7 +54,11 @@
   </div>
 </div>
 <div class="col"><hr></div>
+{% if '/en/' in request.path %}
 <h2 class="ml-4 text-left" id="2">Nature and Food</h2>
+{% else %}
+<h2 class="ml-4 text-left" id="2">Natureza e Comidas</h2>
+{% endif %}
 <div class="row">
   <div class="col-lg emoji">
     {% for x in emojis.nature%}
@@ -58,7 +70,11 @@
   </div>
 </div>
 <div class="col"><hr></div>
+{% if '/en/' in request.path %}
 <h2 class="ml-4 text-left" id="3">Symbols and Objects</h2>
+{% else %}
+<h2 class="ml-4 text-left" id="2">Símbolos e Objetos</h2>
+{% endif %}
 <div class="row">
   <div class="col-lg emoji">
     {% for x in emojis.symbols %}
@@ -70,7 +86,11 @@
   </div>
 </div>
 <div class="col"><hr></div>
+{% if '/en/' in request.path %}
 <h2 class="ml-4 text-left" id="4">Travel and Flags</h2>
+{% else %}
+<h2 class="ml-4 text-left" id="4">Viagem e Bandeiras</h2>
+{% endif %}
 <div class="row">
   <div class="col-lg emoji"> 
     {% for x in emojis.travel %}
@@ -82,7 +102,11 @@
   </div>
 </div>
 <div class="col"><hr></div>
+{% if '/en/' in request.path %}
 <h2 class="ml-4 text-left" id="5">New Emojis</h2>
+{% else %}
+<h2 class="ml-4 text-left" id="5">Novos Emojis</h2>
+{% endif %}
 <div class="row">
   <div class="col-lg emoji"> 
     {% for x in emojis.newemojis %}
@@ -131,6 +155,6 @@
 {% endif %}
 {% endblock %}
 {% block side_right %}
-<a href="/en/emoji" style="text-decoration:none"><p class="side-block">&#127482;&#127480; en</p></a>
-<a href="/pt/emoji" style="text-decoration:none"><p class="side-block">&#127463;&#127479; pt-br</p></a>
+<a href="/en/emoji/" style="text-decoration:none"><p class="side-block">&#127482;&#127480; en</p></a>
+<a href="/pt/emoji/" style="text-decoration:none"><p class="side-block">&#127463;&#127479; pt-br</p></a>
 {% endblock %}

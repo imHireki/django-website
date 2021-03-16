@@ -18,13 +18,13 @@ from core.views import robots_txt
 from django.urls import path, include
 from django.views.generic.base import TemplateView
 from . import views
-import re
+
 
 urlpatterns = [
     path('', include('home.urls')),
-    # TODO: Fix redirect
-    path('en/', include('home.urls')),
-    path('pt/', include('home.urls')),
+    
+    path('en/', views.redir),
+    path('pt/', views.redir),
     
     path('en/convert-case/', include('convert.urls')),
     path('pt/convert-case/', include('convert.urls')),

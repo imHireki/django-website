@@ -1,6 +1,10 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+{% if 'en/' in request.path or request.path == '/' %}
+<html lang="en">
+{% else %}
+<html lang="pt-BR">
+{% endif %}
 <head>
   {% include 'partials/_head.html'%}
   <title>{% block title %}{% endblock %}</title>

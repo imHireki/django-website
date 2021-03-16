@@ -2,10 +2,10 @@
 {% load crispy_forms_tags %}
 
 {% block title %}
-{% if request.path == '/en/conver-case' %}
-Shadesapps | Convert Case &amp; Fancy Fonts &#128526;
+{% if request.path == '/en/convert-case/' %}
+	Shadesapps | Convert Case &amp; Fancy Fonts &#128526;
 {% else %}
-Shadesapps | Letras Diferentes &#128526;
+	Shadesapps | Letras Diferentes &#128526;
 {% endif %}
 {% endblock %}
 
@@ -103,7 +103,7 @@ Shadesapps | Letras Diferentes &#128526;
 <hr>
 <div class="row mt-3">
 	<p id="text-complement">
-	{% if request.path == '/en/convert-case' %}
+	{% if request.path == '/en/convert-case/' %}
 		You can easily use the convert case for generate different styles of text, including UPPERCASE,
 		lowercase and Title Case - capitalizes the first letter of each word -, that can be handy
 		when dealing with Youtube titles and the like.
@@ -123,6 +123,6 @@ Shadesapps | Letras Diferentes &#128526;
 {% endblock %}
 <!-- TODO: place some image flags instead of emojis -->
 {% block side_right %}
-<a href="/en/convert-case" style="text-decoration:none"><p class="side-block">&#127482;&#127480; en</p></a>
-<a href="/pt/convert-case" style="text-decoration:none"><p class="side-block">&#127463;&#127479; pt-br</p></a>
+<a href="/en/convert-case/" style="text-decoration:none"><p class="side-block">&#127482;&#127480; en</p></a>
+<a href="/pt/convert-case/" style="text-decoration:none"><p class="side-block">&#127463;&#127479; pt-br</p></a>
 {% endblock %}
