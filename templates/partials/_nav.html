@@ -20,7 +20,7 @@
 				</li>
 			</ul>		
 		{% else %}
-			{% if '/en/' in request.path %}
+			{% if '/en/' in request.path or request.path == '/' %}
 			<ul class="navbar-nav ml-md-auto">
 				<li class="nav-item active">
 					<a id="link-nav" class="nav-link" href="/en/emoji">EMOJIS</a>

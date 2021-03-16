@@ -16,8 +16,10 @@ body {
   height: auto;
 }
 
-#main {
+.rounded-block {
   justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
   margin-top: 15px;
   margin-bottom: 15px;
   color: whitesmoke;
@@ -32,6 +34,12 @@ body {
     padding: 15px;
   }
   .row.content {height:auto;}
+  
+  #main {
+    height: auto;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
 }
 
 /* Set black background color, white text and some padding */
@@ -77,7 +85,8 @@ footer {
 }
 
 #link-nav {
-  font-family: Arial, serif;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
   font-size: 18px;
 }
 #link-nav:hover {
@@ -85,7 +94,8 @@ footer {
 }
 
 #name-brand {
-  font-family: Arial, serif;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
   height: 45px;
   font-size: 30px;
   text-decoration: none;
@@ -96,14 +106,27 @@ footer {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Arial, serif;
-  font-weight: 400;
+  font-family: Helvetica, Arial, serif;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+h2 {
+  font-size: 25px;
 }
 
 #text-complement {
-  font-family: sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
   text-align: left;
-  padding: 12px;
+  padding: 1%;
+  margin-bottom: 0px;
+}
+
+.title-sub {
+  text-align: left;
+  margin-left: 2%;
+  padding: 1%;
 }
 
 hr {
@@ -140,4 +163,12 @@ p#center {
 
 #attribution {
   font-size: 10px;
+}
+
+.btn {
+  margin-bottom: 4px;
+}
+
+a:hover {
+  text-decoration: none;
 }

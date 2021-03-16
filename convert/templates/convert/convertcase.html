@@ -10,115 +10,118 @@
 {% endblock %}
 
 {% block main %}
-{% if request.path == '/en/convert-case/' %}
-	<h2 class="mt-2">Case Converter</h2>
-{% else %}
-	<h2 class="mt-2">Letras Diferentes</h2>
-{% endif %}
-<div id="io_forms" class="row justify-content-center mt-2">
-{% if not form.treated_data %}
-	{% with val="12"%}
-	<div class="col-sm-{{val}}">
-	{% endwith %}
-{% else %}
-	<div class="col-sm-6">
-{% endif %}
-		<form id="input_form" method="post" name="vaidarcerto">{% csrf_token %}
-			{{ form|crispy }}
-		</form>
-	</div>
-{% if form.treated_data %}
-	<div class="col-sm-6 mb-2">
-		<textarea class="form-control" id="id_origin" rows="5">{{ form.treated_data }}</textarea>
-	</div>
-{% endif %}
-</div>
-<div class="row">
-	<div class="col p-0">
-		<button name="submit" class="btn btn-outline-primary btn-lg mb-1" value="0" form="input_form">
-			UPPER
-		</button>
-		<button name="submit" class="btn btn-outline-primary btn-lg mb-1" value="1" form="input_form">
-			Title
-		</button>
-		<button name="submit" class="btn btn-outline-primary btn-lg mb-1" value="2" form="input_form">
-			lower
-		</button>
-		<button name="submit" class="btn btn-outline-primary btn-lg mb-1" value="3" form="input_form">
-			𝔉𝔯𝔞𝔨𝔱𝔲𝔯
-		</button>
-		<button name="submit" class="btn btn-outline-primary btn-lg mb-1" value="4" form="input_form">
-			𝕱𝖗𝖆𝖐𝖙𝖚𝖗 𝕭𝖔𝖑𝖉
-		</button>
-		<button name="submit" class="btn btn-outline-primary btn-lg mb-1" value="5" form="input_form">
-			𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎
-		</button>
-		<button name="submit" class="btn btn-outline-primary btn-lg mb-1" value="6" form="input_form">
-			𝔻𝕠𝕦𝕓𝕝𝕖 𝕊𝕥𝕣𝕦𝕔𝕜
-		</button>
-		<button name="submit" class="btn btn-outline-primary btn-lg mb-1" value="7" form="input_form">
-			𝒮𝒸𝓇𝒾𝓅𝓉
-		</button>
-		<button name="submit" class="btn btn-outline-primary btn-lg mb-1" value="8" form="input_form">
-			𝓢𝓬𝓻𝓲𝓹𝓽 𝓑𝓸𝓵𝓭
-		</button>
-		<button name="submit" class="btn btn-outline-primary btn-lg mb-1" value="9" form="input_form">
-			🅝🅔🅖🅐🅣🅘🅥🅔 🅒🅘🅡🅒🅛🅔🅓
-		</button>
-		<button name="submit" class="btn btn-outline-primary btn-lg mb-1" value="10" form="input_form">
-			🅒🅘🅡🅒🅛🅔🅓
-		</button>
-		<button name="submit" class="btn btn-outline-primary btn-lg mb-1" value="11" form="input_form">
-			🅂🅀🅄🄰🅁🄴🄳
-		</button>
-		<button name="submit" class="btn btn-outline-primary btn-lg mb-1" value="12" form="input_form">
-			🆂🆀🆄🅰🆁🅴🅳 🅽🅴🅶🅰🆃🅸🆅🅴
-		</button>
-		<button name="submit" class="btn btn-outline-primary btn-lg mb-1" value="13" form="input_form">
-			𝐒𝐞𝐫𝐢𝐟 𝐁𝐨𝐥𝐝
-		</button>
-		<button name="submit" class="btn btn-outline-primary btn-lg mb-1" value="14" form="input_form">
-			𝑆𝑒𝑟𝑖𝑓 𝐼𝑡𝑎𝑙𝑖𝑐
-		</button>
-		<button name="submit" class="btn btn-outline-primary btn-lg mb-1" value="15" form="input_form">
-			𝑺𝒆𝒓𝒊𝒇 𝑩𝒐𝒍𝒅 𝑰𝒕𝒂𝒍𝒊𝒄
-		</button>
-		<button name="submit" class="btn btn-outline-primary btn-lg mb-1" value="16" form="input_form">
-			𝖲𝖺𝗇𝗌-𝗌𝖾𝗋𝗂𝖿
-		</button>
-		<button name="submit" class="btn btn-outline-primary btn-lg mb-1" value="17" form="input_form">
-			𝗦𝗮𝗻𝘀-𝘀𝗲𝗿𝗶𝗳 𝗕𝗼𝗹𝗱
-		</button>
-		<button name="submit" class="btn btn-outline-primary btn-lg mb-1" value="18" form="input_form">
-			𝘚𝘢𝘯𝘴-𝘴𝘦𝘳𝘪𝘧 𝘐𝘵𝘢𝘭𝘪𝘤
-		</button>
-		<button name="submit" class="btn btn-outline-primary btn-lg mb-1" value="19" form="input_form">
-			𝙎𝙖𝙣𝙨-𝙨𝙚𝙧𝙞𝙛 𝘽𝙤𝙡𝙙 𝙄𝙩𝙖𝙡𝙞𝙘
-		</button>
-		<button name="submit" class="btn btn-outline-primary btn-lg mb-1" value="20" form="input_form">
-			pǝʇɹǝʌuI
-		</button>
-	</div>
-</div>
-<hr>
-<div class="row mt-3">
-	<p id="text-complement">
+
+
+<div class="container rounded-block">
 	{% if request.path == '/en/convert-case/' %}
-		You can easily use the convert case for generate different styles of text, including UPPERCASE,
-		lowercase and Title Case - capitalizes the first letter of each word -, that can be handy
-		when dealing with Youtube titles and the like.
-		You can also use the font changer for straightforwardly convert your text and letters, to fancy 
-		and awesome fonts, for easily copy and paste 'em in Twitter, Instagram, Discord, Facebook, Tik
-		Tok, Twitch, and many others.
+	<h1>Case Converter</h1>
 	{% else %}
-		Facilmente converta o seu texto com fontes de letras diferentes, legais, bonitas, incríveis e
-		personalizadas usando fontes ASCII gratuitas. Muito utilizadas em nicks para Free Fire (FF),
-		Fortnite, PUBG, Discord, Whatsapp, TikTok, Instagram, Facebook, Twitter e outros. 
-		Também use o modificador de letras para transformar o texto em MAIÚSCULO, minúsculo e em Título
-		- que converte a primeira letra de cada palavra para maiúscula -. Perfeito para criar 
-		títulos para o Youtube.
+	<h1>Letras Diferentes</h1>
 	{% endif %}
-	</p>
+	<div id="io_forms" class="row justify-content-center">
+	{% if not form.treated_data %}
+		{% with val="12"%}
+		<div class="col-sm-{{val}}">
+		{% endwith %}
+	{% else %}
+		<div class="col-sm-6">
+	{% endif %}
+			<form id="input_form" method="post" name="vaidarcerto">{% csrf_token %}
+				{{ form|crispy }}
+			</form>
+		</div>
+	{% if form.treated_data %}
+		<div class="col-sm-6">
+			<textarea class="form-control" id="id_origin" rows="5">{{ form.treated_data }}</textarea>
+		</div>
+	{% endif %}
+	</div>
+	<button name="submit" class="btn btn-outline-primary btn-lg" value="0" form="input_form">
+		UPPER
+	</button>
+	<button name="submit" class="btn btn-outline-primary btn-lg" value="1" form="input_form">
+		Title
+	</button>
+	<button name="submit" class="btn btn-outline-primary btn-lg" value="2" form="input_form">
+		lower
+	</button>
+	<button name="submit" class="btn btn-outline-primary btn-lg" value="3" form="input_form">
+		𝔉𝔯𝔞𝔨𝔱𝔲𝔯
+	</button>
+	<button name="submit" class="btn btn-outline-primary btn-lg" value="4" form="input_form">
+		𝕱𝖗𝖆𝖐𝖙𝖚𝖗 𝕭𝖔𝖑𝖉
+	</button>
+	<button name="submit" class="btn btn-outline-primary btn-lg" value="5" form="input_form">
+		𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎
+	</button>
+	<button name="submit" class="btn btn-outline-primary btn-lg" value="6" form="input_form">
+		𝔻𝕠𝕦𝕓𝕝𝕖 𝕊𝕥𝕣𝕦𝕔𝕜
+	</button>
+	<button name="submit" class="btn btn-outline-primary btn-lg" value="7" form="input_form">
+		𝒮𝒸𝓇𝒾𝓅𝓉
+	</button>
+	<button name="submit" class="btn btn-outline-primary btn-lg" value="8" form="input_form">
+		𝓢𝓬𝓻𝓲𝓹𝓽 𝓑𝓸𝓵𝓭
+	</button>
+	<button name="submit" class="btn btn-outline-primary btn-lg" value="9" form="input_form">
+		🅝🅔🅖🅐🅣🅘🅥🅔 🅒🅘🅡🅒🅛🅔🅓
+	</button>
+	<button name="submit" class="btn btn-outline-primary btn-lg" value="10" form="input_form">
+		🅒🅘🅡🅒🅛🅔🅓
+	</button>
+	<button name="submit" class="btn btn-outline-primary btn-lg" value="11" form="input_form">
+		🅂🅀🅄🄰🅁🄴🄳
+	</button>
+	<button name="submit" class="btn btn-outline-primary btn-lg" value="12" form="input_form">
+		🆂🆀🆄🅰🆁🅴🅳 🅽🅴🅶🅰🆃🅸🆅🅴
+	</button>
+	<button name="submit" class="btn btn-outline-primary btn-lg" value="13" form="input_form">
+		𝐒𝐞𝐫𝐢𝐟 𝐁𝐨𝐥𝐝
+	</button>
+	<button name="submit" class="btn btn-outline-primary btn-lg" value="14" form="input_form">
+		𝑆𝑒𝑟𝑖𝑓 𝐼𝑡𝑎𝑙𝑖𝑐
+	</button>
+	<button name="submit" class="btn btn-outline-primary btn-lg" value="15" form="input_form">
+		𝑺𝒆𝒓𝒊𝒇 𝑩𝒐𝒍𝒅 𝑰𝒕𝒂𝒍𝒊𝒄
+	</button>
+	<button name="submit" class="btn btn-outline-primary btn-lg" value="16" form="input_form">
+		𝖲𝖺𝗇𝗌-𝗌𝖾𝗋𝗂𝖿
+	</button>
+	<button name="submit" class="btn btn-outline-primary btn-lg" value="17" form="input_form">
+		𝗦𝗮𝗻𝘀-𝘀𝗲𝗿𝗶𝗳 𝗕𝗼𝗹𝗱
+	</button>
+	<button name="submit" class="btn btn-outline-primary btn-lg" value="18" form="input_form">
+		𝘚𝘢𝘯𝘴-𝘴𝘦𝘳𝘪𝘧 𝘐𝘵𝘢𝘭𝘪𝘤
+	</button>
+	<button name="submit" class="btn btn-outline-primary btn-lg" value="19" form="input_form">
+		𝙎𝙖𝙣𝙨-𝙨𝙚𝙧𝙞𝙛 𝘽𝙤𝙡𝙙 𝙄𝙩𝙖𝙡𝙞𝙘
+	</button>
+	<button name="submit" class="btn btn-outline-primary btn-lg" value="20" form="input_form">
+		pǝʇɹǝʌuI
+	</button>
+</div>
+<div class="container rounded-block">
+	<div class="row">
+		<div class="col-lg">
+			<p id="text-complement">
+			{% if request.path == '/en/convert-case/' %}
+				You can easily use the convert case for generate different styles of text, including UPPERCASE,
+				lowercase and Title Case - capitalizes the first letter of each word -, that can be handy
+				when dealing with Youtube titles and the like.
+				You can also use the font changer for straightforwardly convert your text and letters, to fancy 
+				and awesome fonts, for easily copy and paste 'em in Twitter, Instagram, Discord, Facebook, Tik
+				Tok, Twitch, and many others.
+			{% else %}
+				Facilmente converta o seu texto com fontes de letras diferentes, legais, bonitas, incríveis e
+				personalizadas usando fontes ASCII gratuitas. Muito utilizadas em nicks para Free Fire (FF),
+				Fortnite, PUBG, Discord, Whatsapp, TikTok, Instagram, Facebook, Twitter e outros. 
+				Também use o modificador de letras para transformar o texto em MAIÚSCULO, minúsculo e em Título
+				- que converte a primeira letra de cada palavra para maiúscula -. Perfeito para criar 
+				títulos para o Youtube.
+			{% endif %}
+			</p>
+		</div>
+	</div>
 </div>
 {% endblock %}
 <!-- TODO: place some image flags instead of emojis -->

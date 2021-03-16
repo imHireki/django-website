@@ -4,119 +4,125 @@
 
 {% block side_left%}
 {% if '/en/' in request.path %}
-<a href="#0" style="text-decoration:none"><p class="side-block">Faces and Gestures</p></a>
-<a href="#1" style="text-decoration:none"><p class="side-block">People and Activity</p></a>
-<a href="#2" style="text-decoration:none"><p class="side-block">Nature and Food</p></a>
-<a href="#3" style="text-decoration:none"><p class="side-block">Symbols and Objects</p></a>
-<a href="#4" style="text-decoration:none"><p class="side-block">Travel and Flags</p></a>
-<a href="#5" style="text-decoration:none"><p class="side-block">New Emojis</p></a>
+<a href="#0"><p class="side-block">Faces and Gestures</p></a>
+<a href="#1"><p class="side-block">People and Activity</p></a>
+<a href="#2"><p class="side-block">Nature and Food</p></a>
+<a href="#3"><p class="side-block">Symbols and Objects</p></a>
+<a href="#4"><p class="side-block">Travel and Flags</p></a>
+<a href="#5"><p class="side-block">New Emojis</p></a>
 {% else %}
-<a href="#0" style="text-decoration:none"><p class="side-block">Carinhas e Gestos</p></a>
-<a href="#1" style="text-decoration:none"><p class="side-block">Pessoas e Atividades</p></a>
-<a href="#2" style="text-decoration:none"><p class="side-block">Natureza e Comidas</p></a>
-<a href="#3" style="text-decoration:none"><p class="side-block">Símbolos e Objetos</p></a>
-<a href="#4" style="text-decoration:none"><p class="side-block">Viagem e Bandeiras</p></a>
-<a href="#5" style="text-decoration:none"><p class="side-block">Novos Emojis</p></a>
+<a href="#0"><p class="side-block">Carinhas e Gestos</p></a>
+<a href="#1"><p class="side-block">Pessoas e Atividades</p></a>
+<a href="#2"><p class="side-block">Natureza e Comidas</p></a>
+<a href="#3"><p class="side-block">Símbolos e Objetos</p></a>
+<a href="#4"><p class="side-block">Viagem e Bandeiras</p></a>
+<a href="#5"><p class="side-block">Novos Emojis</p></a>
 {% endif %}
 {% endblock %}
 
 {% block main %}
-<h1 class="mt-2">Emojis</h1>
-{% if '/en/' in request.path %}
-<h2 class="ml-4 text-left" id="0">Faces and Gestures</h2>
-{% else %}
-<h2 class="ml-4 text-left" id="0">Carinhas e Gestos</h2>
-{% endif %}
-<div class="row">
-  <div class="col-lg emoji">
-    {% for x in emojis.faces%}
-    {{ x }}
-    {% endfor %}
-    {% for y in emojis.gestures %}
-    {{ y }}
-    {% endfor %}
+<div class="container rounded-block">
+  <h1>Emojis</h1>
+  {% if '/en/' in request.path %}
+  <h2 class="title-sub" id="0">Faces and Gestures</h2>
+  {% else %}
+  <h2 class="title-sub" id="0">Carinhas e Gestos</h2>
+  {% endif %}
+  <div class="row">
+    <div class="col-lg emoji">
+      {% for x in emojis.faces%}
+      {{ x }}
+      {% endfor %}
+      {% for y in emojis.gestures %}
+      {{ y }}
+      {% endfor %}
+    </div>
   </div>
 </div>
-<div class="col"><hr></div>
-{% if '/en/' in request.path %}
-<h2 class="ml-4 text-left" id="1">People and Activity</h2>
-{% else %}
-<h2 class="ml-4 text-left" id="1">Pessoas e Atividades</h2>
-{% endif %}
-<div class="row">
-  <div class="col-lg emoji">
-    {% for x in emojis.people%}
-    {{ x }}
-    {% endfor %}
-    {% for y in emojis.activity %}
-    {{ y }}
-    {% endfor %}
+<div class="container rounded-block">
+  {% if '/en/' in request.path %}
+  <h2 class="title-sub" id="1">People and Activity</h2>
+  {% else %}
+  <h2 class="title-sub" id="1">Pessoas e Atividades</h2>
+  {% endif %}
+  <div class="row">
+    <div class="col-lg emoji">
+      {% for x in emojis.people%}
+      {{ x }}
+      {% endfor %}
+      {% for y in emojis.activity %}
+      {{ y }}
+      {% endfor %}
+    </div>
   </div>
 </div>
-<div class="col"><hr></div>
-{% if '/en/' in request.path %}
-<h2 class="ml-4 text-left" id="2">Nature and Food</h2>
-{% else %}
-<h2 class="ml-4 text-left" id="2">Natureza e Comidas</h2>
-{% endif %}
-<div class="row">
-  <div class="col-lg emoji">
-    {% for x in emojis.nature%}
-    {{ x }}
-    {% endfor %}
-    {% for y in emojis.food %}
-    {{ y }}
-    {% endfor %}
+<div class="container rounded-block">
+  {% if '/en/' in request.path %}
+  <h2 class="title-sub" id="2">Nature and Food</h2>
+  {% else %}
+  <h2 class="title-sub" id="2">Natureza e Comidas</h2>
+  {% endif %}
+  <div class="row">
+    <div class="col-lg emoji">
+      {% for x in emojis.nature%}
+      {{ x }}
+      {% endfor %}
+      {% for y in emojis.food %}
+      {{ y }}
+      {% endfor %}
+    </div>
   </div>
 </div>
-<div class="col"><hr></div>
-{% if '/en/' in request.path %}
-<h2 class="ml-4 text-left" id="3">Symbols and Objects</h2>
-{% else %}
-<h2 class="ml-4 text-left" id="2">Símbolos e Objetos</h2>
-{% endif %}
-<div class="row">
-  <div class="col-lg emoji">
-    {% for x in emojis.symbols %}
-    {{ x }}
-    {% endfor %}
-    {% for y in emojis.objects %}
-    {{ y }}
-    {% endfor %}
+<div class="container rounded-block">
+  {% if '/en/' in request.path %}
+  <h2 class="title-sub" id="3">Symbols and Objects</h2>
+  {% else %}
+  <h2 class="title-sub" id="2">Símbolos e Objetos</h2>
+  {% endif %}
+  <div class="row">
+    <div class="col-lg emoji">
+      {% for x in emojis.symbols %}
+      {{ x }}
+      {% endfor %}
+      {% for y in emojis.objects %}
+      {{ y }}
+      {% endfor %}
+    </div>
   </div>
 </div>
-<div class="col"><hr></div>
-{% if '/en/' in request.path %}
-<h2 class="ml-4 text-left" id="4">Travel and Flags</h2>
-{% else %}
-<h2 class="ml-4 text-left" id="4">Viagem e Bandeiras</h2>
-{% endif %}
-<div class="row">
-  <div class="col-lg emoji"> 
-    {% for x in emojis.travel %}
-    {{ x }}
-    {% endfor %}
-    {% for y in emojis.flags %}
-    {{ y }}
-    {% endfor %}
+<div class="container rounded-block">
+  {% if '/en/' in request.path %}
+  <h2 class="title-sub" id="4">Travel and Flags</h2>
+  {% else %}
+  <h2 class="title-sub" id="4">Viagem e Bandeiras</h2>
+  {% endif %}
+  <div class="row">
+    <div class="col-lg emoji"> 
+      {% for x in emojis.travel %}
+      {{ x }}
+      {% endfor %}
+      {% for y in emojis.flags %}
+      {{ y }}
+      {% endfor %}
+    </div>
   </div>
 </div>
-<div class="col"><hr></div>
-{% if '/en/' in request.path %}
-<h2 class="ml-4 text-left" id="5">New Emojis</h2>
-{% else %}
-<h2 class="ml-4 text-left" id="5">Novos Emojis</h2>
-{% endif %}
-<div class="row">
-  <div class="col-lg emoji"> 
-    {% for x in emojis.newemojis %}
-    {{ x }}
-    {% endfor %}
+<div class="container rounded-block">
+  {% if '/en/' in request.path %}
+  <h2 class="title-sub" id="5">New Emojis</h2>
+  {% else %}
+  <h2 class="title-sub" id="5">Novos Emojis</h2>
+  {% endif %}
+  <div class="row">
+    <div class="col-lg emoji"> 
+      {% for x in emojis.newemojis %}
+      {{ x }}
+      {% endfor %}
+    </div>
   </div>
-</div>
 {% if '/en/' in request.path %}
   <div class="row justify-content-center">
-    <span class="mt-3 mr-3 ml-3">
+    <span>
       <a href="#0">Faces and Gestures</a> |
       <a href="#1">People and Activity</a> |
       <a href="#2">Nature and Food</a> |
@@ -125,17 +131,21 @@
       <a href="#5">New Emojis</a>
     </span>
   </div>
-  <div class="col"><hr></div>
-  <div class="row mt-3">
-    <p class="ml-3 mr-3" id="text-complement">
-      You'll find here lists with emojis for copy and paste. Covering new emojis, faces, gestures,
-      activity, symbols, objects, flags, heart emoji, laughing emoji, sad emoji and so many others. Which
-      can be useful in Twitter, Discord, Instagram, Twitch, Facebook and so on.
-    </p>
+</div>
+<div class="container rounded-block">
+  <div class="row">
+    <div class="col-lg">
+      <p id="text-complement">
+        You'll find here lists with emojis for copy and paste. Covering new emojis, faces, gestures,
+        activity, symbols, objects, flags, heart emoji, laughing emoji, sad emoji and so many others. Which
+        can be useful in Twitter, Discord, Instagram, Twitch, Facebook and so on.
+      </p>
+    </div>
   </div>
+</div>
 {% else %}
-  <div class="row justify-content-center">
-    <span class="mt-3 mr-3 ml-3">
+  <div class="justify-content-center">
+    <span>
       <a href="#0">Carinhas e Gestos</a> |
       <a href="#1">Pessoas e Atividades</a> |
       <a href="#2">Natureza e Comidas</a> |
@@ -144,17 +154,21 @@
       <a href="#5">Novos Emojis</a>
     </span>
   </div>
-  <div class="col"><hr></div>
-  <div class="row mt-3">
-    <p class="ml-3 mr-3" id="text-complement">
-      Você irá encontrar aqui listas com emojis, incluindo novos emojis, carinhas, sinais, gestos, emojis
-      de coração, de animais, símbolos, objetos e bandeiras. Muito fácil de usar, só copiar e colar, seja
-      no Facebook, Twitter, Instagram, Discord, Whatsapp, Twitch, etc.
-    </p>
+</div>
+<div class="container rounded-block">
+  <div class="row">
+    <div class="col-lg">
+      <p id="text-complement">
+        Você irá encontrar aqui listas com emojis, incluindo novos emojis, carinhas, sinais, gestos, emojis
+        de coração, de animais, símbolos, objetos e bandeiras. Muito fácil de usar, só copiar e colar, seja
+        no Facebook, Twitter, Instagram, Discord, Whatsapp, Twitch, etc.
+      </p>
+    </div>
   </div>
+</div>
 {% endif %}
 {% endblock %}
 {% block side_right %}
-<a href="/en/emoji/" style="text-decoration:none"><p class="side-block">&#127482;&#127480; en</p></a>
-<a href="/pt/emoji/" style="text-decoration:none"><p class="side-block">&#127463;&#127479; pt-br</p></a>
+<a href="/en/emoji/"><p class="side-block">&#127482;&#127480; en</p></a>
+<a href="/pt/emoji/"><p class="side-block">&#127463;&#127479; pt-br</p></a>
 {% endblock %}

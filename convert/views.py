@@ -26,8 +26,5 @@ class Convert(View):
             form.treated_data = button_attac(submit, form.cleaned)
             
         return render(self.request, self.template_name, self.context)
-    
-    # TODO: template render improve
+
     # TODO: add max_lenght
-    # TODO: remake redirect(redi)
-    # TODO: contexts directly in html

@@ -1,40 +1,47 @@
 {% extends 'base.html' %}
 {% block title %}Shadesapps &#128526;{% endblock %}
 {% block main %}
-<h2 class="mt-2">SHADESAPPS</h2>
-<a href="/en/convert-case/" style="text-decoration:none">
-	<div class="card mt-3">
-		{% if not 'pt-' in request.META.HTTP_ACCEPT_LANGUAGE %}
-		<div class="card-body p-1">
-			<h5 class="mb-1">Convert Case</h5>
-			<p class="mb-0">𝓒𝓸𝓷𝓿𝓮𝓻𝓽 𝓬𝓪𝓼𝓮 𝓪𝓷𝓭 𝓯𝓪𝓷𝓬𝔂 𝓯𝓸𝓷𝓽𝓼</p>
+<div class="container rounded-block">
+	<div class="row">
+		<div class="col-lg">
+			<h2 class="mt-2">SHADESAPPS</h2>
+			<a href="/en/convert-case/">
+				<div class="card mt-3">
+					{% if not 'pt-' in request.META.HTTP_ACCEPT_LANGUAGE %}
+					<div class="card-body p-1">
+						<h5 class="mb-1">Convert Case</h5>
+						<p class="mb-0">𝓒𝓸𝓷𝓿𝓮𝓻𝓽 𝓬𝓪𝓼𝓮 𝓪𝓷𝓭 𝓯𝓪𝓷𝓬𝔂 𝓯𝓸𝓷𝓽𝓼</p>
+					</div>
+					{% else %}
+					<div class="card-body p-1">
+						<h5 class="mb-1">Letras Diferentes</h5>
+						<p class="mb-0">𝔏𝔢𝔱𝔯𝔞𝔰 𝓓𝓲𝓯𝓮𝓻𝓮𝓷𝓽𝓮𝓼</p>
+					</div>
+					{% endif %}
+				</div>
+			</a>
+			<a href="/en/emoticon/">
+				<div class="card mt-3">
+					<div class="card-body p-1">
+						<h5 class="mb-1">Emoticons</h5>
+						<p class="mb-0">(⁄ ⁄•⁄ω⁄•⁄ ⁄) &nbsp; (^^ゞ &nbsp; ( ` ω ´ ) &nbsp; Σ(O_O) &nbsp; &gt;.&lt; &nbsp; (>‿◠) &nbsp; ;~; &nbsp; (◕‿◕) &nbsp; \(^ヮ^)/ &nbsp; ಥ_ಥ</p>
+					</div>
+				</div>
+			</a>
+			<a href="/en/emoji/">
+				<div class="card mt-3 mb-3">
+					<div class="card-body p-1">
+						<h5 class="mb-1">Emojis</h5>
+						<p class="mb-0">
+							&#129397; &nbsp; &#x1F63C;	&nbsp; &#x1F637; &nbsp; &#x1F62D; &nbsp; &#x1F921;
+							&nbsp; &#x1F608; &nbsp; &#x1F3F3;&#xFE0F;&#x200D;&#x1F308; &nbsp; &#x2694;&#xFE0F;
+							&nbsp; &#x2764;&#xFE0F; &nbsp; &#x1F60E; &nbsp;	&#x1F90C; &nbsp; &#x1f485; &nbsp; &#x1F97A;
+						</p>
+					</div>
+				</div>
+			</a>
 		</div>
-		{% else %}
-		<div class="card-body p-1">
-			<h5 class="mb-1">Letras Diferentes</h5>
-			<p class="mb-0">𝔏𝔢𝔱𝔯𝔞𝔰 𝓓𝓲𝓯𝓮𝓻𝓮𝓷𝓽𝓮𝓼</p>
-		</div>
-		{% endif %}
 	</div>
-</a>
-<a href="/en/emoticon/" style="text-decoration:none">
-	<div class="card mt-3">
-		<div class="card-body p-1">
-			<h5 class="mb-1">Emoticons</h5>
-			<p class="mb-0">(⁄ ⁄•⁄ω⁄•⁄ ⁄) &nbsp; (^^ゞ &nbsp; ( ` ω ´ ) &nbsp; Σ(O_O) &nbsp; &gt;.&lt; &nbsp; (>‿◠) &nbsp; ;~; &nbsp; (◕‿◕) &nbsp; \(^ヮ^)/ &nbsp; ಥ_ಥ</p>
-		</div>
-	</div>
-</a>
-<a href="/en/emoji/" style="text-decoration:none">
-	<div class="card mt-3 mb-3">
-		<div class="card-body p-1">
-			<h5 class="mb-1">Emojis</h5>
-			<p class="mb-0">
-				&#129397; &nbsp; &#x1F63C;	&nbsp; &#x1F637; &nbsp; &#x1F62D; &nbsp; &#x1F921;
-			 	&nbsp; &#x1F608; &nbsp; &#x1F3F3;&#xFE0F;&#x200D;&#x1F308; &nbsp; &#x2694;&#xFE0F;
-				&nbsp; &#x2764;&#xFE0F; &nbsp; &#x1F60E; &nbsp;	&#x1F90C; &nbsp; &#x1f485; &nbsp; &#x1F97A;
-			</p>
-		</div>
-	</div>
-</a>
+</div>
+
 {% endblock %}
