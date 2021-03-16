@@ -16,15 +16,13 @@ class Convert(View):
         form = self.form_class(request.POST or None)
         self.context = {'form': form}
 
-        if form.is_valid():
-            form.cleaned = form.cleaned_data['input_txt']
-        
+        form_cleaned = form.data.get('input_txt')
+        if len(form_cleaned) > 999:
+            form_cleaned = form_cleaned[:999]
+            
         submit = (request.POST.get('submit'))
         form.treated_data = ''
         if submit:
-            
-            form.treated_data = button_attac(submit, form.cleaned)
+            form.treated_data = button_attac(submit, form_cleaned)
             
         return render(self.request, self.template_name, self.context)
-
-    # TODO: add max_lenght
