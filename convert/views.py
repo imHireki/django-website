@@ -17,8 +17,9 @@ class Convert(View):
         self.context = {'form': form}
 
         form_cleaned = form.data.get('input_txt')
-        if len(form_cleaned) > 999:
-            form_cleaned = form_cleaned[:999]
+
+        if len(form_cleaned) > 10000:
+            form_cleaned = form_cleaned[:10000]
             
         submit = (request.POST.get('submit'))
         form.treated_data = ''
