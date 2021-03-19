@@ -5,22 +5,30 @@
 	<div class="row">
 		<div class="col-lg">
 			<h2 class="mt-2">SHADESAPPS</h2>
+			{% if not 'pt-' in request.META.HTTP_ACCEPT_LANGUAGE %}
 			<a href="/en/convert-case/">
 				<div class="card mt-3">
-					{% if not 'pt-' in request.META.HTTP_ACCEPT_LANGUAGE %}
 					<div class="card-body p-1">
 						<h5 class="mb-1">Convert Case</h5>
 						<p class="mb-0">𝓒𝓸𝓷𝓿𝓮𝓻𝓽 𝓬𝓪𝓼𝓮 𝓪𝓷𝓭 𝓯𝓪𝓷𝓬𝔂 𝓯𝓸𝓷𝓽𝓼</p>
 					</div>
-					{% else %}
+				</div>
+			</a>
+			{% else %}
+			<a href="/pt/convert-case/">
+				<div class="card mt-3">
 					<div class="card-body p-1">
 						<h5 class="mb-1">Letras Diferentes</h5>
 						<p class="mb-0">𝔏𝔢𝔱𝔯𝔞𝔰 𝓓𝓲𝓯𝓮𝓻𝓮𝓷𝓽𝓮𝓼</p>
 					</div>
-					{% endif %}
 				</div>
 			</a>
+			{% endif %}
+			{% if not 'pt-' in request.META.HTTP_ACCEPT_LANGUAGE %}
 			<a href="/en/emoticon/">
+			{% else %}
+			<a href="/pt/emoticon/">
+			{% endif %}
 				<div class="card mt-3">
 					<div class="card-body p-1">
 						<h5 class="mb-1">Emoticons</h5>
@@ -28,7 +36,11 @@
 					</div>
 				</div>
 			</a>
+			{% if not 'pt-' in request.META.HTTP_ACCEPT_LANGUAGE %}
 			<a href="/en/emoji/">
+			{% else %}
+			<a href="/pt/emoji/">
+			{% endif %}
 				<div class="card mt-3 mb-3">
 					<div class="card-body p-1">
 						<h5 class="mb-1">Emojis</h5>
@@ -43,5 +55,4 @@
 		</div>
 	</div>
 </div>
-
 {% endblock %}

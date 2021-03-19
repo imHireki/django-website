@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
-
+{% load static %}
 {% block title %}
 {% if request.path == '/en/convert-case/' %}
 	Shadesapps | Convert Case &amp; Fancy Fonts &#128526;
@@ -8,10 +8,7 @@
 	Shadesapps | Letras Diferentes &#128526;
 {% endif %}
 {% endblock %}
-
 {% block main %}
-
-
 <div class="container rounded-block">
 	{% if request.path == '/en/convert-case/' %}
 	<h1>Case Converter</h1>
@@ -124,8 +121,7 @@
 	</div>
 </div>
 {% endblock %}
-<!-- TODO: place some image flags instead of emojis -->
 {% block side_right %}
-<a href="/en/convert-case/" style="text-decoration:none"><p class="side-block">&#127482;&#127480; en</p></a>
-<a href="/pt/convert-case/" style="text-decoration:none"><p class="side-block">&#127463;&#127479; pt-br</p></a>
+<a href="/en/convert-case/" style="text-decoration:none"><p class="side-block"><img src="{% static 'vendor/eua.png' %}"> en</p></a>
+<a href="/pt/convert-case/" style="text-decoration:none"><p class="side-block"><img src="{% static 'vendor/br.png' %}"> pt-BR</p></a>
 {% endblock %}
