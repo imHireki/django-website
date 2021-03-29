@@ -1,6 +1,5 @@
-{% extends 'base.html' %}
+{% extends 'convert/convertcase.html' %}
 {% load crispy_forms_tags %}
-{% load static %}
 {% block title %}
 Letras Diferentes | Shadesapps &#128526;
 {% endblock %}
@@ -93,19 +92,15 @@ Letras Diferentes | Shadesapps &#128526;
 	<div class="row">
 		<div class="col-lg">
 			<p id="text-complement">
-      Facilmente converta o seu texto com fontes de letras diferentes, legais, bonitas, incríveis e
-      personalizadas usando fontes ASCII gratuitas. Muito utilizadas em nicks para Free Fire (FF),
-      Fortnite, PUBG, Discord, Whatsapp, TikTok, Instagram, Facebook, Twitter e outros. 
-      Também use o modificador de letras para transformar o texto em MAIÚSCULO, minúsculo e em Título
-      - que converte a primeira letra de cada palavra para maiúscula -. Perfeito para criar 
-      títulos para o Youtube.
-      reddit wild rift
+			Facilmente converta o seu texto com fontes de letras diferentes, legais, bonitas, incríveis e
+			personalizadas usando fontes ASCII gratuitas. Muito utilizadas em nicks para Free Fire (FF),
+			Fortnite, PUBG, Discord, Whatsapp, TikTok, Instagram, Facebook, Twitter e outros. 
+			Também use o modificador de letras para transformar o texto em MAIÚSCULO, minúsculo e em Título
+			- que converte a primeira letra de cada palavra para maiúscula -. Perfeito para criar 
+			títulos para o Youtube.
+			reddit wild rift
 			</p>
 		</div>
 	</div>
 </div>
-{% endblock %}
-{% block side_right %}
-<a href="/en/convert-case/" style="text-decoration:none"><p class="side-block"><img src="{% static 'vendor/eua.png' %}"> en</p></a>
-<a href="/pt/convert-case/" style="text-decoration:none"><p class="side-block"><img src="{% static 'vendor/br.png' %}"> pt-BR</p></a>
 {% endblock %}

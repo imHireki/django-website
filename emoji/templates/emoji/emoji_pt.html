@@ -1,0 +1,108 @@
+{% extends 'emoji/emoji.html' %}
+{% block side_left%}
+<a href="#0"><p class="side-block">Carinhas e Gestos</p></a>
+<a href="#1"><p class="side-block">Pessoas e Atividades</p></a>
+<a href="#2"><p class="side-block">Natureza e Comidas</p></a>
+<a href="#3"><p class="side-block">Símbolos e Objetos</p></a>
+<a href="#4"><p class="side-block">Viagem e Bandeiras</p></a>
+<a href="#5"><p class="side-block">Novos Emojis</p></a>
+{% endblock %}
+{% block main %}
+<div class="container rounded-block">
+  <h1>Emojis</h1>
+  <h2 class="title-sub" id="0">Carinhas e Gestos</h2>
+  <div class="row">
+    <div class="col-lg emoji">
+      {% for x in faces %}
+      {{ x }}
+      {% endfor %}
+      {% for y in gestures %}
+      {{ y }}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<div class="container rounded-block">
+  <h2 class="title-sub" id="1">Pessoas e Atividades</h2>
+  <div class="row">
+    <div class="col-lg emoji">
+      {% for x in people%}
+      {{ x }}
+      {% endfor %}
+      {% for y in activity %}
+      {{ y }}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<div class="container rounded-block">
+  <h2 class="title-sub" id="2">Natureza e Comidas</h2>
+  <div class="row">
+    <div class="col-lg emoji">
+      {% for x in nature%}
+      {{ x }}
+      {% endfor %}
+      {% for y in food %}
+      {{ y }}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<div class="container rounded-block">
+  <h2 class="title-sub" id="2">Símbolos e Objetos</h2>
+  <div class="row">
+    <div class="col-lg emoji">
+      {% for x in symbols %}
+      {{ x }}
+      {% endfor %}
+      {% for y in objects %}
+      {{ y }}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<div class="container rounded-block">
+  <h2 class="title-sub" id="4">Viagem e Bandeiras</h2>
+  <div class="row">
+    <div class="col-lg emoji"> 
+      {% for x in travel %}
+      {{ x }}
+      {% endfor %}
+      {% for y in flags %}
+      {{ y }}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<div class="container rounded-block">
+  <h2 class="title-sub" id="5">Novos Emojis</h2>
+  <div class="row">
+    <div class="col-lg emoji"> 
+      {% for x in newemojis %}
+      {{ x }}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="justify-content-center">
+    <span>
+      <a href="#0">Carinhas e Gestos</a> |
+      <a href="#1">Pessoas e Atividades</a> |
+      <a href="#2">Natureza e Comidas</a> |
+      <a href="#3">Símbolos e Objetos</a> |
+      <a href="#4">Viagem e Bandeiras</a> |
+      <a href="#5">Novos Emojis</a>
+    </span>
+  </div>
+</div>
+<div class="container rounded-block">
+  <div class="row">
+    <div class="col-lg">
+      <p id="text-complement">
+        Você irá encontrar aqui listas com emojis, incluindo novos emojis, carinhas, sinais, gestos, emojis
+        de coração, de animais, símbolos, objetos e bandeiras. Muito fácil de usar, só copiar e colar, seja
+        no Facebook, Twitter, Instagram, Discord, Whatsapp, Twitch, etc.
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}

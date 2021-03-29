@@ -5,8 +5,10 @@ from utils import emoji_dicts
 class Emoji(View):
     template_name = 'emoji/emoji.html'
     
-    def get(self, request, *args, **kwargs):
-        emojis = {
+    def setup(self, *args, **kwargs):
+        super().setup(*args, **kwargs)
+
+        self.context = {
             'faces': emoji_dicts.faces,
             'gestures': emoji_dicts.gestures,
             'people': emoji_dicts.people,
@@ -19,4 +21,13 @@ class Emoji(View):
             'flags': emoji_dicts.flags,
             'newemojis': emoji_dicts.newemojis,
             }
-        return render(self.request, self.template_name,  {'emojis': emojis})
+        
+        if self.request.path == '/pt/emoji/':
+            self.template_name = 'emoji/emoji_pt.html'
+        
+        self.renderizar = render(
+            self.request, self.template_name, self.context
+        )
+        
+    def get(self, request, *args, **kwargs):
+        return self.renderizar
