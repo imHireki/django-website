@@ -8,22 +8,33 @@ class Convert(View):
     template_name = 'convert/convertcase.html'
     form_class = InputForms
 
-    def get(self, request, *args, **kwargs):
-        form = self.form_class(request.POST or None)
-        return render(self.request, self.template_name, {'form': form})
-    
-    def post(self, request, *args, **kwargs):
-        form = self.form_class(request.POST or None)
-        self.context = {'form': form}
+    def setup(self, *args, **kwargs):
+        super().setup(*args, **kwargs)
 
-        form_cleaned = form.data.get('input_txt')
+        self.form = self.form_class(self.request.POST or None)
+        self.context = {'form':self.form}
+
+        if self.request.path == '/pt/convert-case/':
+            self.template_name = 'convert/convertcase_pt.html'
+        
+        self.renderizar = render(
+            self.request, self.template_name, self.context
+        )
+
+    def get(self, request, *args, **kwargs):        
+        return self.renderizar
+
+    def post(self, request, *args, **kwargs):
+        # TODO: Set a proper clean
+        form_cleaned = self.form.data.get('input_txt')
 
         if len(form_cleaned) > 10000:
             form_cleaned = form_cleaned[:10000]
             
         submit = (request.POST.get('submit'))
-        form.treated_data = ''
+        self.form.treated_data = ''
+
         if submit:
-            form.treated_data = button_attac(submit, form_cleaned)
+            self.form.treated_data = button_attac(submit, form_cleaned)
             
-        return render(self.request, self.template_name, self.context)
+        return self.renderizar
