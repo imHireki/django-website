@@ -5,5 +5,11 @@ Allow: /pt/emoticon/
 Allow: /en/convert-case/
 Allow: /en/emoji/
 Allow: /en/emoticon/
+Disallow: /pt/convert-case
+Disallow: /pt/emoji
+Disallow: /pt/emoticon
+Disallow: /en/convert-case
+Disallow: /en/emoji
+Disallow: /en/emoticon
 
 Sitemap: https://www.shadesapps.com/sitemap.xml
