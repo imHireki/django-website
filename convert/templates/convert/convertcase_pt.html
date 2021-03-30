@@ -7,7 +7,7 @@ Letras Diferentes | Shadesapps &#128526;
 <div class="container rounded-block">
 	<h1>Letras Diferentes</h1>
 	<div id="io_forms" class="row justify-content-center">
-	{% if not form.treated_data %}
+	{% if not form.new_data %}
 		{% with val="12"%}
 		<div class="col-sm-{{val}}">
 		{% endwith %}
@@ -18,9 +18,9 @@ Letras Diferentes | Shadesapps &#128526;
 				{{ form|crispy }}
 			</form>
 		</div>
-	{% if form.treated_data %}
+	{% if form.new_data %}
 		<div class="col-sm-6">
-			<textarea class="form-control" id="id_origin" rows="5">{{ form.treated_data }}</textarea>
+			<textarea class="form-control" id="id_origin" rows="5">{{ form.new_data }}</textarea>
 		</div>
 	{% endif %}
 	</div>
@@ -92,13 +92,13 @@ Letras Diferentes | Shadesapps &#128526;
 	<div class="row">
 		<div class="col-lg">
 			<p id="text-complement">
-			Facilmente converta o seu texto com fontes de letras diferentes, legais, bonitas, incríveis e
-			personalizadas usando fontes ASCII gratuitas. Muito utilizadas em nicks para Free Fire (FF),
-			Fortnite, PUBG, Discord, Whatsapp, TikTok, Instagram, Facebook, Twitter e outros. 
+			Facilmente converta o seu texto com fontes de letras diferentes, legais, bonitas, cursivas e personalizadas,
+			para copiar e colar, usando fontes ASCII gratuitas. Muito utilizadas em nicks para Free Fire (FF),
+			Fortnite, PUBG, League of Legends(LOL), Wild Rift, Discord, Whatsapp, TikTok, Instagram, Facebook,
+			Twitter, Reddit e outros. 
 			Também use o modificador de letras para transformar o texto em MAIÚSCULO, minúsculo e em Título
 			- que converte a primeira letra de cada palavra para maiúscula -. Perfeito para criar 
-			títulos para o Youtube.
-			reddit wild rift
+			títulos para o Youtube e para lives na Twitch.
 			</p>
 		</div>
 	</div>

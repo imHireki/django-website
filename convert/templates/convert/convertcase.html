@@ -8,7 +8,7 @@ Convert Case &amp; Fancy Fonts | Shadesapps &#128526;
 <div class="container rounded-block">
 	<h1>Case Converter</h1>
 	<div id="io_forms" class="row justify-content-center">
-	{% if not form.treated_data %}
+	{% if not form.new_data %}
 		{% with val="12"%}
 		<div class="col-sm-{{val}}">
 		{% endwith %}
@@ -19,9 +19,9 @@ Convert Case &amp; Fancy Fonts | Shadesapps &#128526;
 				{{ form|crispy }}
 			</form>
 		</div>
-	{% if form.treated_data %}
+	{% if form.new_data %}
 		<div class="col-sm-6">
-			<textarea class="form-control" id="id_origin" rows="5">{{ form.treated_data }}</textarea>
+			<textarea class="form-control" id="id_origin" rows="5">{{ form.new_data }}</textarea>
 		</div>
 	{% endif %}
 	</div>
@@ -93,12 +93,19 @@ Convert Case &amp; Fancy Fonts | Shadesapps &#128526;
 	<div class="row">
 		<div class="col-lg">
 			<p id="text-complement">
-			You can easily use the convert case for generate different styles of text, including UPPERCASE,
-			lowercase and Title Case - capitalizes the first letter of each word -, that can be handy
-			when dealing with Youtube titles and the like.
-			You can also use the font changer for straightforwardly convert your text and letters, to fancy 
-			and awesome fonts, for easily copy and paste 'em in Twitter, Instagram, Discord, Facebook, Tik
-			Tok, Twitch, and many others.
+			You can easily use the convert case for generate different styles of text, 
+			that can be handy when dealing with Youtube titles, Twitch and the like. including:
+
+			UPPERCASE - IT TRANSFORMS ALL THE LOWER CASE LETTERS IN YOUR TEXT INTO CAPITALS.
+
+			lowercase - it turns all capital letters into lower case, without leaving any capital letters on your text.
+
+			Title Case - It Capitalizes The First Letter Of Each Word.
+			</p>
+			<p id="text-complement">
+			You can also use the font changer for straightforwardly convert your text and letters, to ℱ𝒶𝓃𝒸𝓎 
+			and 𝓪𝔀𝓮𝓼𝓸𝓶𝓮 fonts, for easily copy and paste 'em in Twitter, Instagram, Discord, Facebook, Tik
+			Tok, Twitch, Reddit, even nicks for games, like League of Legends(LOL), Wild Rift, Fortnite, PUBG and many others.
 			</p>
 		</div>
 	</div>

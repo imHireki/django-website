@@ -3,7 +3,6 @@ def bound_items(a, font):
     except_ones = [squared, squared_n, inverted, circled_n]
     
     if font in except_ones:
-        print('aaaaaa')
         if font == squared or font == squared_n:
             for c in a:
                 c = c.lower()
