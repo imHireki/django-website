@@ -11,17 +11,19 @@
 </head>
 <body>
 {% include 'partials/_nav.html'%}
-<div class="container-fluid text-center">    
+<div class="container-fluid">    
   <div class="row content">
-    <div class="col-sm-2 sidenav" id="side-left">
+    <aside class="col-sm-2 sidenav">
       {% block side_left %}{% endblock %}
-    </div>
-    <div class="col-sm-8 p-0" id="main"> 
+    </aside>
+    <main class="col-sm-8"> 
       {% block main %}{% endblock %}
-    </div>
-    <div class="col-sm-2 sidenav" id="side-right">
+    </main>
+    <aside class="col-sm-2 sidenav">
+      {% if not request.path == '/' %}
       {% block side_right %}{% endblock %}
-    </div>
+      {% endif %}
+    </aside>
   </div>
 </div>
 {% include 'partials/_footer.html' %}

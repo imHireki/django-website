@@ -1,47 +1,119 @@
 {% load static %}
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="index, follow, max-snippet:-1">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="robots" content="index, follow, max-snippet:-1"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="shadesapps.com"/>
 {% if request.path == '/' %}
-<link rel="canonical" href="https://www.shadesapps.com/">
-<meta name="description" content="Emoticons >_<, Emojis &#128293; and Kaomoji ( ͡° ͜ʖ ͡°), for &#9986;&#65039; copy and &#128203; paste. All in Dark Mode! &#127770;">
+<link rel="canonical" href="https://www.shadesapps.com/"/>
+<meta name="description" content="Emoticons >_<, Emojis &#128293; and Kaomoji
+ ( ͡° ͜ʖ ͡°), for &#9986;&#65039; copy and &#128203; paste. All in Dark Mode!
+ &#127770;"/>
+<meta property="og:title" content="Shadesapps"/>
+<meta property="og:url" content="https://www.shadesapps.com/"/>
+<meta property="og:description" content="Emoticons >_<, Emojis &#128293; and Kaomoji
+ ( ͡° ͜ʖ ͡°), for &#9986;&#65039; copy and &#128203; paste. All in Dark Mode!
+ &#127770;"/>
 {% elif request.path == '/en/emoji/'%}
-<link rel="canonical" href="https://www.shadesapps.com/en/emoji/">
-<meta name="description" content="Emojis &#129313; &#129397; &#127752;, for &#9986;&#65039; copy and &#128203; paste. Covering new emojis, faces, gestures, symbols, heart emoji, sad emoji, and so many others.">
-<link rel="alternate" hreflang="en" href="https://www.shadesapps.com/en/emoji/">
-<link rel="alternate" hreflang="pt-br" href="https://www.shadesapps.com/pt/emoji/">
-<link rel="alternate" hreflang="x-default" href="https://www.shadesapps.com/en/emoji/">
+<link rel="canonical" href="https://www.shadesapps.com/en/emoji/"/>
+<meta name="description" content="Emojis &#129313; &#129397; &#127752;, for
+ &#9986;&#65039; copy and &#128203; paste. Covering new emojis, faces, 
+ gestures, symbols, heart emoji, sad emoji, and so many others."/>
+<meta property="og:title" content="Emojis"/>
+<meta property="og:url" content="https://www.shadesapps.com/en/emoji/"/>
+<meta property="og:description" content="Emojis &#129313; &#129397; &#127752;, for
+ &#9986;&#65039; copy and &#128203; paste. Covering new emojis, faces, 
+ gestures, symbols, heart emoji, sad emoji, and so many others."/>
+<link rel="alternate" hreflang="en"
+href="https://www.shadesapps.com/en/emoji/"/>
+<link rel="alternate" hreflang="pt-br"
+href="https://www.shadesapps.com/pt/emoji/"/>
+<link rel="alternate" hreflang="x-default"
+href="https://www.shadesapps.com/en/emoji/"/>
 {% elif request.path == '/pt/emoji/' %}
-<link rel="canonical" href="https://www.shadesapps.com/pt/emoji/">
-<meta name="description" content="Emojis &#128293; &#129397; &#127752;, para &#9986;&#65039; copiar e &#128203; colar. Com carinhas, sinais, gestos, emojis de coraçao, de animais, e outros.">
-<link rel="alternate" hreflang="en" href="https://www.shadesapps.com/en/emoji/">
-<link rel="alternate" hreflang="pt-br" href="https://www.shadesapps.com/pt/emoji/">
-<link rel="alternate" hreflang="x-default" href="https://www.shadesapps.com/en/emoji/">
+<link rel="canonical" href="https://www.shadesapps.com/pt/emoji/"/>
+<meta name="description" content="Emojis &#128293; &#129397; &#127752;, para
+ &#9986;&#65039; copiar e &#128203; colar. Com carinhas, sinais, gestos,
+ emojis de coraçao, de animais, e outros."/>
+<meta property="og:title" content="Emojis"/>
+<meta property="og:url" content="https://www.shadesapps.com/pt/emoji/"/>
+<meta property="og:description" content="Emojis &#128293; &#129397; &#127752;,
+ para &#9986;&#65039; copiar e &#128203; colar. Com carinhas, sinais, gestos,
+ emojis de coraçao, de animais, e outros."/>
+<link rel="alternate" hreflang="en"
+href="https://www.shadesapps.com/en/emoji/"/>
+<link rel="alternate" hreflang="pt-br"
+href="https://www.shadesapps.com/pt/emoji/"/>
+<link rel="alternate" hreflang="x-default"
+href="https://www.shadesapps.com/en/emoji/"/>
 {% elif request.path == '/en/emoticon/' %}
-<link rel="canonical" href="https://www.shadesapps.com/en/emoticon/">
-<meta name="description" content="Emoticons >_< and Kaomoji (✯◡✯), for &#9986;&#65039; copy and &#128203; paste. Covering ASCII emoticons, japanese emoticons, and others.">
-<link rel="alternate" hreflang="en" href="https://www.shadesapps.com/en/emoticon/">
-<link rel="alternate" hreflang="pt-br" href="https://www.shadesapps.com/pt/emoticon/">
-<link rel="alternate" hreflang="x-default" href="https://www.shadesapps.com/en/emoticon/">
+<link rel="canonical" href="https://www.shadesapps.com/en/emoticon/"/>
+<meta name="description" content="Emoticons >_< and Kaomoji (✯◡✯), for
+ &#9986;&#65039; copy and &#128203; paste. Covering ASCII emoticons,
+ japanese emoticons, and others."/>
+<meta property="og:title" content="Emoticons and Kaomoji"/>
+<meta property="og:url" content="https://www.shadesapps.com/en/emoticon/"/>
+<meta property="og:description" content="Emoticons >_< and Kaomoji (✯◡✯), for
+ &#9986;&#65039; copy and &#128203; paste. Covering ASCII emoticons,
+ japanese emoticons, and others."/>
+<link rel="alternate" hreflang="en"
+href="https://www.shadesapps.com/en/emoticon/"/>
+<link rel="alternate" hreflang="pt-br"
+href="https://www.shadesapps.com/pt/emoticon/"/>
+<link rel="alternate" hreflang="x-default"
+href="https://www.shadesapps.com/en/emoticon/"/>
 {% elif request.path == '/pt/emoticon/' %}
-<link rel="canonical" href="https://www.shadesapps.com/pt/emoticon/">
-<meta name="description" content="Emoticons >_< e Kaomoji (✯◡✯), para &#9986;&#65039; copiar e &#128203; colar. Com emoticons ASCII, emoticons japoneses, e outros.">
-<link rel="alternate" hreflang="en" href="https://www.shadesapps.com/en/emoticon/">
-<link rel="alternate" hreflang="pt-br" href="https://www.shadesapps.com/pt/emoticon/">
-<link rel="alternate" hreflang="x-default" href="https://www.shadesapps.com/en/emoticon/">
+<link rel="canonical" href="https://www.shadesapps.com/pt/emoticon/"/>
+<meta name="description" content="Emoticons >_< e Kaomoji (✯◡✯), para
+ &#9986;&#65039; copiar e &#128203; colar. Com emoticons ASCII, emoticons
+ japoneses, e outros."/>
+<meta property="og:title" content="Emoticons e Kaomoji"/>
+<meta property="og:url" content="https://www.shadesapps.com/pt/emoticon/"/>
+<meta property="og:description" content="Emoticons >_< e Kaomoji (✯◡✯), para
+ &#9986;&#65039; copiar e &#128203; colar. Com emoticons ASCII, emoticons
+ japoneses, e outros."/>
+<link rel="alternate" hreflang="en"
+href="https://www.shadesapps.com/en/emoticon/"/>
+<link rel="alternate" hreflang="pt-br"
+href="https://www.shadesapps.com/pt/emoticon/"/>
+<link rel="alternate" hreflang="x-default"
+href="https://www.shadesapps.com/en/emoticon/"/>
 {% elif request.path == '/en/convert-case/'%}
-<link rel="canonical" href="https://www.shadesapps.com/en/convert-case/">
-<meta name="description" content="Convert Case and Awesome Fonts, for &#9986;&#65039; copy and &#128203; paste. Covering UPPERCASE, lowercase, Title Case, 𝔞𝔫𝔡 𝓬𝓸𝓸𝓵 𝒻ℴ𝓃𝓉𝓈">
-<link rel="alternate" hreflang="en" href="https://www.shadesapps.com/en/convert-case/">
-<link rel="alternate" hreflang="pt-br" href="https://www.shadesapps.com/pt/convert-case/">
-<link rel="alternate" hreflang="x-default" href="https://www.shadesapps.com/en/convert-case/">
+<link rel="canonical" href="https://www.shadesapps.com/en/convert-case/"/>
+<meta name="description" content="Convert Case and Awesome Fonts, for
+ &#9986;&#65039; copy and &#128203; paste. Covering UPPERCASE, lowercase,
+ Title Case, 𝔞𝔫𝔡 𝓬𝓸𝓸𝓵 𝒻ℴ𝓃𝓉𝓈"/>
+<meta property="og:title" content="Convert Case"/>
+<meta property="og:url" content="https://www.shadesapps.com/en/convert-case/"/>
+<meta property="og:description" content="Convert Case and Awesome Fonts, for
+ &#9986;&#65039; copy and &#128203; paste. Covering UPPERCASE, lowercase,
+ Title Case, 𝔞𝔫𝔡 𝓬𝓸𝓸𝓵 𝒻ℴ𝓃𝓉𝓈"/>
+<link rel="alternate" hreflang="en"
+href="https://www.shadesapps.com/en/convert-case/"/>
+<link rel="alternate" hreflang="pt-br"
+href="https://www.shadesapps.com/pt/convert-case/"/>
+<link rel="alternate" hreflang="x-default"
+href="https://www.shadesapps.com/en/convert-case/"/>
 {% elif request.path == '/pt/convert-case/'%}
-<link rel="canonical" href="https://www.shadesapps.com/pt/convert-case/">
-<meta name="description" content="Letras Diferentes e Fontes Legais, para &#9986;&#65039; copiar e &#128203; colar. Com MAIÚSCULAS, MINÚSCULAS, e 𝔣𝔬𝔫𝔱𝔢𝔰 𝓭𝓲𝓯𝓮𝓻𝓮𝓷𝓮𝓽𝓮𝓼">
-<link rel="alternate" hreflang="en" href="https://www.shadesapps.com/en/convert-case/">
-<link rel="alternate" hreflang="pt-br" href="https://www.shadesapps.com/pt/convert-case/">
-<link rel="alternate" hreflang="x-default" href="https://www.shadesapps.com/en/convert-case/">
+<link rel="canonical" href="https://www.shadesapps.com/pt/convert-case/"/>
+<meta name="description" content="Letras Diferentes e Fontes Legais, para
+ &#9986;&#65039; copiar e &#128203; colar. Com MAIÚSCULAS, MINÚSCULAS, e
+ 𝔣𝔬𝔫𝔱𝔢𝔰 𝓭𝓲𝓯𝓮𝓻𝓮𝓷𝓮𝓽𝓮𝓼"/>
+<meta property="og:title" content="Letras Diferentes"/>
+<meta property="og:url" content="https://www.shadesapps.com/pt/convert-case/"/>
+<meta property="og:description" content="Letras Diferentes e Fontes Legais, para
+ &#9986;&#65039; copiar e &#128203; colar. Com MAIÚSCULAS, MINÚSCULAS, e
+ 𝔣𝔬𝔫𝔱𝔢𝔰 𝓭𝓲𝓯𝓮𝓻𝓮𝓷𝓮𝓽𝓮𝓼"/>
+<link rel="alternate" hreflang="en"
+href="https://www.shadesapps.com/en/convert-case/"/>
+<link rel="alternate" hreflang="pt-br"
+href="https://www.shadesapps.com/pt/convert-case/"/>
+<link rel="alternate" hreflang="x-default"
+href="https://www.shadesapps.com/en/convert-case/"/>
 {% endif %}
-<link rel="shortcut icon" href="{% static 'vendor/favicon.svg' %}" type="image/x-icon">
-<link href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
-<link href="{% static 'vendor/css/style.css'%}" rel="stylesheet">
+<meta property="og:image" content="https://www.shadesapps.com/static/vendor/sunglasses.png"/>
+<link rel="shortcut icon" href="{% static 'vendor/favicon.svg' %}"
+type="image/x-icon"/>
+<link href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}"
+rel="stylesheet"/>
+<link href="{% static 'vendor/css/style.css'%}" rel="stylesheet"/>

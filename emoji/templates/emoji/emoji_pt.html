@@ -1,5 +1,7 @@
-{% extends 'emoji/emoji.html' %}
-{% block title %}Emojis | &#128526; Shadesapps - Modo Escuro &#127770;{% endblock %}
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Emojis | &#128526; Shadesapps - Modo Escuro &#127770;
+{% endblock %}
 {% block side_left%}
 <a href="#0"><p class="side-block">Carinhas e Gestos</p></a>
 <a href="#1"><p class="side-block">Pessoas e Atividades</p></a>
@@ -9,7 +11,7 @@
 <a href="#5"><p class="side-block">Novos Emojis</p></a>
 {% endblock %}
 {% block main %}
-<div class="container rounded-block">
+<div class="rounded-block">
   <h1>Emojis</h1>
   <h2 class="title-sub" id="0">Carinhas e Gestos</h2>
   <div class="row">
@@ -23,7 +25,7 @@
     </div>
   </div>
 </div>
-<div class="container rounded-block">
+<div class="rounded-block">
   <h2 class="title-sub" id="1">Pessoas e Atividades</h2>
   <div class="row">
     <div class="col-lg emoji">
@@ -36,7 +38,7 @@
     </div>
   </div>
 </div>
-<div class="container rounded-block">
+<div class="rounded-block">
   <h2 class="title-sub" id="2">Natureza e Comidas</h2>
   <div class="row">
     <div class="col-lg emoji">
@@ -49,7 +51,7 @@
     </div>
   </div>
 </div>
-<div class="container rounded-block">
+<div class="rounded-block">
   <h2 class="title-sub" id="2">Símbolos e Objetos</h2>
   <div class="row">
     <div class="col-lg emoji">
@@ -62,10 +64,10 @@
     </div>
   </div>
 </div>
-<div class="container rounded-block">
+<div class="rounded-block">
   <h2 class="title-sub" id="4">Viagem e Bandeiras</h2>
   <div class="row">
-    <div class="col-lg emoji"> 
+    <div class="col-lg emoji">
       {% for x in travel %}
       {{ x }}
       {% endfor %}
@@ -75,16 +77,16 @@
     </div>
   </div>
 </div>
-<div class="container rounded-block">
+<div class="rounded-block">
   <h2 class="title-sub" id="5">Novos Emojis</h2>
   <div class="row">
-    <div class="col-lg emoji"> 
+    <div class="col-lg emoji">
       {% for x in newemojis %}
       {{ x }}
       {% endfor %}
     </div>
   </div>
-  <div class="justify-content-center">
+  <nav>
     <span>
       <a href="#0">Carinhas e Gestos</a> |
       <a href="#1">Pessoas e Atividades</a> |
@@ -93,27 +95,49 @@
       <a href="#4">Viagem e Bandeiras</a> |
       <a href="#5">Novos Emojis</a>
     </span>
-  </div>
+  </nav>
 </div>
-<div class="container rounded-block">
+<div class="rounded-block">
   <div class="row">
-    <div class="col-lg">
+    <section class="col-lg">
       <p id="text-complement">
-        Você encontrará aqui listas com emojis para copiar e colar. <br> Cobrindo novos emojis, rostos, gestos,
-        atividade, símbolos, objetos, bandeiras, emoji de coração, emoji risonho, emoji triste, emoji LGBT, emoji de gatinho,
-        emoji trangender, emoji de bandeira, emoji suplicante, emoji de rosto com lágrimas de alegria, emoji de abraço, emoji de palhaço,
-        emoji de rosto sorridente, emoji de marca de seleção, emoji rosto sorridente de emoji com lágrima, vírus, vacina, emoji quente, emoji de fogo,
-        emoji de máscara, emoji de gato, emoji de cão, emoji de arco-íris, emoji de sol, emoji de lua, emoji de clima, emoji de olhos,
-        emojis de páscoa, emojis fofos, emoji de mão, emoji de dedos, emoji de roupa e muitos outros.
-        emoji de aniversário, emoji de sexta-feira negra, emoji de matéria de vida negra, emoji de carnaval, emoji de ano novo chinês,
-        emoji de natal, emoji de cinco de mayo, emojim de coronavírus diwali emoji, emoji de festival de barco do dragão,
-        emoji do dia da terra, emoji de filme, emoji do dia dos pais, quatro vinte emoji, 420 emoji, emoji de formatura,
-        emoji de halloween, emoji de hanukkah, emoji do dia da independência, emoji do dia da mulher, emoji NSFW,
-        emoji olimpíadas, emoji de orgulho, emoji de verão, emoji de ação de tanques, emoji de casamento, emoji de casamento,
-        emoji de inverno, emoji de olimpíadas de inverno, emoji de trabalho em casa, emoji da copa do mundo,
-        <br> que pode ser útil em jogos e Twitter, Discord, Instagram, Twitch, Facebook, LOL Wild Rift e assim por diante.
+        Você encontrará aqui listas com emojis para copiar e colar. <br>
+        Cobrindo novos emojis, rostos, gestos,
+        atividade, símbolos, objetos, bandeiras, emoji de coração, emoji
+        risonho, emoji triste, emoji LGBT, emoji de gatinho,
+        emoji trangender, emoji de bandeira, emoji suplicante, emoji de rosto
+        com lágrimas de alegria, emoji de abraço, emoji de palhaço,
+        emoji de rosto sorridente, emoji de marca de seleção, emoji rosto
+        sorridente de emoji com lágrima, vírus, vacina, emoji quente, emoji de
+        fogo,
+        emoji de máscara, emoji de gato, emoji de cão, emoji de arco-íris, 
+        emoji de sol, emoji de lua, emoji de clima, emoji de olhos,
+        emojis de páscoa, emojis fofos, emoji de mão, emoji de dedos, emoji de
+        roupa e muitos outros.
+        emoji de aniversário, emoji de sexta-feira negra, emoji de matéria de
+        vida negra, emoji de carnaval, emoji de ano novo chinês,
+        emoji de natal, emoji de cinco de mayo, emojim de coronavírus diwali
+        emoji, emoji de festival de barco do dragão,
+        emoji do dia da terra, emoji de filme, emoji do dia dos pais, quatro
+        vinte emoji, 420 emoji, emoji de formatura,
+        emoji de halloween, emoji de hanukkah, emoji do dia da independência,
+        emoji do dia da mulher, emoji NSFW,
+        emoji olimpíadas, emoji de orgulho, emoji de verão, emoji de ação de
+        tanques, emoji de casamento, emoji de casamento,
+        emoji de inverno, emoji de olimpíadas de inverno, emoji de trabalho em
+        casa, emoji da copa do mundo,
+        <br> que pode ser útil em jogos e Twitter, Discord, Instagram, Twitch,
+        Facebook, LOL Wild Rift e assim por diante.
       </p>
-    </div>
+    </section>
   </div>
 </div>
+{% endblock %}
+{% block side_right %}
+<a href="/en/emoji/" style="text-decoration:none"><p class="side-block">
+  <img src="{% static 'vendor/eua.png' %}" width="16" height="16"
+  alt="us flag"/> en</p></a>
+<a href="/pt/emoji/" style="text-decoration:none"><p class="side-block">
+  <img src="{% static 'vendor/br.png' %}" width="16" height="16"
+  alt="br flag"/> pt-BR</p></a>
 {% endblock %}

@@ -8,4 +8,4 @@ class InputForms(forms.Form):
                 "rows":5,
                 "autofocus": True
                 }
-            ), required=False, label='')
+            ), required=False, label='Convert case')

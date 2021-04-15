@@ -1,112 +1,150 @@
-{% extends 'convert/convertcase.html' %}
+{% extends 'base.html' %}
 {% load crispy_forms_tags %}
+{% load static %}
 {% block title %}
 Letras Diferentes | &#128526; Shadesapps - Modo Escuro &#127770;
 {% endblock %}
 {% block main %}
-<div class="container rounded-block">
+<div class="rounded-block">
 	<h1>Letras Diferentes</h1>
 	<div id="io_forms" class="row justify-content-center">
-	{% if not form.new_data %}
+		{% if not form.new_data %}
 		{% with val="12"%}
 		<div class="col-sm-{{val}}">
-		{% endwith %}
-	{% else %}
+    {% endwith %}
+    {% else %}
 		<div class="col-sm-6">
-	{% endif %}
-			<form id="input_form" method="post" name="vaidarcerto">{% csrf_token %}
-				{{ form|crispy }}
-			</form>
-		</div>
-	{% if form.new_data %}
-		<div class="col-sm-6">
-			<textarea class="form-control" id="id_origin" rows="5">{{ form.new_data }}</textarea>
-		</div>
-	{% endif %}
+		{% endif %}
+      <form id="input_form" method="post"
+      name="vaidarcerto">{% csrf_token %}
+      {{ form|crispy }}
+      </form>
+    </div>
+    {% if form.new_data %}
+    <div class="col-sm-6">
+    <label for="id_origin">Convert case</label>
+    <textarea class="form-control" id="id_origin" rows="5">{{ form.new_data }}
+    </textarea>
+    </div>
+    {% endif %}
 	</div>
-	<button name="submit" class="btn btn-outline-primary btn-lg" value="0" form="input_form">
-		UPPER
-	</button>
-	<button name="submit" class="btn btn-outline-primary btn-lg" value="1" form="input_form">
-		Title
-	</button>
-	<button name="submit" class="btn btn-outline-primary btn-lg" value="2" form="input_form">
-		lower
-	</button>
-	<button name="submit" class="btn btn-outline-primary btn-lg" value="3" form="input_form">
-		𝔉𝔯𝔞𝔨𝔱𝔲𝔯
-	</button>
-	<button name="submit" class="btn btn-outline-primary btn-lg" value="4" form="input_form">
-		𝕱𝖗𝖆𝖐𝖙𝖚𝖗 𝕭𝖔𝖑𝖉
-	</button>
-	<button name="submit" class="btn btn-outline-primary btn-lg" value="5" form="input_form">
-		𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎
-	</button>
-	<button name="submit" class="btn btn-outline-primary btn-lg" value="6" form="input_form">
-		𝔻𝕠𝕦𝕓𝕝𝕖 𝕊𝕥𝕣𝕦𝕔𝕜
-	</button>
-	<button name="submit" class="btn btn-outline-primary btn-lg" value="7" form="input_form">
-		𝒮𝒸𝓇𝒾𝓅𝓉
-	</button>
-	<button name="submit" class="btn btn-outline-primary btn-lg" value="8" form="input_form">
-		𝓢𝓬𝓻𝓲𝓹𝓽 𝓑𝓸𝓵𝓭
-	</button>
-	<button name="submit" class="btn btn-outline-primary btn-lg" value="9" form="input_form">
-		🅝🅔🅖🅐🅣🅘🅥🅔 🅒🅘🅡🅒🅛🅔🅓
-	</button>
-	<button name="submit" class="btn btn-outline-primary btn-lg" value="10" form="input_form">
-		🅒🅘🅡🅒🅛🅔🅓
-	</button>
-	<button name="submit" class="btn btn-outline-primary btn-lg" value="11" form="input_form">
-		🅂🅀🅄🄰🅁🄴🄳
-	</button>
-	<button name="submit" class="btn btn-outline-primary btn-lg" value="12" form="input_form">
-		🆂🆀🆄🅰🆁🅴🅳 🅽🅴🅶🅰🆃🅸🆅🅴
-	</button>
-	<button name="submit" class="btn btn-outline-primary btn-lg" value="13" form="input_form">
-		𝐒𝐞𝐫𝐢𝐟 𝐁𝐨𝐥𝐝
-	</button>
-	<button name="submit" class="btn btn-outline-primary btn-lg" value="14" form="input_form">
-		𝑆𝑒𝑟𝑖𝑓 𝐼𝑡𝑎𝑙𝑖𝑐
-	</button>
-	<button name="submit" class="btn btn-outline-primary btn-lg" value="15" form="input_form">
-		𝑺𝒆𝒓𝒊𝒇 𝑩𝒐𝒍𝒅 𝑰𝒕𝒂𝒍𝒊𝒄
-	</button>
-	<button name="submit" class="btn btn-outline-primary btn-lg" value="16" form="input_form">
-		𝖲𝖺𝗇𝗌-𝗌𝖾𝗋𝗂𝖿
-	</button>
-	<button name="submit" class="btn btn-outline-primary btn-lg" value="17" form="input_form">
-		𝗦𝗮𝗻𝘀-𝘀𝗲𝗿𝗶𝗳 𝗕𝗼𝗹𝗱
-	</button>
-	<button name="submit" class="btn btn-outline-primary btn-lg" value="18" form="input_form">
-		𝘚𝘢𝘯𝘴-𝘴𝘦𝘳𝘪𝘧 𝘐𝘵𝘢𝘭𝘪𝘤
-	</button>
-	<button name="submit" class="btn btn-outline-primary btn-lg" value="19" form="input_form">
-		𝙎𝙖𝙣𝙨-𝙨𝙚𝙧𝙞𝙛 𝘽𝙤𝙡𝙙 𝙄𝙩𝙖𝙡𝙞𝙘
-	</button>
-	<button name="submit" class="btn btn-outline-primary btn-lg" value="20" form="input_form">
-		pǝʇɹǝʌuI
-	</button>
+		<button name="submit" class="btn btn-outline-primary btn-lg" value="0"
+			form="input_form">
+			UPPER
+		</button>
+		<button name="submit" class="btn btn-outline-primary btn-lg" value="1"
+			form="input_form">
+			Title
+		</button>
+		<button name="submit" class="btn btn-outline-primary btn-lg" value="2"
+			form="input_form">
+			lower
+		</button>
+		<button name="submit" class="btn btn-outline-primary btn-lg" value="3"
+			form="input_form">
+			𝔉𝔯𝔞𝔨𝔱𝔲𝔯
+		</button>
+		<button name="submit" class="btn btn-outline-primary btn-lg" value="4"
+			form="input_form">
+			𝕱𝖗𝖆𝖐𝖙𝖚𝖗 𝕭𝖔𝖑𝖉
+		</button>
+		<button name="submit" class="btn btn-outline-primary btn-lg" value="5"
+			form="input_form">
+			𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎
+		</button>
+		<button name="submit" class="btn btn-outline-primary btn-lg" value="6"
+			form="input_form">
+			𝔻𝕠𝕦𝕓𝕝𝕖 𝕊𝕥𝕣𝕦𝕔𝕜
+		</button>
+		<button name="submit" class="btn btn-outline-primary btn-lg" value="7"
+			form="input_form">
+			𝒮𝒸𝓇𝒾𝓅𝓉
+		</button>
+		<button name="submit" class="btn btn-outline-primary btn-lg" value="8"
+			form="input_form">
+			𝓢𝓬𝓻𝓲𝓹𝓽 𝓑𝓸𝓵𝓭
+		</button>
+		<button name="submit" class="btn btn-outline-primary btn-lg" value="9"
+			form="input_form">
+			🅝🅔🅖🅐🅣🅘🅥🅔 🅒🅘🅡🅒🅛🅔🅓
+		</button>
+		<button name="submit" class="btn btn-outline-primary btn-lg" value="10"
+			form="input_form">
+			🅒🅘🅡🅒🅛🅔🅓
+		</button>
+		<button name="submit" class="btn btn-outline-primary btn-lg" value="11"
+			form="input_form">
+			🅂🅀🅄🄰🅁🄴🄳
+		</button>
+		<button name="submit" class="btn btn-outline-primary btn-lg" value="12"
+			form="input_form">
+			🆂🆀🆄🅰🆁🅴🅳 🅽🅴🅶🅰🆃🅸🆅🅴
+		</button>
+		<button name="submit" class="btn btn-outline-primary btn-lg" value="13"
+			form="input_form">
+			𝐒𝐞𝐫𝐢𝐟 𝐁𝐨𝐥𝐝
+		</button>
+		<button name="submit" class="btn btn-outline-primary btn-lg" value="14"
+			form="input_form">
+			𝑆𝑒𝑟𝑖𝑓 𝐼𝑡𝑎𝑙𝑖𝑐
+		</button>
+		<button name="submit" class="btn btn-outline-primary btn-lg" value="15"
+			form="input_form">
+			𝑺𝒆𝒓𝒊𝒇 𝑩𝒐𝒍𝒅 𝑰𝒕𝒂𝒍𝒊𝒄
+		</button>
+		<button name="submit" class="btn btn-outline-primary btn-lg" value="16"
+			form="input_form">
+			𝖲𝖺𝗇𝗌-𝗌𝖾𝗋𝗂𝖿
+		</button>
+		<button name="submit" class="btn btn-outline-primary btn-lg" value="17"
+			form="input_form">
+			𝗦𝗮𝗻𝘀-𝘀𝗲𝗿𝗶𝗳 𝗕𝗼𝗹𝗱
+		</button>
+		<button name="submit" class="btn btn-outline-primary btn-lg" value="18"
+			form="input_form">
+			𝘚𝘢𝘯𝘴-𝘴𝘦𝘳𝘪𝘧 𝘐𝘵𝘢𝘭𝘪𝘤
+		</button>
+		<button name="submit" class="btn btn-outline-primary btn-lg" value="19"
+			form="input_form">
+			𝙎𝙖𝙣𝙨-𝙨𝙚𝙧𝙞𝙛 𝘽𝙤𝙡𝙙 𝙄𝙩𝙖𝙡𝙞𝙘
+		</button>
+		<button name="submit" class="btn btn-outline-primary btn-lg" value="20"
+			form="input_form">
+			pǝʇɹǝʌuI
+		</button>
 </div>
-<div class="container rounded-block">
-	<div class="row">
-		<div class="col-lg">
-			<p id="text-complement">
-			Facilmente converta o seu texto com fontes de letras diferentes, legais, bonitas,
-      cursivas e personalizadas, para copiar e colar, usando fontes ASCII gratuitas.<br>
-      Muito utilizadas em nicks em games como: LoL Wild Rift, Free Fire (FF), Fortnite, 
-      PUBG, League of Legends(LOL), Among Us e outros<br>Além de redes sociais populares como: Discord, Whatsapp,
-      TikTok, Instagram, Facebook, Twitter, Reddit e outros.
-			</p>
-			<p id="text-complement">	
-			Também use o modificador de letras para criar títulos para Youtube, Intagram e Twitch com:
-			<ul class="text-left pl-4">
-				<li>UPPERCASE - TRANSFORMA TODAS AS PALAVRAS DO TEXTO EM MAÍUSCULO</li>
-				<li>LOWERCASE - converte todas as letras do texto para minúsculas</li>
-				<li>TitleCase - Deixa Em Maíusculo Todas As Letras Inicias Das Palavras</li>
-			</ul>
-			</p>
-		</div>
-	</div>
+<div class="rounded-block">
+  <div class="row">
+    <section class="col-lg">
+      <p id="text-complement">
+        Facilmente converta o seu texto com fontes de letras diferentes, 
+        legais, bonitas, cursivas e personalizadas, para copiar e colar, usando
+        fontes ASCII gratuitas.<br> Muito utilizadas em nicks em games como:
+        LoL Wild Rift, Free Fire (FF), Fortnite, PUBG, League of Legends(LOL),
+        Among Us e outros<br>Além de redes sociais populares como: Discord,
+        Whatsapp, TikTok, Instagram, Facebook, Twitter, Reddit e outros.
+      </p>
+      <p id="text-complement">
+        Também use o modificador de letras para criar títulos para Youtube,
+        Intagram e Twitch com:
+        <ul class="text-left pl-4">
+          <li><strong>UPPERCASE</strong> - TRANSFORMA TODAS AS PALAVRAS DO
+            TEXTO EM MAÍUSCULO</li>
+          <li><strong>LOWERCASE</strong> - converte todas as letras do texto
+            para minúsculas</li>
+          <li><strong>TitleCase</strong> - Deixa Em Maíusculo Todas As Letras
+            Inicias Das Palavras</li>
+        </ul>
+      </p>
+    </section>
+  </div>
 </div>
+{% endblock %}
+{% block side_right %}
+<a href="/en/convert-case/" style="text-decoration:none"><p class="side-block">
+  <img src="{% static 'vendor/eua.png' %}" width="16" height="16"
+  alt="us flag"/> en</p></a>
+<a href="/pt/convert-case/" style="text-decoration:none"><p class="side-block">
+  <img src="{% static 'vendor/br.png' %}" width="16" height="16"
+  alt="br flag"/> pt-BR</p></a>
 {% endblock %}

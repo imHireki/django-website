@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Emojis | &#128526; Shadesapps - Dark Mode &#127770;{% endblock %}
+{% block title %}Emojis | &#128526; Shadesapps - Dark Mode &#127770;
+{% endblock%}
 {% block side_left%}
 <a href="#0"><p class="side-block">Faces and Gestures</p></a>
 <a href="#1"><p class="side-block">People and Activity</p></a>
@@ -10,7 +11,7 @@
 <a href="#5"><p class="side-block">New Emojis</p></a>
 {% endblock %}
 {% block main %}
-<div class="container rounded-block">
+<div class="rounded-block">
   <h1>Emojis</h1>
   <h2 class="title-sub" id="0">Faces and Gestures</h2>
   <div class="row">
@@ -24,7 +25,7 @@
     </div>
   </div>
 </div>
-<div class="container rounded-block">
+<div class="rounded-block">
   <h2 class="title-sub" id="1">People and Activity</h2>
   <div class="row">
     <div class="col-lg emoji">
@@ -37,7 +38,7 @@
     </div>
   </div>
 </div>
-<div class="container rounded-block">
+<div class="rounded-block">
   <h2 class="title-sub" id="2">Nature and Food</h2>
   <div class="row">
     <div class="col-lg emoji">
@@ -50,7 +51,7 @@
     </div>
   </div>
 </div>
-<div class="container rounded-block">
+<div class="rounded-block">
   <h2 class="title-sub" id="3">Symbols and Objects</h2>
   <div class="row">
     <div class="col-lg emoji">
@@ -63,10 +64,10 @@
     </div>
   </div>
 </div>
-<div class="container rounded-block">
+<div class="rounded-block">
   <h2 class="title-sub" id="4">Travel and Flags</h2>
   <div class="row">
-    <div class="col-lg emoji"> 
+    <div class="col-lg emoji">
       {% for x in travel %}
       {{ x }}
       {% endfor %}
@@ -76,16 +77,16 @@
     </div>
   </div>
 </div>
-<div class="container rounded-block">
+<div class="rounded-block">
   <h2 class="title-sub" id="5">New Emojis</h2>
   <div class="row">
-    <div class="col-lg emoji"> 
+    <div class="col-lg emoji">
       {% for x in newemojis %}
       {{ x }}
       {% endfor %}
     </div>
   </div>
-  <div class="row justify-content-center">
+  <nav>
     <span>
       <a href="#0">Faces and Gestures</a> |
       <a href="#1">People and Activity</a> |
@@ -94,32 +95,49 @@
       <a href="#4">Travel and Flags</a> |
       <a href="#5">New Emojis</a>
     </span>
-  </div>
+  </nav>
 </div>
-<div class="container rounded-block">
+<div class="rounded-block">
   <div class="row">
-    <div class="col-lg">
+    <section class="col-lg">
       <p id="text-complement">
-        You'll find here lists with emojis for copy and paste.<br> Covering new emojis, faces, gestures,
-        activity, symbols, objects, flags, heart emoji, laughing emoji, sad emoji, LGBT emoji, kitten emoji,
-        trangender emoji, flag emoji, pleading emoji, face with tears of joy emoji, hug emoji, clown emoji,
-        smiling face emoji, check mark emoji, emoji smiling face with tear, virus, vaccine, hot emoji, fire emoji,
-        mask emoji, cat emoji, dog emoji, rainbow emoji, sun emoji, moon emoji, weather emoji, eyes emoji,
-        easter emojis, cute emojis, hand emoji, fingers emoji, outfit emoji, and so many others.
-        birthday emoji, black Friday emoji, black lives matter emoji, Carnaval emoji, Chinese new year emoji,
-        christmas emoji, cinco de mayo emoji, coronavirus emojim diwali emoji, dragon boat festival emoji,
-        earth day emoji, movie emoji, father's day emoji, four twenty emoji, 420 emoji, graduation emoji,
-        halloween emoji, hanukkah emoji, Independence day emoji, women's day emoji, NSFW emoji,
-        olympics emoji, pride emoji, summer emoji, tanksgiving emoji, wedding emoji, marriage emoji,
-        winter emoji, winter olympics emoji, working from home emoji, world cup emoji,
+        You'll find here lists with emojis for copy and paste.<br> Covering new
+        emojis, faces, gestures,
+        activity, symbols, objects, flags, heart emoji, laughing emoji, sad
+        emoji, LGBT emoji, kitten emoji,
+        trangender emoji, flag emoji, pleading emoji, face with tears of joy
+        emoji, hug emoji, clown emoji,
+        smiling face emoji, check mark emoji, emoji smiling face with tear,
+        virus, vaccine, hot emoji, fire emoji,
+        mask emoji, cat emoji, dog emoji, rainbow emoji, sun emoji, moon emoji,
+        weather emoji, eyes emoji,
+        easter emojis, cute emojis, hand emoji, fingers emoji, outfit emoji, and
+        so many others.
+        birthday emoji, black Friday emoji, black lives matter emoji, Carnaval
+        emoji, Chinese new year emoji,
+        christmas emoji, cinco de mayo emoji, coronavirus emojim diwali emoji,
+        dragon boat festival emoji,
+        earth day emoji, movie emoji, father's day emoji, four twenty emoji, 420
+        emoji, graduation emoji,
+        halloween emoji, hanukkah emoji, Independence day emoji, women's day
+        emoji, NSFW emoji,
+        olympics emoji, pride emoji, summer emoji, tanksgiving emoji, wedding
+        emoji, marriage emoji,
+        winter emoji, winter olympics emoji, working from home emoji, world cup
+        emoji,
         <br> Which
-        can be useful in games and Twitter, Discord, Instagram, Twitch, Facebook, LOL Wild Rift and so on.
+        can be useful in games and Twitter, Discord, Instagram, Twitch,
+        Facebook, LOL Wild Rift and so on.
       </p>
-    </div>
+    </section>
   </div>
 </div>
 {% endblock %}
 {% block side_right %}
-<a href="/en/emoji/" style="text-decoration:none"><p class="side-block"><img src="{% static 'vendor/eua.png' %}"> en</p></a>
-<a href="/pt/emoji/" style="text-decoration:none"><p class="side-block"><img src="{% static 'vendor/br.png' %}"> pt-BR</p></a>
+<a href="/en/emoji/" style="text-decoration:none"><p class="side-block">
+  <img src="{% static 'vendor/eua.png' %}" width="16" height="16"
+  alt="us flag"/> en</p></a>
+<a href="/pt/emoji/" style="text-decoration:none"><p class="side-block">
+  <img src="{% static 'vendor/br.png' %}" width="16" height="16"
+  alt="br flag"/> pt-BR</p></a>
 {% endblock %}
