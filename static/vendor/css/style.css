@@ -18,8 +18,7 @@ body {
 
 .rounded-block {
   justify-content: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 15px;
   margin-top: 15px;
   margin-bottom: 15px;
   color: whitesmoke;
@@ -27,7 +26,6 @@ body {
   border-radius: 20px;
 }
 
-/* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 767px) {
   .sidenav {
     height: auto;
@@ -35,22 +33,22 @@ body {
   }
   .row.content {height:auto;}
   
-  #main {
+  body > main {
     height: auto;
     margin-right: 15px;
     margin-left: 15px;
+    padding: 0;
   }
 }
 
-/* Set black background color, white text and some padding */
-footer {
+body > footer {
   background-color: rgb(36,37,38);
   color: white;
   padding: 15px;
   border-top: 2px solid rgb(58,59,60);
 }
 
-.side-block {
+aside > a > p.side-block {
   justify-content: center;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -62,38 +60,11 @@ footer {
   margin-top: 0%;
 }
 
-.side-block:hover {
+aside > a > p.side-block:hover {
   background-color: rgb(78,79,80);
 }
 
-#id_input_txt, #id_origin {
-  color: whitesmoke;
-  background-color: rgb(78,79,80);
-  border-radius: 10px;
-  border: none;
-}
-
-.card {
-  color: whitesmoke;
-  background-color: rgb(58,59,60);
-  border-radius: 20px;
-  padding: 0.25em;
-  margin-top: 0%;
-}
-.card:hover {
-  background-color: rgb(78,79,80);
-}
-
-#link-nav {
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-}
-#link-nav:hover {
-  color: rgb(66, 147, 245);
-}
-
-#name-brand {
+a#name-brand {
   font-family: 'Times New Roman', Times, serif;
   font-style: italic;
   height: 45px;
@@ -101,7 +72,28 @@ footer {
   text-decoration: none;
   color: aliceblue;
 }
-#name-brand:hover {
+
+a#name-brand:hover {
+  color: rgb(66, 147, 245);
+}
+
+div.card {
+  color: whitesmoke;
+  background-color: rgb(58,59,60);
+  border-radius: 20px;
+  padding: 0.25em;
+  margin-top: 0%;
+}
+div.card:hover {
+  background-color: rgb(78,79,80);
+}
+
+li.nav-item.active > a.nav-link {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+li.nav-item.active > a.nav-link:hover {
   color: rgb(66, 147, 245);
 }
 
@@ -111,38 +103,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 8px;
 }
 
-h2 {
-  font-size: 25px;
-}
-
-#text-complement {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  text-align: left;
-  padding: 1%;
-  margin-bottom: 0px;
-}
-
-.title-sub {
-  text-align: left;
-  margin-left: 2%;
-  padding: 1%;
-}
-
-hr {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 0;
-  border-top: 3px solid  rgb(24,25,26);
-}
-
-.table td {
+table.table td {
   border-top: none;
   color: gainsboro;
   font-weight: bold;
 }
 
-.table {
+table.table {
   align-content: right;
   margin-left: 10px;
   margin-right: 10px;
@@ -153,7 +120,38 @@ p#center {
   text-align: center;
 }
 
-.emoji {
+main > div > button.btn {
+  margin-bottom: 4px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+div.container-fluid {
+  text-align: center;
+}
+
+nav.nav-footer {
+  color: #6c757d;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+p.text-footer {
+  margin: 0%;
+  justify-content: center;
+  color: #6c757d;
+}
+
+#id_input_txt, #id_origin {
+  color: whitesmoke;
+  background-color: rgb(78,79,80);
+  border-radius: 10px;
+  border: none;
+}
+
+div.emoji {
   font-family: "Apple Color Emoji", "Segoe UI Emoji";
   padding-left: 2%;
   padding-right: 2%;
@@ -161,10 +159,23 @@ p#center {
   font-size: 2.7em;
 }
 
-.btn {
-  margin-bottom: 4px;
+p#text-complement {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  text-align: left;
+  padding: 1%;
+  margin-bottom: 0px;
 }
 
-a:hover {
-  text-decoration: none;
+h2.title-sub {
+  text-align: left;
+  margin-left: 2%;
+  padding: 1%;
+}
+
+label[for="id_input_txt"], label[for="id_origin"]
+{
+  opacity: 0;
+  font-size: 1px;
+  margin-bottom: 0%;
 }
