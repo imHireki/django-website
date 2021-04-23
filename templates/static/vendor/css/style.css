@@ -4,10 +4,6 @@
   border-bottom: 2px solid rgb(58,59,60);
 }
 
-body {
-  background-color: rgb(24,25,26);
-}
-
 .row.content {height: auto}
 
 .sidenav {
