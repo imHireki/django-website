@@ -44,7 +44,7 @@ body > footer {
   border-top: 2px solid rgb(58,59,60);
 }
 
-aside > a > p.side-block {
+aside > section > a > p.side-block {
   justify-content: center;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -56,7 +56,7 @@ aside > a > p.side-block {
   margin-top: 0%;
 }
 
-aside > a > p.side-block:hover {
+p.side-block:hover {
   background-color: rgb(78,79,80);
 }
 
@@ -116,7 +116,7 @@ p#center {
   text-align: center;
 }
 
-main > div > button.btn {
+button.btn {
   margin-bottom: 4px;
 }
 

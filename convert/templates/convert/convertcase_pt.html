@@ -5,7 +5,7 @@
 Letras Diferentes | &#128526; Shadesapps - Modo Escuro &#127770;
 {% endblock %}
 {% block main %}
-<div class="rounded-block">
+<section class="rounded-block">
 	<h1>Letras Diferentes</h1>
 	<div id="io_forms" class="row justify-content-center">
 		{% if not form.new_data %}
@@ -22,9 +22,9 @@ Letras Diferentes | &#128526; Shadesapps - Modo Escuro &#127770;
     </div>
     {% if form.new_data %}
     <div class="col-sm-6">
-    <label for="id_origin">Convert case</label>
-    <textarea class="form-control" id="id_origin" rows="5">{{ form.new_data }}
-    </textarea>
+      <label for="id_origin">Convert case</label>
+      <textarea class="form-control"id="id_origin" rows="5">{{ form.new_data }}
+      </textarea>
     </div>
     {% endif %}
 	</div>
@@ -116,33 +116,37 @@ Letras Diferentes | &#128526; Shadesapps - Modo Escuro &#127770;
       </button>
     </div>
   </div>
-</div>
-<div class="rounded-block">
+</section>
+<article class="rounded-block">
   <div class="row">
-    <section class="col-lg">
-      <p id="text-complement">
-        Facilmente converta o seu texto com fontes de letras diferentes, 
-        legais, bonitas, cursivas e personalizadas, para copiar e colar, usando
-        fontes ASCII gratuitas.<br> Muito utilizadas em nicks em games como:
-        LoL Wild Rift, Free Fire (FF), Fortnite, PUBG, League of Legends(LOL),
-        Among Us e outros<br>Além de redes sociais populares como: Discord,
-        Whatsapp, TikTok, Instagram, Facebook, Twitter, Reddit e outros.
-      </p>
-      <p id="text-complement">
-        Também use o modificador de letras para criar títulos para Youtube,
-        Intagram e Twitch com:
-        <ul class="text-left pl-4">
-          <li><strong>UPPERCASE</strong> - TRANSFORMA TODAS AS PALAVRAS DO
-            TEXTO EM MAÍUSCULO</li>
-          <li><strong>LOWERCASE</strong> - converte todas as letras do texto
-            para minúsculas</li>
-          <li><strong>TitleCase</strong> - Deixa Em Maíusculo Todas As Letras
-            Inicias Das Palavras</li>
-        </ul>
-      </p>
-    </section>
+    <div class="col-lg">
+      <header>
+        <p id="text-complement">
+          Facilmente converta o seu texto com fontes de letras diferentes, 
+          legais, bonitas, cursivas e personalizadas, para copiar e colar, usando
+          fontes ASCII gratuitas.<br> Muito utilizadas em nicks em games como:
+          LoL Wild Rift, Free Fire (FF), Fortnite, PUBG, League of Legends(LOL),
+          Among Us e outros<br>Além de redes sociais populares como: Discord,
+          Whatsapp, TikTok, Instagram, Facebook, Twitter, Reddit e outros.
+        </p>
+      </header>
+      <section>
+        <p id="text-complement">
+          Também use o modificador de letras para criar títulos para Youtube,
+          Intagram e Twitch com:
+          <ul class="text-left pl-4">
+            <li><strong>UPPERCASE</strong> - TRANSFORMA TODAS AS PALAVRAS DO
+              TEXTO EM MAÍUSCULO</li>
+            <li><strong>LOWERCASE</strong> - converte todas as letras do texto
+              para minúsculas</li>
+            <li><strong>TitleCase</strong> - Deixa Em Maíusculo Todas As Letras
+              Inicias Das Palavras</li>
+          </ul>
+        </p>
+      </section>
+    </div>
   </div>
-</div>
+</article>
 {% endblock %}
 {% block side_right %}
 <a href="/en/convert-case/" style="text-decoration:none"><p class="side-block">

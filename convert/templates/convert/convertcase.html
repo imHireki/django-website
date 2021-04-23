@@ -5,7 +5,7 @@
 Convert Case &amp; Fancy Fonts | &#128526; Shadesapps - Dark Mode &#127770;
 {% endblock %}
 {% block main %}
-<div class="rounded-block">
+<section class="rounded-block">
   <h1>Case Converter</h1>
   <div id="io_forms" class="row justify-content-center">
     {% if not form.new_data %}
@@ -22,9 +22,9 @@ Convert Case &amp; Fancy Fonts | &#128526; Shadesapps - Dark Mode &#127770;
     </div>
     {% if form.new_data %}
     <div class="col-sm-6">
-    <label for="id_origin">Convert case</label>
-    <textarea class="form-control" id="id_origin" rows="5">{{ form.new_data }}
-    </textarea>
+      <label for="id_origin">Convert case</label>
+      <textarea class="form-control"id="id_origin" rows="5">{{ form.new_data }}
+      </textarea>
     </div>
     {% endif %}
   </div>
@@ -116,37 +116,41 @@ Convert Case &amp; Fancy Fonts | &#128526; Shadesapps - Dark Mode &#127770;
       </button>
     </div>
   </div>
-</div>
-<div class="rounded-block">
+</section>
+<article class="rounded-block">
   <div class="row">
-    <section class="col-lg">
-      <p id="text-complement">
-        You can easily use the convert case for generate different styles of
-        text,that can be handy when dealing with Youtube titles, Twitch, and
-        the like, including:
-      </p>
-      <p id="text-complement">
-        <ul class="text-left pl-4">
-          <li>UPPERCASE - IT TRANSFORMS ALL THE LOWER CASE LETTERS IN YOUR
-            TEXT INTO
-            CAPITALS.</li>
-          <li>lowercase - it convert all capital letters into lower case,
-            without
-            leaving any capital letters on your text</li>
-          <li>TitleCase - It Capitalizes The First Letter Of Each Word.</li>
-        </ul>
-      </p>
-      <p id="text-complement">
-        You can also use the font changer for straightforwardly convert your
-        text and letters, to 𝖋𝖆𝖓𝖈𝖞 𝒶𝓃𝒹 𝐚𝐰𝐞𝐬𝐨𝐦𝐞 𝓯𝓸𝓷𝓽𝓼, for easily copy and paste
-        'em in social medias, like: Twitter, Instagram, Discord, Facebook,
-        TikTok, Twitch, Reddit.<br> It can be used even for nicks/nicknames
-        in games, like: League of Legends(LOL), LOL Wild Rift, Fortnite, PUBG,
-        Among Us, and many others.
-      </p>
-    </section>
+    <div class="col-lg">
+      <header>
+        <p id="text-complement">
+          You can easily use the convert case for generate different styles of
+          text,that can be handy when dealing with Youtube titles, Twitch, and
+          the like, including:
+        </p>
+      </header>
+      <section>
+        <p id="text-complement">
+          <ul class="text-left pl-4">
+            <li>UPPERCASE - IT TRANSFORMS ALL THE LOWER CASE LETTERS IN YOUR
+              TEXT INTO
+              CAPITALS.</li>
+            <li>lowercase - it convert all capital letters into lower case,
+              without
+              leaving any capital letters on your text</li>
+            <li>TitleCase - It Capitalizes The First Letter Of Each Word.</li>
+          </ul>
+        </p>
+        <p id="text-complement">
+          You can also use the font changer for straightforwardly convert your
+          text and letters, to 𝖋𝖆𝖓𝖈𝖞 𝒶𝓃𝒹 𝐚𝐰𝐞𝐬𝐨𝐦𝐞 𝓯𝓸𝓷𝓽𝓼, for easily copy and paste
+          'em in social medias, like: Twitter, Instagram, Discord, Facebook,
+          TikTok, Twitch, Reddit.<br> It can be used even for nicks/nicknames
+          in games, like: League of Legends(LOL), LOL Wild Rift, Fortnite, PUBG,
+          Among Us, and many others.
+        </p>
+      </section>
+    </div>
   </div>
-</div>
+</article>
 {% endblock %}
 {% block side_right %}
 <a href="/en/convert-case/" style="text-decoration:none"><p class="side-block">
