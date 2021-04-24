@@ -6,33 +6,32 @@ Letras Diferentes | &#128526; Shadesapps - Modo Escuro &#127770;
 {% endblock %}
 {% block main %}
 <section class="rounded-block">
-	<h1>Letras Diferentes</h1>
-	<div id="io_forms" class="row justify-content-center">
-		{% if not form.new_data %}
-		{% with val="12"%}
-		<div class="col-sm-{{val}}">
+  <h1>Letras Diferentes</h1>
+  <div id="io_forms" class="row justify-content-center">
+    {% if not form.new_data %}
+    {% with val="12"%}
+    <div class="col-sm-{{val}}">
     {% endwith %}
     {% else %}
-		<div class="col-sm-6">
-		{% endif %}
+    <div class="col-sm-6">
+    {% endif %}
       <form id="input_form" method="post"
-      name="vaidarcerto">{% csrf_token %}
-      {{ form|crispy }}
+        name="vaidarcerto">{% csrf_token %}
+        {{ form|crispy }}
       </form>
     </div>
-    {% if form.new_data %}
-    <div class="col-sm-6">
-      <label for="id_origin">Convert case</label>
-      <textarea class="form-control"id="id_origin" rows="5">{{ form.new_data }}
-      </textarea>
-    </div>
-    {% endif %}
-	</div>
+  {% if form.new_data %}
+  <div class="col-sm-6">
+    <label for="id_origin">Convert case</label>
+    <textarea class="form-control"id="id_origin"rows="5">{{ form.new_data }}
+    </textarea>
+  </div>
+  {% endif %}
   <div class="row">
     <div class="col-lg mt-3">
       <button name="submit" class="btn btn-outline-primary btn-lg" value="0"
-			  form="input_form">
-			  UPPER
+        form="input_form">
+        UPPER
       </button>
       <button name="submit" class="btn btn-outline-primary btn-lg" value="1"
         form="input_form">
@@ -121,27 +120,71 @@ Letras Diferentes | &#128526; Shadesapps - Modo Escuro &#127770;
   <div class="row">
     <div class="col-lg">
       <header>
+        <h2>O que são letras diferentes?</h2>
         <p id="text-complement">
-          Facilmente converta o seu texto com fontes de letras diferentes, 
-          legais, bonitas, cursivas e personalizadas, para copiar e colar, usando
-          fontes ASCII gratuitas.<br> Muito utilizadas em nicks em games como:
-          LoL Wild Rift, Free Fire (FF), Fortnite, PUBG, League of Legends(LOL),
-          Among Us e outros<br>Além de redes sociais populares como: Discord,
-          Whatsapp, TikTok, Instagram, Facebook, Twitter, Reddit e outros.
+          As letras diferentes utilizadas no site, são formadas com base em
+          muitos conjuntos de caracteres <a
+            href="https://pt.wikipedia.org/wiki/Unicode">Unicode</a>,
+          utilizados em sistemas de escritas de várias linguagens, mas também,
+          utilizadas no site para criar letras diferentes amino, oferecendo
+          mais destaque aos criadores de conteúdo, ajuda a criar nomes super
+          legais com letras diferentes para nick e letras diferentes ff.
+        </p>
+        <p id="text-complement">
+          Você também poderá criar títulos para seu canal no <a
+            href="https://pt.wikipedia.org/wiki/YouTube">Youtube</a> e suas
+          lives na <a href="https://pt.wikipedia.org/wiki/Twitch">Twitch</a>,
+          com nossas letras diferentes pequenas e letras diferentes grandes,
+          que facilitam seu trabalho ou passatempo, deixando os títulos muito
+          mais atraentes para seu consumidor de conteúdo.
+        </p>
+        <p id="text-complement">
+          Consiga mais likes no seu <a
+            href="https://pt.wikipedia.org/wiki/Twitter">Twitter</a>, com
+          letras diferentes para twitter, também use nossos símbolos e letras
+          diferentes para ganhar mais destaque, combine fontes para outro tipo
+          de letras diferentes, use letras diferentes tumblr e também letras
+          diferentes discord.
         </p>
       </header>
       <section>
+        <h3>Como fazer letras diferentes ?</h3>
         <p id="text-complement">
-          Também use o modificador de letras para criar títulos para Youtube,
-          Intagram e Twitch com:
-          <ul class="text-left pl-4">
-            <li><strong>UPPERCASE</strong> - TRANSFORMA TODAS AS PALAVRAS DO
-              TEXTO EM MAÍUSCULO</li>
-            <li><strong>LOWERCASE</strong> - converte todas as letras do texto
-              para minúsculas</li>
-            <li><strong>TitleCase</strong> - Deixa Em Maíusculo Todas As Letras
-              Inicias Das Palavras</li>
-          </ul>
+          Com o sistema do Shadesapps de gerar letras diferentes, você pode
+          facilmente colocar o texto de sua preferência no site e ainda
+          escolher, algum entre os vários estilos de letras diferentes bonitas
+          para personalizar sua frase ou texto.
+        </p>
+        <p id="text-complement">
+          Você também conseguirá usar o nosso site para gerar letras
+          diferentes para nicks, letras diferentes para nomes, para usar em
+          seu jogo favorito. Crie aqui suas letras diferentes para ff, Wild
+          Rift, e muitos outros.
+        </p>
+        <h3>Como colocar letras diferentes no instagram ?</h3>
+        <p id="text-complement">
+          O <a href="https://pt.wikipedia.org/wiki/Instagram">Instagram</a> é
+          uma rede social online de compartilhamentos de vídeos e fotos, e
+          interação entre seus usuários. Assim como outras redes sociais
+          famosas, como o <a href="https://pt.wikipedia.org/wiki/Facebook">Facebook</a>
+          e o Twitter, tentar se destacar de alguma forma é algo essencial,
+          seja para conseguir mais likes, mais seguidores, ou até mesmo
+          conquistar alguns clientes extras para sua empresa e impulsionar o
+          seu negócio.
+        </p>
+        <p id="text-complement">
+          É nesse ponto que o Shadesapps aparece para te ajudar, com nosso
+          gerador de letras diferentes para instagram, com poucos cliques você
+          conseguirá criar várias frases com letras diferentes e assim, dar
+          mais destaque para seu conteúdo, não apenas no Instagram, mas em
+          todas redes sociais!
+        </p>
+        <p id="text-complement">
+          Só aqui, você conseguirá letras diferentes insta, para copiar e
+          colar na sua rede social favorita. Letras diferentes no instagram,
+          uma variedade de letras diferentes e bonitas, tudo em um só lugar,
+          shadesapps.com. Aprenda a escrever com letras diferentes no
+          instagram, com várias fontes e letras diferentes do instagram
         </p>
       </section>
     </div>
@@ -149,10 +192,12 @@ Letras Diferentes | &#128526; Shadesapps - Modo Escuro &#127770;
 </article>
 {% endblock %}
 {% block side_right %}
-<a href="/en/convert-case/" style="text-decoration:none"><p class="side-block">
-  <img src="{% static 'vendor/eua.png' %}" width="16" height="16"
-  alt="us flag"/> en</p></a>
-<a href="/pt/convert-case/" style="text-decoration:none"><p class="side-block">
-  <img src="{% static 'vendor/br.png' %}" width="16" height="16"
-  alt="br flag"/> pt-BR</p></a>
+<a href="/en/convert-case/" style="text-decoration:none"><p
+    class="side-block">
+    <img src="{% static 'vendor/eua.png' %}" width="16" height="16"
+      alt="us flag" /> en</p></a>
+<a href="/pt/convert-case/" style="text-decoration:none"><p
+    class="side-block">
+    <img src="{% static 'vendor/br.png' %}" width="16" height="16"
+      alt="br flag" /> pt-BR</p></a>
 {% endblock %}
