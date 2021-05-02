@@ -26,14 +26,14 @@ urlpatterns = [
     path('en/', views.redir),
     path('pt/', views.redir),
     
-    path('en/convert-case/', include('convert.urls')),
-    path('pt/convert-case/', include('convert.urls')),
+    path('convert-case/', include('convert.urls')),
+    path('letras-diferentes/', include('convert.urls')),
     
-    path('en/emoji/', include('emoji.urls')),
-    path('pt/emoji/', include('emoji.urls')),
+    path('en/emojis/', include('emoji.urls')),
+    path('pt/emojis/', include('emoji.urls')),
     
-    path('en/emoticon/', include('emoticon.urls')),
-    path('pt/emoticon/', include('emoticon.urls')),
+    path('en/emoticons/', include('emoticon.urls')),
+    path('pt/emoticons/', include('emoticon.urls')),
     
     path('robots.txt', views.robots_txt, name='robots'),
     path('sitemap.xml', views.sitemap_xml, name='sitemap')

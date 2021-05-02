@@ -2,11 +2,11 @@
 {% if not 'Mobile' in request.headers.user_agent %}
 {% if not '/' == request.path %}
 <footer class="container-fluid text-center">
-	{% if '/en/' in request.path %}
+	{% if '/en/' in request.path or '/convert-case/' in request.path %}
 	<nav class="nav nav-footer">
-		<a href="/en/emoji">Emojis</a>&nbsp;|&nbsp;
-		<a href="/en/emoticon">Emoticons</a>&nbsp;|&nbsp;
-		<a href="/en/convert-case">Convert Case</a>
+		<a href="/en/emojis/">Emojis</a>&nbsp;|&nbsp;
+		<a href="/en/emoticons/">Emoticons</a>&nbsp;|&nbsp;
+		<a href="/convert-case/">Convert Case</a>
 	</nav>
 	<p class="nav text-footer">Words Can't Hurt Me These Shades Are Gucci
 		 &#128526;</p>
@@ -14,9 +14,9 @@
 		2021</p>
 	{% else %}
 	<nav class="nav nav-footer">
-		<a href="/pt/emoji">Emojis</a>&nbsp;|&nbsp;
-		<a href="/pt/emoticon">Emoticons</a>&nbsp;|&nbsp;
-		<a href="/pt/convert-case">Letras Diferentes</a>
+		<a href="/pt/emojis/">Emojis</a>&nbsp;|&nbsp;
+		<a href="/pt/emoticons/">Emoticons</a>&nbsp;|&nbsp;
+		<a href="/letras-diferentes/">Letras Diferentes</a>
 	</nav>
 	<p class="nav text-footer">Words Can't Hurt Me These Shades Are Gucci
 		&#128526;</p>
@@ -27,9 +27,9 @@
 <footer class="fixed-bottom">
 	{% if 'pt-' in request.META.HTTP_ACCEPT_LANGUAGE %}
 	<nav class="nav nav-footer">
-		<a href="/pt/emoji">Emojis</a>&nbsp;|&nbsp;
-		<a href="/pt/emoticon">Emoticons</a>&nbsp;|&nbsp; 
-		<a href="/pt/convert-case">Letras Diferentes</a>
+		<a href="/pt/emojis/">Emojis</a>&nbsp;|&nbsp;
+		<a href="/pt/emoticons/">Emoticons</a>&nbsp;|&nbsp; 
+		<a href="/letras-diferentes/">Letras Diferentes</a>
 	</nav>
 	<p class="text-footer nav">Words Can't Hurt Me
 		 These Shades Are Gucci &#128526;</p>
@@ -37,9 +37,9 @@
 		&#128153; por Hireki | &copy 2021</p>
 	{% else %}
 	<nav class="nav nav-footer">
-		<a href="/en/emoji">Emojis</a>&nbsp;|&nbsp;
-		<a href="/en/emoticon">Emoticons</a>&nbsp;|&nbsp;
-		<a href="/en/convert-case">Convert Case</a>
+		<a href="/en/emojis/">Emojis</a>&nbsp;|&nbsp;
+		<a href="/en/emoticons/">Emoticons</a>&nbsp;|&nbsp;
+		<a href="/convert-case/">Convert Case</a>
 	</nav>
 	<p class="text-footer nav">Words Can't Hurt Me
 		These Shades Are Gucci &#128526;</p>
@@ -50,20 +50,20 @@
 {% else %}
 {% if not '/' == request.path %}
 <footer class="container-fluid text-center">
-	{% if '/en/' in request.path %}
+	{% if '/en/' in request.path or '/convert-case/' in request.path %}
 	<nav class="nav nav-footer">
-		<a href="/en/emoji">Emojis</a>&nbsp;|&nbsp;
-		<a href="/en/emoticon">Emoticons</a>&nbsp;|&nbsp;
-		<a href="/en/convert-case">Convert Case</a>
+		<a href="/en/emojis/">Emojis</a>&nbsp;|&nbsp;
+		<a href="/en/emoticons/">Emoticons</a>&nbsp;|&nbsp;
+		<a href="/convert-case/">Convert Case</a>
 	</nav>
 	<p class="nav text-footer">Words Can't Hurt Me These Shades Are Gucci
 		&#128526;</p>
 	<p class="nav text-footer">Developed with &#128153; by Hireki | &copy 2021</p>
 	{% else %}
 	<nav class="nav nav-footer">
-		<a href="/pt/emoji">Emojis</a>&nbsp;|&nbsp;
-		<a href="/pt/emoticon">Emoticons</a>&nbsp;|&nbsp;
-		<a href="/pt/convert-case">Letras Diferentes</a>
+		<a href="/pt/emojis/">Emojis</a>&nbsp;|&nbsp;
+		<a href="/pt/emoticons/">Emoticons</a>&nbsp;|&nbsp;
+		<a href="/letras-diferentes/">Letras Diferentes</a>
 	</nav>
 	<p class="nav text-footer">Words Can't Hurt Me These Shades Are Gucci
 		&#128526;</p>
@@ -74,9 +74,9 @@
 <footer class="container-fluid text-center">
 	{% if 'pt-' in request.META.HTTP_ACCEPT_LANGUAGE %}
 	<nav class="nav nav-footer">
-		<a href="/pt/emoji">Emojis</a>&nbsp;|&nbsp;
-		<a href="/pt/emoticon">Emoticons</a>&nbsp;|&nbsp; 
-		<a href="/pt/convert-case">Letras Diferentes</a>
+		<a href="/pt/emojis/">Emojis</a>&nbsp;|&nbsp;
+		<a href="/pt/emoticons/">Emoticons</a>&nbsp;|&nbsp; 
+		<a href="/letras-diferentes/">Letras Diferentes</a>
 	</nav>
 	<p class="text-footer nav">Words Can't Hurt Me
 		These Shades Are Gucci &#128526;</p>
@@ -84,9 +84,9 @@
 		&#128153; por Hireki | &copy 2021</p>
 	{% else %}
 	<nav class="nav nav-footer">
-		<a href="/en/emoji">Emojis</a>&nbsp;|&nbsp;
-		<a href="/en/emoticon">Emoticons</a>&nbsp;|&nbsp;
-		<a href="/en/convert-case">Convert Case</a>
+		<a href="/en/emojis/">Emojis</a>&nbsp;|&nbsp;
+		<a href="/en/emoticons/">Emoticons</a>&nbsp;|&nbsp;
+		<a href="/convert-case/">Convert Case</a>
 	</nav>
 	<p class="text-footer nav">Words Can't Hurt Me
 		These Shades Are Gucci &#128526;</p>

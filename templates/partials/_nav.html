@@ -15,40 +15,40 @@
         {% if request.path == '/' and 'pt' in request.META.HTTP_ACCEPT_LANGUAGE %}
         <ul class="navbar-nav ml-md-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/pt/emoji">EMOJIS</a>
+            <a class="nav-link" href="/pt/emojis/">EMOJIS</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/pt/emoticon">EMOTICONS</a>
+            <a class="nav-link" href="/pt/emoticons/">EMOTICONS</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/pt/convert-case">LETRAS
+            <a class="nav-link" href="/letras-diferentes/">LETRAS
               DIFERENTES</a>
           </li>
         </ul>
         {% else %}
-        {% if '/en/' in request.path or request.path == '/' %}
+        {% if '/en/' in request.path or '/convert-case/' in request.path or request.path == '/' %}
         <ul class="navbar-nav ml-md-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/en/emoji">EMOJIS</a>
+            <a class="nav-link" href="/en/emojis/">EMOJIS</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/en/emoticon">EMOTICONS</a>
+            <a class="nav-link" href="/en/emoticons/">EMOTICONS</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/en/convert-case">CONVERT
+            <a class="nav-link" href="/convert-case/">CONVERT
               CASE</a>
           </li>
         </ul>
         {% else %}
         <ul class="navbar-nav ml-md-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/pt/emoji">EMOJIS</a>
+            <a class="nav-link" href="/pt/emojis/">EMOJIS</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/pt/emoticon">EMOTICONS</a>
+            <a class="nav-link" href="/pt/emoticons/">EMOTICONS</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/pt/convert-case">LETRAS
+            <a class="nav-link" href="/letras-diferentes/">LETRAS
               DIFERENTES</a>
           </li>
         </ul>

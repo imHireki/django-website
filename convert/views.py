@@ -10,8 +10,8 @@ class Convert(View):
     def setup(self, *args, **kwargs):
         super().setup(*args, **kwargs)
 
-        if self.request.path == '/pt/convert-case/':
-            self.template_name = 'convert/convertcase_pt.html'
+        if self.request.path == '/letras-diferentes/':
+            self.template_name = 'convert/letras_diferentes.html'
     
         self.context = {
             'form': forms.InputForms(data=self.request.POST or None)
