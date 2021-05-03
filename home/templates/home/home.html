@@ -6,7 +6,7 @@
 		<div class="col-lg">
 			<h1 class="mt-2">SHADESAPPS</h1>
 			{% if not 'pt-' in request.META.HTTP_ACCEPT_LANGUAGE %}
-			<a href="/en/convert-case/">
+			<a href="/convert-case/">
 				<div class="card mt-3">
 					<div class="card-body p-1">
 						<p class="h5 mb-1">Convert Case</p>
@@ -15,7 +15,7 @@
 				</div>
 			</a>
 			{% else %}
-			<a href="/pt/convert-case/">
+			<a href="/letras-diferentes/">
 				<div class="card mt-3">
 					<div class="card-body p-1">
 						<p class="h5 mb-1">Letras Diferentes</p>
@@ -25,9 +25,9 @@
 			</a>
 			{% endif %}
 			{% if not 'pt-' in request.META.HTTP_ACCEPT_LANGUAGE %}
-			<a href="/en/emoticon/">
+			<a href="/en/emoticons/">
 			{% else %}
-			<a href="/pt/emoticon/">
+			<a href="/pt/emoticons/">
 			{% endif %}
 				<div class="card mt-3">
 					<div class="card-body p-1">
@@ -39,9 +39,9 @@
 				</div>
 			</a>
 			{% if not 'pt-' in request.META.HTTP_ACCEPT_LANGUAGE %}
-			<a href="/en/emoji/">
+			<a href="/en/emojis/">
 			{% else %}
-			<a href="/pt/emoji/">
+			<a href="/pt/emojis/">
 			{% endif %}
 				<div class="card mt-3 mb-3">
 					<div class="card-body p-1">

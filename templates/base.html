@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-{% if '/en/' in request.path or request.path == '/' %}
+{% if '/en/' in request.path or '/convert-case/' in request.path or request.path == '/' %}
 <html lang="en">
 {% else %}
 <html lang="pt-BR">
