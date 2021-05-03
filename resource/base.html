@@ -13,7 +13,11 @@
 {% include 'partials/_nav.html'%}
 <div class="container-fluid">    
   <div class="row content">
+    {% if not 'Mobile' in request.headers.user_agent %}
     <aside class="col-sm-2 sidenav pr-0">
+    {% else %}
+    <aside class="col-sm-2 sidenav"></aside>
+    {% endif %}
       <section>
         {% block side_left %}{% endblock %}
       </section>
@@ -21,7 +25,11 @@
     <main class="col-sm-8"> 
       {% block main %}{% endblock %}
     </main>
+    {% if not 'Mobile' in request.headers.user_agent %}
     <aside class="col-sm-2 sidenav pl-0">
+    {% else %}
+    <aside class="col-sm-2 sidenav">
+    {% endif %}
       <section>
         {% block side_right %}{% endblock %}
       </section>
