@@ -36,5 +36,19 @@ urlpatterns = [
     path('pt/emoticons/', include('emoticon.urls')),
     
     path('robots.txt', views.robots_txt, name='robots'),
-    path('sitemap.xml', views.sitemap_xml, name='sitemap')
+    path('sitemap.xml', views.sitemap_xml, name='sitemap'),
+
+    # avoiding canonical problems
+    path('pt/emoji', include('emoji.urls')),
+    path('en/emoji', include('emoji.urls')),
+    path('pt/emoticon', include('emoticon.urls')),
+    path('en/emoticon', include('emoticon.urls')),
+    path('en/convert-case', include('convert.urls')),
+    path('pt/convert-case', include('convert.urls')),
+    path('pt/emoji/', include('emoji.urls')),
+    path('en/emoji/', include('emoji.urls')),
+    path('pt/emoticon/', include('emoticon.urls')),
+    path('en/emoticon/', include('emoticon.urls')),
+    path('en/convert-case/', include('convert.urls')),
+    path('pt/convert-case/', include('convert.urls')),
 ]

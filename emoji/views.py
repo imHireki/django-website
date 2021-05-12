@@ -22,7 +22,7 @@ class Emoji(View):
             'newemojis': emoji_dicts.newemojis,
             }
         
-        if self.request.path == '/pt/emoji/':
+        if self.request.path == '/pt/emojis/':
             self.template_name = 'emoji/emoji_pt.html'
         
         self.renderizar = render(

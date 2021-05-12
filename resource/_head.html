@@ -123,6 +123,24 @@
 <link rel="alternate" hreflang="en" href="https://www.shadesapps.com/convert-case/"/>
 <link rel="alternate" hreflang="pt-br" href="https://www.shadesapps.com/letras-diferentes/"/>
 <link rel="alternate" hreflang="x-default" href="https://www.shadesapps.com/convert-case/"/>
+
+<!-- fixing canonicals -->
+{% elif request.path == '/pt/emoji/' or request.path == '/pt/emoji' %}
+<link rel="canonical" href="https://www.shadesapps.com/pt/emojis/"/>
+{% elif request.path == '/en/emoji/' or request.path == '/en/emoji' %}
+<link rel="canonical" href="https://www.shadesapps.com/en/emojis/"/>
+
+{% elif request.path == '/pt/emoticon/' or request.path == '/pt/emoticon' %}
+<link rel="canonical" href="https://www.shadesapps.com/pt/emoticons/"/>
+{% elif request.path == '/en/emoticon/' or request.path == '/en/emoticon' %}
+<link rel="canonical" href="https://www.shadesapps.com/en/emoticons/"/>
+
+{% elif request.path == '/pt/convert-case/' or request.path == '/pt/convert-case' %}
+<link rel="canonical" href="https://www.shadesapps.com/letras-diferentes/"/>
+{% elif request.path == '/en/convert-case/' or request.path == '/en/convert-case' %}
+<link rel="canonical" href="https://www.shadesapps.com/convert-case/"/>
+
+
 {% endif %}
 
 <meta property="og:site_name" content="Shadesapps"/>

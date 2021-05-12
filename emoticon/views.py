@@ -8,7 +8,7 @@ class Emoticon(View):
     def setup(self, *args, **kwargs):
         super().setup(*args, **kwargs)
 
-        if self.request.path == '/pt/emoticon/':
+        if self.request.path == '/pt/emoticons/':
             self.template_name = 'emoticon/emoticon_pt.html'
 
         self.renderizar = render(self.request, self.template_name)
