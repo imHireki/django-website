@@ -1,9 +1,6 @@
-from django.shortcuts import render
-from django.views.generic.base import View
+from django.shortcuts import render, HttpResponse
+from django.views.generic import View
 
 
-class Home(View):
-    template_name = 'home/home.html'
-    
-    def get(self, request, *args, **kwargs):
-        return render(self.request, self.template_name)
+class Home(View): 
+    def get(self, *args, **kwargs): return HttpResponse('Homee')
