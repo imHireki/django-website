@@ -6,5 +6,4 @@ app_name = 'home'
 
 urlpatterns = [
     path('', views.Home.as_view(), name='initial'),
-    path('dark/', views.SwitchDarkMode.as_view(), name='dark')
 ]
