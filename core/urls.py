@@ -19,8 +19,11 @@ from django.urls import path
 from django.urls import include
 
 
+app_name = 'core'
+
 urlpatterns = [
     path('', include('home.urls')),
+    path('convert-case/', include('convertcase.urls')),
     path('dark/', views.SwitchDarkMode.as_view(), name='dark'),
     path('admin/', admin.site.urls),
 ]
