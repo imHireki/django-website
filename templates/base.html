@@ -1,150 +1,50 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <title>{% block title %}{% endblock %}</title>
         {% include 'partials/_head.html' %}
     </head>
+
     <body>
         <!-- Responsive navbar-->
         {% include 'partials/_nav.html' %}
-        <!-- Page header with logo and tagline-->
-        <header class="py-5 bg-light border-bottom mb-4">
-            <div class="container">
-                <div class="text-center my-5">
-                    <h1 class="fw-bolder">Welcome to Blog Home!</h1>
-                    <p class="lead mb-0">A Bootstrap 5 starter layout for your next blog homepage</p>
-                </div>
-            </div>
-        </header>
+
+        <!-- Page header with logo and tagline -->
+        {% include 'partials/_header.html' %}
+        
+
         <!-- Page content-->
         <div class="container">
             <div class="row">
-                <!-- Blog entries-->
+
+                <!-- Main content-->
                 <div class="col-lg-8">
-                    <!-- Featured blog post-->
-                    
+
                     {% block content %}{% endblock %}
-                    <!-- Nested row for non-featured blog posts-->
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <!-- Blog post-->
-                            <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                                <div class="card-body">
-                                    <div class="small text-muted">January 1, 2021</div>
-                                    <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
-                                </div>
-                            </div>
-                            <!-- Blog post-->
-                            <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                                <div class="card-body">
-                                    <div class="small text-muted">January 1, 2021</div>
-                                    <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <!-- Blog post-->
-                            <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                                <div class="card-body">
-                                    <div class="small text-muted">January 1, 2021</div>
-                                    <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
-                                </div>
-                            </div>
-                            <!-- Blog post-->
-                            <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                                <div class="card-body">
-                                    <div class="small text-muted">January 1, 2021</div>
-                                    <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                        
+                    {% include 'partials/_lorem.html' %}
+
                 </div>
 
-                <!-- Side widgets-->
+                <!-- Side content -->
                 <div class="col-lg-4">
-                    
-                    <!-- Dark Mode Widget -->
-                    <div class="card mb-4">
-                        <div class="card-header">Dark Mode</div>
-                        <div class="card-body">
-                            <form action="{% url 'dark' %}" method="POST" class="form-check form-switch">{% csrf_token %}
-                                <input class="form-check-input rounded-pill" type="checkbox" id="flexSwitchCheckDefault" onChange="this.form.submit()" name="dark-mode" value="dark" {{ request.session.dark }}>
-                                <label class="form-check-label nav-link active d-inline" for="flexSwitchCheckDefault">Dark Mode</label>
-                            </form>
-                        </div>
-                    </div>
-                    <!-- Languages widget -->
-                    <div class="card mb-4">
-                        <div class="card-header">Languages</div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <ul class="list-unstyled mb-0">
-                                        <li><a href="#!">en-US</a></li>
-                                        <li><a href="#!">pt-BR</a></li>
-                                        <li><a href="#!">es-ES</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- TODO: add if for each page -->
 
-                    <div class="card mb-4">
-                        <div class="card-header">Web Apps</div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <ul class="list-unstyled mb-0">
-                                        <li><a href="#!">Convert Case</a></li>
-                                        <li><a href="#!">Emojis</a></li>
-                                        <li><a href="#!">Emoticons</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Categories widget-->
-                    <div class="card mb-4">
-                        <div class="card-header">Categories</div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <ul class="list-unstyled mb-0">
-                                        <li><a href="#!">Web Design</a></li>
-                                        <li><a href="#!">HTML</a></li>
-                                        <li><a href="#!">Freebies</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-6">
-                                    <ul class="list-unstyled mb-0">
-                                        <li><a href="#!">JavaScript</a></li>
-                                        <li><a href="#!">CSS</a></li>
-                                        <li><a href="#!">Tutorials</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Side widget-->
-                    <div class="card mb-4">
-                        <div class="card-header">Side Widget</div>
-                        <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
-                    </div>
+                    <!-- Dark Mode Widget -->
+                    {% include 'partials/_dark.html' %}
+                    
+                    <!-- Languages widget -->
+                    {% include 'partials/_lang.html' %}
+
+                    <!-- Links widget-->
+                    {% include 'partials/_links.html' %}
+
+                    <!-- Links widget-->
+                    {% include 'partials/_pages.html' %}
                 </div>
+
             </div>
         </div>
         <!-- Footer-->
