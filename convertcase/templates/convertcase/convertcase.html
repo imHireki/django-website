@@ -1,14 +1,29 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+
+<!-- <div class="alert alert-success" role="alert">
+  A simple success alert—check it out!
+</div>
+<div class="alert alert-danger" role="alert">
+  A simple danger alert—check it out!
+</div>
+<div class="alert alert-warning" role="alert">
+  A simple warning alert—check it out!
+</div> -->
+{% if alert %}
+<div class="alert alert-{{ alert }}" role="alert">
+  A simple warning alert—check it out!
+</div>
+{% endif %}
+
 <div class="card mb-4">
   <div class="card-header"><h2 class="card-title">Convert Case</h2></div>
-
   <div class="card-body">
     <span class="small text-muted">January 1, 2021</span>
     <form action="{% url 'convertcase' %}" method="POST">{% csrf_token %}
       <label for="textArea" class="form-label">Insert your text below and click in one button</label>
-      <textarea class="form-control mb-2" name="text_area" id="textArea" rows="3"></textarea>
+      <textarea class="form-control mb-2" name="text_area" id="textArea" rows="3" autofocus></textarea>
 
       <!-- Responsive Text Area-->
       {% if textarearesponse %}
@@ -39,85 +54,94 @@
         <button name="b_val" class="btn btn-primary" value="5">𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎</button>
       </div>  
     </form>
-    
   </div>
 </div>
-
-
 <div class="card mb-4">
-  <div class="card-header"><h2 class="card-title">Convert Case</h2></div>
+  <div class="card-header">
+    <h2 class="card-title">How to use the case converter ?</h2>
+  </div>
   <div class="card-body">
-    <span class="small text-muted">January 1, 2021</span>
-
-
-    <div class="row">
-      <div class="col-lg">
-        <header>
-          <h2>How to use the case converter ?</h2>
-          <p id="card-text">
-            You can easily use the caseconverter to generate <strong>different</strong>
-            styles of text on our convert case online. You will just have to
-            input a text of your preference, and then, click on a button which
-            has a style or a proper case converter of your own choice, so you
-            can just copy and paste it in everywhere. Our case converter net
-            supports all letters, and plus, it is a case converter free.
-          </p>
-          <p id="card-text">
-            You can also use the convert case to generate different styles of
-            text, that can be <strong>handy</strong> and one of the best choice
-            for your business or hobby when dealing with <a
-              href="https://en.wikipedia.org/wiki/YouTube">Youtube</a> titles,
-            Twitch, and so on, giving it more awareness and popularity with
-            random case converter and alternating case converter
-          </p>
-        </header>
-        <section>
-          <h3>Upper Case</h3>
-          <p id="card-text">
-            The uppercase converter will <strong>allow</strong> you to convert
-            to uppercase in <a
-              href="https://en.wikipedia.org/wiki/Microsoft_Excel">Excel</a>,
-            you will just have to copy the words and letters of your very
-            choice, paste them on the text area and then, click in UPPER, and
-            that’s pretty much it.
-          </p>
-          <h3>Lower Case</h3>
-          <p id="card-text">
-            The lowercase converter can help you to uncapitalize your text, to
-            <strong>do the trick</strong> you just have to copy your text to the
-            text area, and then click on lower, and that’s basically it, all
-            your capitalized letters, have just been transformed into lower. So
-            you can use it as a convert case in word, or even a convert case in
-            excel.
-          </p>
-          <h3>Title Case</h3>
-          <p id="card-text">
-            <strong>Go ahead, mr. Joestar</strong>, and pick a titlecase
-            converter, if you want to convert all first letters of each word
-            into upper case, till there’s no one left. Then, you can use it’s
-            case converter tool to convert case excel or even convert case in <a
-              href="https://en.wikipedia.org/wiki/Microsoft_Word">Word</a>.
-          </p>
-          <h3>Fancy Fonts</h3>
-          <p id="card-text">
-            Come and check out our font changer for <strong>straightforwardly</strong>
-            converting your text and all it’s letters to fancy and cool fonts,
-            so you can easily copy and paste ‘em in social media, like: Twitter,
-            Instagram, <a
-              href="https://en.wikipedia.org/wiki/Discord_(software)">Discord</a>,
-            Facebook, TikTok, Twitch and Reddit. To stand apart and get more
-            awareness and boost your business and social page.
-          </p>
-          <p id="card-text">
-            It can also be used even for nicks and nicknames in games, like:
-            League of Legends, Wild Rift, Fortnite, PUBG, Among US, and many
-            others.
-          </p>
-        </section>
-      </div>
-    </div>
+    <p class="card-text">
+    You can easily use the caseconverter to generate <strong>different</strong>
+    styles of text on our convert case online. You will just have to
+    input a text of your preference, and then, click on a button which
+    has a style or a proper case converter of your own choice, so you
+    can just copy and paste it in everywhere. Our case converter net
+    supports all letters, and plus, it is a case converter free.
+    </p>
+    <p class="card-text">
+    You can also use the convert case to generate different styles of
+    text, that can be <strong>handy</strong> and one of the best choice
+    for your business or hobby when dealing with <a
+      href="https://en.wikipedia.org/wiki/YouTube">Youtube</a> titles,
+    Twitch, and so on, giving it more awareness and popularity with
+    random case converter and alternating case converter
+    </p>
   </div>
 </div>
-
-
-{%endblock%}
+<div class="card mb-4">
+  <div class="card-header">
+    <h2 class="card-title">Upper Case</h2>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+    The uppercase converter will <strong>allow</strong> you to convert
+    to uppercase in <a
+      href="https://en.wikipedia.org/wiki/Microsoft_Excel">Excel</a>,
+    you will just have to copy the words and letters of your very
+    choice, paste them on the text area and then, click in UPPER, and
+    that’s pretty much it.
+    </p>
+  </div>
+</div>
+<div class="card mb-4">
+  <div class="card-header">
+    <h2 class="card-title">Lower Case</h2>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+    The lowercase converter can help you to uncapitalize your text, to
+    <strong>do the trick</strong> you just have to copy your text to the
+    text area, and then click on lower, and that’s basically it, all
+    your capitalized letters, have just been transformed into lower. So
+    you can use it as a convert case in word, or even a convert case in
+    excel.
+    </p>
+  </div>
+</div>
+<div class="card mb-4">
+  <div class="card-header">
+    <h2 class="card-title">Title Case</h2>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+    <strong>Go ahead, mr. Joestar</strong>, and pick a titlecase
+    converter, if you want to convert all first letters of each word
+    into upper case, till there’s no one left. Then, you can use it’s
+    case converter tool to convert case excel or even convert case in <a
+      href="https://en.wikipedia.org/wiki/Microsoft_Word">Word</a>.
+    </p>
+  </div>
+</div>
+<div class="card mb-4">
+  <div class="card-header">
+    <h2 class="card-title">Fancy Fonts</h2>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+    Come and check out our font changer for <strong>straightforwardly</strong>
+    converting your text and all it’s letters to fancy and cool fonts,
+    so you can easily copy and paste ‘em in social media, like: Twitter,
+    Instagram, <a
+      href="https://en.wikipedia.org/wiki/Discord_(software)">Discord</a>,
+    Facebook, TikTok, Twitch and Reddit. To stand apart and get more
+    awareness and boost your business and social page.
+    </p>
+    <p class="card-text">
+    It can also be used even for nicks and nicknames in games, like:
+    League of Legends, Wild Rift, Fortnite, PUBG, Among US, and many
+    others.
+    </p>
+  </div>
+</div>
+{% endblock %}

@@ -8,20 +8,24 @@ class ConvertCase(View):
 
 
     def setup(self, *args, **kwargs):
+        self.context = {}
         super().setup(*args, **kwargs)
+        
 
     def get(self, *args, **kwargs):
-        return render(self.request, self.template_name)
+        return render(self.request, self.template_name, self.context)
 
     def post(self, *args, **kwargs):
         text_area_value = self.request.POST.get('text_area')
         button_value = self.request.POST.get('b_val')
 
-        # if len(text_area_value) > 100:
-        #     text_area_value = text_area_value[:100]
         
-        print(text_area_value)
+        if len(text_area_value) > 2000:
+            text_area_value = text_area_value[:2000]
+            self.context['alert'] = 'warning'
+            
+            
         conv = convert.point_convert(button_value, text_area_value)
-        contexto = {'textarearesponse': conv}
+        self.context['textarearesponse'] = conv
     
-        return render(self.request, self.template_name, contexto)
+        return render(self.request, self.template_name, self.context)
