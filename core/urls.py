@@ -25,6 +25,7 @@ urlpatterns = [
     path('', include('home.urls')),
     path('convert-case/', include('convertcase.urls')),
     path('en/emojis/', include('emojis.urls')), # TODO: hm ? 
+    path('en/emoticons/', include('emoticons.urls')), 
     path('dark/', views.SwitchDarkMode.as_view(), name='dark'),
     path('admin/', admin.site.urls),
 ]

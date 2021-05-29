@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'home',
     'convertcase',
     'emojis',
+    'emoticons',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
