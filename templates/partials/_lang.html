@@ -1,13 +1,21 @@
+{% load static %}
 <div class="card mb-4">
     <div class="card-header">Languages</div>
     <div class="card-body">
         <div class="row">
-            <div class="col-sm-6">
-                <ul class="list-unstyled mb-0">
-                    <li><a href="#!">en-US</a></li>
-                    <li><a href="#!">pt-BR</a></li>
-                    <li><a href="#!">es-ES</a></li>
-                </ul>
+            <div class="col">
+                <div class="input-group mb-3 d-flex">
+                    <span class="input-group-text" id="basic-addon1"><img src="{% static 'assets/img/usa.png' %}"></span>
+                    <span class="form-control">en-US</span>
+                </div>
+                <div class="input-group mb-3 d-flex">
+                    <span class="input-group-text" id="basic-addon1"><img src="{% static 'assets/img/br.png' %}"></span>
+                    <span class="form-control">pt-BR</span>
+                </div>
+                <div class="input-group mb-3 d-flex">
+                    <span class="input-group-text" id="basic-addon1"><img src="{% static 'assets/img/esp.png' %}"></span>
+                    <span class="form-control">es-ES</span>
+                </div>
             </div>
         </div>
     </div>
