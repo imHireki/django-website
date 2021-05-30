@@ -22,10 +22,15 @@ from django.urls import include
 app_name = 'core'
 
 urlpatterns = [
-    path('', include('home.urls')),
+    path('', include('home.urls'), name='home'),
+
     path('convert-case/', include('convertcase.urls')),
+
     path('en/emojis/', include('emojis.urls')), # TODO: hm ? 
-    path('en/emoticons/', include('emoticons.urls')), 
+    path('pt/emojis/', include('emojis.urls')),
+
+    path('en/emoticons/', include('emoticons.urls')),
+
     path('dark/', views.SwitchDarkMode.as_view(), name='dark'),
     path('admin/', admin.site.urls),
 ]

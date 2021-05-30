@@ -8,6 +8,9 @@ class Emojis(View):
     def setup(self, *args, **kwargs):
         super().setup(*args, **kwargs)
 
+        if '/pt/emojis/' in self.request.path:
+            self.template_name = 'emojis/pt_emojis.html'
+
         self.context = {
             'faces': emojidicts.faces,
             'gestures': emojidicts.gestures,
