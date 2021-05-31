@@ -22,16 +22,14 @@
 
                 <!-- Main content-->
                 <div class="col-lg-8">
-
                     <!-- en -->
                     <a href="{% host_url 'home:initial' host 'en'  %}">Home</a>
                     <!-- en/dark/ -->
                     <a href="{% host_url 'dark' host 'en'  %}">Dark</a>
                     <!-- pt/convert-case/-->
-                    <a href="{% host_url 'convertcase' host 'pt'  %}">convert case</a>
+                    <a href="{% host_url 'convertcase' host 'www'  %}">convert case</a>
                     <!-- pt/pt/emojis   -->
                     <a href="{% host_url 'emojis' host 'pt'  %}">pt emojis</a>
-
                     {% block content %}{% endblock %}
                 </div>
 
@@ -40,7 +38,7 @@
                     <!-- TODO: add if for each page -->
 
                     <!-- Dark Mode Widget -->
-
+                    {% include 'partials/_dark.html' %}
                     
                     <!-- Languages widget -->
                     {% include 'partials/_lang.html' %}

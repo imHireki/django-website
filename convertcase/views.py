@@ -6,14 +6,12 @@ from utils import convert
 class ConvertCase(View):
     template_name = 'convertcase/convertcase.html'
 
-
     def setup(self, *args, **kwargs):
         self.context = {}
-        super().setup(*args, **kwargs)
-        
+        return super().setup(*args, **kwargs)
 
     def get(self, *args, **kwargs):
-        return render(self.request, self.template_name, self.context)
+        return render(self.request, self.template_name)
 
     def post(self, *args, **kwargs):
         text_area_value = self.request.POST.get('text_area')

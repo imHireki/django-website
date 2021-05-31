@@ -5,6 +5,7 @@ from data import emojidicts
 
 class Emojis(View):
     template_name = 'emojis/emojis.html'
+    
     def setup(self, *args, **kwargs):
         super().setup(*args, **kwargs)
 
@@ -27,7 +28,4 @@ class Emojis(View):
         
     
     def get(self, *args, **kwargs):
-        return render(self.request, self.template_name, self.context)
-    
-    def post(self, *args, **kwargs):
         return render(self.request, self.template_name, self.context)
