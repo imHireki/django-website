@@ -22,7 +22,7 @@ from django.urls import include
 app_name = 'core'
 
 urlpatterns = [
-    path('', include('home.urls'), name='home'),
+    path('', include('cover.urls'), name='cover'),
 
     path('convert-case/', include('convertcase.urls')),
 
