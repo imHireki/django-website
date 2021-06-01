@@ -1,18 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
-<!-- Emojis -->
-<div class="card mb-4">
-    <div class="card-header">
-      <h1 class="card-title h2">Emojis</h1>
-    </div>
-    <div class="card-body">
-        <div class="card mb-4">
 
-            <!-- FACES AND GESTURES -->
-            <div class="card-header">
-                <h2 class="card-title h3">Faces and Gestures</h2>
-            </div>
-            <div class="card-body">
+<!-- EMOJIS -->
+<div class="card mb-4">
+    <!-- MAIN TITLE -->
+    <section>
+        <div class="card-header"><h1 class="card-title h2">Emojis</h1></div>
+    </section>
+
+    <div class="card-body">
+
+        <!-- FACES AND GESTURES -->
+        <article>
+        <div class="card mb-4">
+            <header>
+                <div class="card-header">
+                    <h2 class="card-title h3">Faces and Gestures</h2>
+                </div>
+            </header>
+            <section>
+                <div class="card-body">
                 <p class="h3">
                 {% for x in faces %}
                 {{ x }}
@@ -21,13 +28,21 @@
                 {{ y }}
                 {% endfor %}
                 </p>
-            </div>
+                </div>
+            </section>
+        </div>
+        </article>
 
-          <!-- PEOPLE AND ACTIVITY -->
-            <div class="card-header">
-                <h2 class="card-title">People and Activity</h2>
-            </div>
-            <div class="card-body">
+        <!-- PEOPLE AND ACTIVITY -->
+        <article>
+        <div class="card mb-4">
+            <header>
+                <div class="card-header">
+                    <h2 class="card-title h3">People and Activity</h2>
+                </div>
+            </header>
+            <section>
+                <div class="card-body">
                 <p class="h3">
                 {% for x in people%}
                 {{ x }}
@@ -36,13 +51,21 @@
                 {{ y }}
                 {% endfor %}
                 </p>
-            </div>
+                </div>
+            </section>
+        </div>
+        </article>
 
-          <!--  NATURE AND FOOD -->
-            <div class="card-header">
-                <h2 class="card-title">Nature and Food</h2>
-            </div>
-            <div class="card-body">
+        <!--  NATURE AND FOOD -->
+        <article>
+        <div class="card mb-4">
+            <header>
+                <div class="card-header">
+                    <h2 class="card-title h3">Nature and Food</h2>
+                </div>
+            </header>
+            <section>
+                <div class="card-body">
                 <p class="h3">
                 {% for x in nature%}
                 {{ x }}
@@ -51,13 +74,22 @@
                 {{ y }}
                 {% endfor %}
                 </p>
-            </div>
+                </div>
+            </section>
+        </div>
+        </article> 
 
-            <!--  SYMBOLS AND OBJECTS -->
-            <div class="card-header">
-                <h2 class="card-title">Symbols and Objects</h2>
-            </div>
-            <div class="card-body">
+
+        <!--  SYMBOLS AND OBJECTS -->
+        <article>
+        <div class="card mb-4">
+            <header>
+                <div class="card-header">
+                    <h2 class="card-title h3">Symbols and Objects</h2>
+                </div>
+            </header>
+            <section>
+                <div class="card-body">
                 <p class="h3"> 
                 {% for x in symbols %}
                 {{ x }}
@@ -66,29 +98,44 @@
                 {{ y }}
                 {% endfor %}
                 </p>
-            </div>
-
-            <!--  NEW EMOJIS -->
-            <div class="card-header">
-                <h2 class="card-title">New Emojis</h2>
-            </div>
-            <div class="card-body">
+                </div>
+            </section>
+        </div>
+        </article>
+            
+        <!--  NEW EMOJIS -->
+        <article>
+        <div class="card mb-4">
+            <header>
+                <div class="card-header">
+                    <h2 class="card-title h3">New Emojis</h2>
+                </div>
+            </header>
+            <section>
+                <div class="card-body">
                 <p class="h3">
                 {% for x in newemojis %}
                 {{ x }}
                 {% endfor %}
                 </p>
-            </div>
-
-        </div>
+                </div>
+            </section>
+        </div>  
+        </article>
+        
     </div>
 </div>
-<!-- Texts -->
+
+<!-- TEXTS -->
+<article>
 <div class="card mb-4">
-    <div class="card-header">
-        <h2 class="card-title">What emoji means ?</h2>
-    </div>
-    <div class="card-body">
+    <header>
+        <div class="card-header">
+        <h2 class="card-title h3">What emoji means ?</h2>
+        </div>
+    </header>
+    <section>
+        <div class="card-body">
         <p class="card-text">
         Emojis are smileys and <a href="https://en.wikipedia.org/wiki/Ideogram"></a>
         ideograms used to <strong>represent</strong> word, emotion, or
@@ -106,13 +153,20 @@
         emoji keyboard, emoji kiss and emoji heart eyes to send to your
         girlfriend.
         </p>
-    </div>
+        </div>
+    </section>
 </div>
+</article>
+
+<article>
 <div class="card mb-4">
-    <div class="card-header">
-        <h2 class="card-title">How to put emojis in contacts ?</h2>
-    </div>
-    <div class="card-body">
+    <header>
+        <div class="card-header">
+        <h2 class="card-title h3">How to put emojis in contacts ?</h2>
+        </div>
+    </header>
+    <section>
+        <div class="card-body">
         <p class="card-text">
         To put <a href="https://en.wikipedia.org/wiki/Emoji">emoji</a> in
         contacts, both with iphone and android emoji first, it
@@ -172,13 +226,20 @@
         it’s cold, emoji to words to send to your mom, <strong>emoji 8 ball</strong>
         to send to your friends.
         </p>
-    </div>
+        </div>
+    </section>
 </div>
+</article>
+
+<article>
 <div class="card mb-4">
-    <div class="card-header">
-        <h2 class="card-title">How to use emojis on social networks?</h2>
-    </div>
-    <div class="card-body">
+    <header>
+        <div class="card-header">
+        <h3 class="card-title">How to use emojis on social networks?</h3>
+        </div>
+    </header>
+    <section>
+        <div class="card-body">
         <p class="card-text">
         Give more prominence to your posts with emoji facebook, making them
         more attractive with Instagram emojis, getting more likes and
@@ -194,6 +255,8 @@
         and also
         emoji Youtube for more prominence in your videos.
         </p>
-    </div>
+        </div>
+    </section>
 </div>
+</article>
 {% endblock %}
