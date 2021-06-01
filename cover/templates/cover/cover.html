@@ -1,0 +1,61 @@
+{% load static %}
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Hugo 0.83.1">
+        <title>Cover Template · Bootstrap v5.0</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
+
+        <!-- Custom styles for this template -->
+        <link href="{% static 'assets/custom/cover.css' %}" rel="stylesheet">
+    </head>
+    <body class="d-flex h-100 text-center text-white bg-dark">
+    
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="mb-auto">
+                <div>
+                <h3 class="float-md-start mb-0">Shadesapps</h3>
+                    <nav class="nav nav-masthead justify-content-center float-md-end">
+                        <!-- www.shadesapps.com -->
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <!-- en.shadesapps.com -->
+                        <a class="nav-link" href="#">Features</a>
+                        <!-- en.shadesapps.com/contact/ -->
+                        <a class="nav-link" href="#">Contact</a>
+                    </nav>
+                </div>
+            </header>
+
+            <main class="px-3">
+                <h1>Shadesapps</h1>
+                <p class="lead">select your language below so that you can proceed to your destination.</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <!-- en.shadesapps.com -->
+                        <p class="lead"><a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">English</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- pt.shadesapps.com -->
+                        <p class="lead"><a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Português</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- es.shadesapps.com -->
+                        <p class="lead"><a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Espanõl</a></p>
+                    </div>
+                </div>
+                
+            </main>
+
+            <footer class="mt-auto text-white-50">
+                <p>Developed with 💙 by Hireki</p>
+            </footer>
+        </div>
+
+    </body>
+</html

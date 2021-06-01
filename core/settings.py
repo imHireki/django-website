@@ -62,7 +62,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_HOSTCONF = 'core.hosts'
-DEFAULT_HOST = 'www'
+DEFAULT_HOST = 'en'
 
 ROOT_URLCONF = 'core.urls'
 
