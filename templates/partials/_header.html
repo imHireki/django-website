@@ -8,7 +8,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    
+
+
+                    <li class="nav-item">
+                        <a class="nav-link active">
+                            <form action="{% url 'dark' %}" method="POST" class="form-check form-switch m-0">{% csrf_token %}
+                                <input class="form-check-input bg-light" type="checkbox" id="flexSwitchCheckDefault" onChange="this.form.submit()" name="dark-mode" value="dark" {{ request.session.dark }}>
+                                <label class="form-check-label nav-link active d-inline" for="flexSwitchCheckDefault">Dark Mode</label>
+                            </form>
+                        </a>
+                    </li>
+
                     <li class="nav-item"><a class="nav-link active" href="#">Emojis</a></li>
                     <li class="nav-item"><a class="nav-link active" href="#!">Emoticons</a></li>
                     <li class="nav-item"><a class="nav-link active" href="#!">Convert Case</a></li>

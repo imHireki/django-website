@@ -1,4 +1,3 @@
-{% load static %}
 {% load hosts %}
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +8,7 @@
     </head>
 
     <body>
+
         <!-- PAGE HEADER -->
         {% include 'partials/_header.html' %}
         
@@ -18,24 +18,28 @@
         <div class="container">
         <div class="row">
         <div class="col-lg-8">  
-            <!-- Main content-->
+
+            <!-- MAIN CONTENT -->
             <main>
                 {% block content %}{% endblock %}
             </main>
+
         </div>
         <div class="col-lg-4">
-            <!-- Side content -->
+
+            <!-- SIDE CONTENT -->
             <aside>
-                {% include 'partials/_dark.html' %}
                 {% include 'partials/_lang.html' %}
-                {% include 'partials/_links.html' %}
+                {% block side_block %}{% endblock %}
                 {% include 'partials/_pages.html' %}
             </aside>
+
         </div>
         </div>
         </div>
 
         <!-- PAGE FOOTER -->
         {% include 'partials/_footer.html' %}
+
     </body>
 </html>

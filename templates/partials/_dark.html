@@ -1,9 +1,0 @@
-<div class="card mb-4">
-    <div class="card-header">Dark Mode</div>
-    <div class="card-body">
-        <form action="{% url 'dark' %}" method="POST" class="form-check form-switch">{% csrf_token %}
-            <input class="form-check-input rounded-pill" type="checkbox" id="flexSwitchCheckDefault" onChange="this.form.submit()" name="dark-mode" value="dark" {{ request.session.dark }}>
-            <label class="form-check-label nav-link active d-inline" for="flexSwitchCheckDefault">Dark Mode</label>
-        </form>
-    </div>
-</div>
