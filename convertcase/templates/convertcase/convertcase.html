@@ -11,15 +11,13 @@
 {% endif %}
 
 <!-- CONVERT CASE -->
-<article>
-<div class="card mb-4">
+<section>
+	<div class="card mb-4">
+	<div class="card-header">
+		<h1 class="card-title h2">Convert Case</h1>
+	</div>
 
-	<header>
-		<div class="card-header"><h1 class="card-title h2">Convert Case</h1></div>
-	</header>
-
-	<section>
-		<div class="card-body">
+	<div class="card-body">
 		<form action="{% url 'convertcase' %}" method="POST">{% csrf_token %}
 			<label for="textArea" class="form-label">Insert your text below and click in one button</label>
 			<textarea class="form-control mb-2" name="text_area" id="textArea" rows="3" autofocus></textarea>
@@ -49,22 +47,18 @@
 			<button name="b_val" class="btn-primary flex-fill" value="5">𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎</button>
 			</div>  
 		</form>
-		</div>
-	</section>
-
-</div>	
-</article>
+	</div>
+	</div>	
+</section>
 
 <!-- TEXTS -->
-<article>
-<div class="card mb-4">
+<section>
+	<div class="card mb-4">
+	<div class="card-header">
+		<h2 class="card-title h3">How to use the case converter ?</h2>
+	</div>
 
-	<header>
-		<div class="card-header"><h2 class="card-title h3">How to use the case converter ?</h2></div>
-	</header>
-
-	<section>
-		<div class="card-body">
+	<div class="card-body">
 		<p class="card-text">
 		You can easily use the caseconverter to generate <strong>different</strong>
 		styles of text on our convert case online. You will just have to
@@ -81,19 +75,16 @@
 		Twitch, and so on, giving it more awareness and popularity with
 		random case converter and alternating case converter
 		</p>
-		</div>
-	</section>
+	</div>
+	</div>
+</section>
 
-</div>
-</article>
-
-<article>
-<div class="card mb-4">
-	<header>
-		<div class="card-header"><h2 class="card-title h3">Upper Case</h2></div>
-	</header>
-	<section>
-		<div class="card-body">
+<section>
+	<div class="card mb-4">
+	<div class="card-header">
+		<h2 class="card-title h3">Upper Case</h2>
+	</div>
+	<div class="card-body">
 		<p class="card-text">
 		The uppercase converter will <strong>allow</strong> you to convert
 		to uppercase in <a
@@ -102,18 +93,16 @@
 		choice, paste them on the text area and then, click in UPPER, and
 		that’s pretty much it.
 		</p>
-		</div>
-	</section>
-</div>
-</article>
+	</div>
+	</div>
+</section>
 
-<article>
-<div class="card mb-4">
-	<header>
-		<div class="card-header"><h2 class="card-title h3">Lower Case</h2></div>
-	</header>
-	<section>
-		<div class="card-body">
+<section>
+	<div class="card mb-4">
+	<div class="card-header">
+		<h2 class="card-title h3">Lower Case</h2>
+	</div>
+	<div class="card-body">
 		<p class="card-text">
 		The lowercase converter can help you to uncapitalize your text, to
 		<strong>do the trick</strong> you just have to copy your text to the
@@ -122,18 +111,16 @@
 		you can use it as a convert case in word, or even a convert case in
 		excel.
 		</p>
-		</div>
-	</section>	
-</div>
-</article>
+	</div>
+	</div>
+</section>
 
-<article>
-<div class="card mb-4">
-	<header>
-		<div class="card-header"><h2 class="card-title h3">Title Case</h2></div>
-	</header>
-	<section>
-		<div class="card-body">
+<section>
+	<div class="card mb-4">
+	<div class="card-header">
+		<h2 class="card-title h3">Title Case</h2>
+	</div>
+	<div class="card-body">
 		<p class="card-text">
 		<strong>Go ahead, mr. Joestar</strong>, and pick a titlecase
 		converter, if you want to convert all first letters of each word
@@ -141,18 +128,16 @@
 		case converter tool to convert case excel or even convert case in <a
 		href="https://en.wikipedia.org/wiki/Microsoft_Word">Word</a>.
 		</p>
-		</div>
-	</section>
-</div>
-</article>
+	</div>
+	</div>
+</section>
 
-<article>
-<div class="card mb-4">
-	<header>
-		<div class="card-header"><h3 class="card-title">Fancy Fonts</h3></div>
-	</header>
-	<section>
-		<div class="card-body">
+<section>
+	<div class="card mb-4">
+	<div class="card-header">
+		<h3 class="card-title">Fancy Fonts</h3>
+	</div>
+	<div class="card-body">
 		<p class="card-text">
 		Come and check out our font changer for <strong>straightforwardly</strong>
 		converting your text and all it’s letters to fancy and cool fonts,
@@ -167,8 +152,7 @@
 		League of Legends, Wild Rift, Fortnite, PUBG, Among US, and many
 		others.
 		</p>
-		</div>
-	</section>
-</div>
-</article>
+	</div>
+	</div>
+</section>
 {% endblock %}
