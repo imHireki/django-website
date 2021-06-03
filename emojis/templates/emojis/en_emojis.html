@@ -85,6 +85,25 @@
             </div>
             </div>
         </section>
+
+        <!--  TRAVEL AND FLAGS -->
+        <section>
+            <div class="card mb-4">
+            <div class="card-header">
+                <h2 class="card-title h3">Travel and Flags</h2>
+            </div>
+            <div class="card-body">
+                <p class="card-text h3">
+                {% for x in travel %}
+                {{ x }}
+                {% endfor %}
+                {% for y in flags %}
+                {{ y }}
+                {% endfor %}
+                </p>
+            </div>
+            </div>
+        </section>
         
         <!--  NEW EMOJIS -->
         <section>

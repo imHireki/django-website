@@ -1,12 +1,21 @@
+from django_hosts.resolvers import reverse
 from django.shortcuts import render
 from django.views.generic import View
 from utils import convert
 
 
 class ConvertCase(View):
-    template_name = 'convertcase/convertcase.html'
-
     def setup(self, *args, **kwargs):
+
+        current_url = reverse('convertcase')
+
+        if '//en.' in current_url:
+            self.template_name = 'convertcase/en_convertcase.html'
+        elif '//pt.' in current_url:
+            self.template_name = 'convertcase/pt_convertcase.html'
+        elif '//es.' in current_url:
+            self.template_name = 'convertcase/es_convertcase.html'
+
         self.context = {}
         return super().setup(*args, **kwargs)
 
@@ -18,8 +27,8 @@ class ConvertCase(View):
         button_value = self.request.POST.get('b_val')
 
         
-        if len(text_area_value) > 2000:
-            text_area_value = text_area_value[:2000]
+        if len(text_area_value) > 3000:
+            text_area_value = text_area_value[:3000]
             self.context['alert'] = 'warning'
             
             
