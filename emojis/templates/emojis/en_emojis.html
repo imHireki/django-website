@@ -14,7 +14,7 @@
         <section>
             <div class="card mb-4">
             <div class="card-header">
-                <h2 class="card-title h3">Faces and Gestures</h2>
+                <h2 class="card-title h3" id="faces-gestures">Faces and Gestures</h2>
             </div>
             <div class="card-body">
                 <p class="card-text h3">
@@ -33,7 +33,7 @@
         <section>
             <div class="card mb-4">
             <div class="card-header">
-                <h2 class="card-title h3">People and Activity</h2>
+                <h2 class="card-title h3" id="people-activity">People and Activity</h2>
             </div>
             <div class="card-body">
                 <p class="card-text h3">
@@ -52,7 +52,7 @@
         <section>
             <div class="card mb-4">
             <div class="card-header">
-                <h2 class="card-title h3">Nature and Food</h2>
+                <h2 class="card-title h3" id="nature-food">Nature and Food</h2>
             </div>
             <div class="card-body">
                 <p class="card-text h3">
@@ -71,7 +71,7 @@
         <section>
             <div class="card mb-4">
             <div class="card-header">
-                <h2 class="card-title h3">Symbols and Objects</h2>
+                <h2 class="card-title h3" id="symbols-objects">Symbols and Objects</h2>
             </div>
             <div class="card-body">
                 <p class="card-text h3">
@@ -90,7 +90,7 @@
         <section>
             <div class="card mb-4">
             <div class="card-header">
-                <h2 class="card-title h3">Travel and Flags</h2>
+                <h2 class="card-title h3" id="travel-flags">Travel and Flags</h2>
             </div>
             <div class="card-body">
                 <p class="card-text h3">
@@ -109,7 +109,7 @@
         <section>
             <div class="card mb-4">
             <div class="card-header">
-                <h2 class="card-title h3">New Emojis</h2>
+                <h2 class="card-title h3" id="new-emojis">New Emojis</h2>
             </div>
             <div class="card-body">
                 <p class="card-text h3">
@@ -245,4 +245,27 @@
     </div>
     </div>
 </section>
+{% endblock %}
+{% block side_block %}
+<nav>
+	<div class="card mb-4">
+	<div class="card-header">
+		<p class="card-text">Emojis</p>
+	</div>
+	<div class="card-body">
+	<div class="row">
+	<div class="col">
+		<ul class="list-unstyled mb-0">
+			<li><a href="#faces-gestures">Faces and Gestures 😎👌</a></li>
+			<li><a href="#people-activity">People and Activity 🥷🪕</a></li>
+			<li><a href="#nature-food">Nature and Food 🐧🍡</a></li>
+			<li><a href="#symbols-objects">Symbols and Objects 💖🎐</a></li>
+			<li><a href="#travel-flags">Travel and Flags 🚀🏴‍☠️</a></li>
+			<li><a href="#new-emojis">New Emojis 😶‍🌫️ ❤️‍🔥</a></li>
+		</ul>
+	</div>
+	</div>
+	</div>
+	</div>
+</nav>
 {% endblock %}

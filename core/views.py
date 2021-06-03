@@ -8,7 +8,7 @@ class SwitchDarkMode(View):
         super().dispatch(*args, **kwargs)
 
         http_referer = self.request.META.get(
-            'HTTP_REFERER', reverse('home:initial')
+            'HTTP_REFERER', reverse('home')
         )
 
         self.dark = self.request.POST.get('dark-mode')

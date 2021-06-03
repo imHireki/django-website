@@ -16,7 +16,7 @@
         <section>
             <div class="card mb-4">
             <div class="card-header">
-                <h2 class="card-title h3">ASCII xD</h2>
+                <h2 class="card-title h3" id="ascii">ASCII xD</h2>
             </div>
             <div class="card-body">
                 <table class="table table-striped text-center">
@@ -101,7 +101,7 @@
         <section>
             <div class="card mb-4">
             <div class="card-header">
-                <h2 class="card-title h3">Feliz \(^ヮ^)/</h2>
+                <h2 class="card-title h3" id="feliz">Feliz \(^ヮ^)/</h2>
             </div>
             <div class="card-body">
                 <table class="table table-striped text-center">
@@ -174,7 +174,7 @@
         <section>
             <div class="card mb-4">
             <div class="card-header">
-                <h2 class="card-title h3">Triste ಥ_ಥ</h2>
+                <h2 class="card-title h3" id="triste">Triste ಥ_ಥ</h2>
             </div>
             <div class="card-body">
                 <table class="table table-striped text-center">
@@ -232,7 +232,7 @@
         <section>
             <div class="card mb-4">
             <div class="card-header">
-                <h2 class="card-title h3">Nervoso (►__◄)</h2>
+                <h2 class="card-title h3" id="nervoso">Nervoso (►__◄)</h2>
             </div>
             <div class="card-body">
                 <table class="table table-striped text-center">
@@ -295,7 +295,7 @@
         <section>
             <div class="card mb-4">
             <div class="card-header">
-                <h2 class="card-title h3">Surpreso Σ(O_O)</h2>
+                <h2 class="card-title h3" id="surpreso">Surpreso Σ(O_O)</h2>
             </div>
             <div class="card-body">
                 <table class="table table-striped text-center">
@@ -337,7 +337,7 @@
         <section>
             <div class="card mb-4">
             <div class="card-header">
-                <h2 class="card-title h3">Cumprimento (^^ゞ</h2>
+                <h2 class="card-title h3" id="cumprimento">Cumprimento (^^ゞ</h2>
             </div>
             <div class="card-body">
                 <table class="table table-striped text-center">
@@ -394,7 +394,7 @@
         <section>
             <div class="card mb-4">
             <div class="card-header">
-                <h2 class="card-title h3">Fofo ฅ^•ﻌ•^ฅ</h2>
+                <h2 class="card-title h3" id="fofo">Fofo ฅ^•ﻌ•^ฅ</h2>
             </div>
             <div class="card-body">
                 <table class="table table-striped text-center">
@@ -437,7 +437,7 @@
         <section>
             <div class="card mb-4">
             <div class="card-header">
-                <h2 class="card-title h3">Outros ( ͡° ͜ʖ ͡°)</h2>
+                <h2 class="card-title h3" id="outros">Outros ( ͡° ͜ʖ ͡°)</h2>
             </div>
             <div class="card-body">
                 <table class="table table-striped text-center">
@@ -562,4 +562,33 @@
     </div>
     </div>
 </section>
+{% endblock %}
+{% block side_block %}
+<nav>
+	<div class="card mb-4">
+	<div class="card-header">
+		<p class="card-text">Emoticons</p>
+	</div>
+	<div class="card-body">
+	<div class="row">   
+	<div class="col-sm-6">
+		<ul class="list-unstyled mb-0">
+			<li><a href="#ascii">ASCII</a></li>
+			<li><a href="#feliz">Feliz</a></li>
+			<li><a href="#triste">Triste</a></li>
+			<li><a href="#nervoso">Nervoso</a></li>
+		</ul>
+	</div>
+	<div class="col-sm-6">
+		<ul class="list-unstyled mb-0">
+			<li><a href="#surpreso">Surpreso</a></li>
+			<li><a href="#cumprimento">Cumprimento</a></li>
+			<li><a href="#fofo">Fofo</a></li>
+			<li><a href="#outros">Outros</a></li>
+		</ul>
+	</div>
+	</div>
+	</div>
+	</div>
+</nav>
 {% endblock %}
