@@ -6,6 +6,7 @@ host_patterns = patterns(
     '',
     host(r'en', 'core.en_urls', name='en'),
     host(r'pt', 'core.pt_urls', name='pt'),
+    host(r'es', 'core.es_urls', name='es'),
     host(r'www', 'core.www_urls', name='www'),
     # host(r'admin', settings.ROOT_URLCONF, name='admin'),
 )

@@ -2,13 +2,8 @@
 <!doctype html>
 <html lang="en" class="h-100">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Cover Template · Bootstrap v5.0</title>
-        <!-- Bootstrap core CSS -->
-        <link href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
-        <!-- Custom styles for this template -->
-        <link href="{% static 'assets/custom/cover.css' %}" rel="stylesheet">
+        {% include 'partials/_head.html' %}
+        <link rel="stylesheet" href="{% static 'cover/cover.css' %}">
     </head>
     <body class="d-flex h-100 text-center text-white bg-dark">
         <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -16,35 +11,29 @@
                 <div>
                     <h3 class="float-md-start mb-0">Shadesapps</h3>
                     <nav class="nav nav-masthead justify-content-center float-md-end">
-                        <!-- www.shadesapps.com -->
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <!-- en.shadesapps.com -->
-                        <a class="nav-link" href="#">Features</a>
-                        <!-- en.shadesapps.com/contact/ -->
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        <a class="nav-link" href="https://en.shadesapps.com/">Features</a>
+                        <a class="nav-link" href="https://en.shadesapps.com/contact/">Contact</a>
                     </nav>
                 </div>
             </header>
             <main class="px-3">
                 <section>
                     <h1>Shadesapps</h1>
-                    <p class="lead">select your language below so that you can proceed to your destination.</p>
+                    <p class="lead">select your preferred language below, so that you can proceed to your destination.</p>
                 </section>
                 <section>
                     <div class="row">
                     <div class="col-md-4">
-                        <!-- en.shadesapps.com -->
-                        <p class="lead"><a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">English</a></p>
+                        <p class="lead"><a href="https://en.shadesapps.com/" class="btn btn-lg btn-secondary fw-bold border-white bg-white">English</a></p>
                     </div>        
 
                     <div class="col-md-4">
-                        <!-- pt.shadesapps.com -->
-                        <p class="lead"><a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Português</a></p>
+                        <p class="lead"><a href="https://pt.shadesapps.com/" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Português</a></p>
                     </div>                                
 
                     <div class="col-md-4">
-                        <!-- es.shadesapps.com -->
-                        <p class="lead"><a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Espanõl</a></p>
+                        <p class="lead"><a href="https://es.shadesapps.com/" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Espanõl</a></p>
                     </div>        
                     </div>
                 </section>
