@@ -63,7 +63,7 @@ MIDDLEWARE = [
 
 ROOT_HOSTCONF = 'core.hosts'
 
-DEFAULT_HOST = 'en'
+DEFAULT_HOST = 'pt'
 PARENT_HOST = 'shadesapps.com'
 
 ROOT_URLCONF = 'core.urls'
