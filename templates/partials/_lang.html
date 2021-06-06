@@ -2,23 +2,35 @@
 <nav>
     <div class="card mb-4">
         <div class="card-header">
-            <p class="card-text">Languages</p>
+            <p class="card-text">
+            {% if 'https://en.shadesapps.com/' == request.build_absolute_uri %}
+                Languages
+            {% else %}
+                Idiomas
+            {% endif %}
+            </p>
         </div>
     <div class="card-body">
     <div class="row">
     <div class="col">
-    <div class="input-group mb-3 d-flex">
-        <span class="input-group-text" id="basic-addon1"><img src="{% static 'assets/img/usa.png' %}" alt="United States of America flag"></span>
-        <span class="form-control">en-US</span>
-    </div>
-    <div class="input-group mb-3 d-flex">
-        <span class="input-group-text" id="basic-addon1"><img src="{% static 'assets/img/br.png' %}" alt="Brazil flag"></span>
-        <span class="form-control">pt-BR</span>
-    </div>
-    <div class="input-group mb-3 d-flex">
-        <span class="input-group-text" id="basic-addon1"><img src="{% static 'assets/img/esp.png' %}" alt="Spain flag"></span>
-        <span class="form-control">es-ES</span>
-    </div>
+    <a href="https://en.shadesapps.com/">
+        <div class="input-group mb-3 d-flex">
+            <span class="input-group-text" id="basic-addon1"><img src="{% static 'assets/img/usa.png' %}" alt="United States of America flag"></span>
+            <span class="form-control text-primary">en-US</span>
+        </div>
+    </a>
+    <a href="https://pt.shadesapps.com/">
+        <div class="input-group mb-3 d-flex">
+            <span class="input-group-text" id="basic-addon1"><img src="{% static 'assets/img/br.png' %}" alt="Brazil flag"></span>
+            <span class="form-control text-primary">pt-BR</span>
+        </div>
+    </a>
+    <a href="https://es.shadesapps.com/">
+        <div class="input-group mb-3 d-flex">
+            <span class="input-group-text" id="basic-addon1"><img src="{% static 'assets/img/esp.png' %}" alt="Spain flag"></span>
+            <span class="form-control text-primary">es-ES</span>
+        </div>
+    </a>
     </div>
     </div>
     </div>
