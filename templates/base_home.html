@@ -3,6 +3,7 @@
 <html lang="{% block language %}{% endblock %}">
     <head>
         {% include 'partials/_head.html' %}
+        {% block head %}{% endblock %}
     </head>
     <body>
         {% include 'partials/_header.html' %}

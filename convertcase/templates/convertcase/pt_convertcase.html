@@ -1,7 +1,23 @@
 {% extends 'base.html' %}
-{% load static %}
+{% block head %}
+<title>Letras Diferentes | Shadesapps &#128526; - Modo Escuro &#127770;</title>
+<meta name="description" content="Letras Diferentes e Fontes Legais, para &#9986;&#65039; copiar e &#128203; colar. Com MAIÚSCULAS, MINÚSCULAS, e fontes diferentes">
+
+<!-- META SOCIAL MEDIA -->
+<meta property="og:title" content="Letras Diferentes | &#128526; Shadesapps - Modo Escuro &#127770;">
+<meta property="og:description" content="Letras Diferentes e Fontes Legais, para &#9986;&#65039; copiar e &#128203; colar. Com MAIÚSCULAS, MINÚSCULAS, e fontes diferentes">
+<meta property="og:url" content="https://pt.shadesapps.com/letras-diferentes/">
+
+<!-- CANONICAL -->
+<link rel="canonical" href="https://pt.shadesapps.com/letras-diferentes/">
+
+<!-- HREFLANG -->
+<link rel="alternate" href="https://en.shadesapps.com/convert-case/" hreflang="en">
+<link rel="alternate" href="https://pt.shadesapps.com/letras-diferentes/" hreflang="pt-br">
+<link rel="alternate" href="https://es.shadesapps.com/letras-diferentes/" hreflang="es"> 
+<link rel="alternate" href="https://en.shadesapps.com/convert-case/" hreflang="x-default">
+{% endblock %}
 {% block content %}
-<!-- SECTION ALERT -->
 {% if alert %}
 <section>
 	<div class="alert alert-{{ alert }}" role="alert">
@@ -9,8 +25,6 @@
 	</div>
 </section>
 {% endif %}
-
-<!-- CONVERT CASE -->
 <section>
 	<div class="card mb-4">
 	<div class="card-header">
@@ -50,8 +64,6 @@
 	</div>
 	</div>	
 </section>
-
-<!-- TEXTS -->
 <section>
 	<div class="card mb-4">
 	<div class="card-header">
@@ -90,7 +102,6 @@
 	</div>
 	</div>
 </section>
-
 <section>
 	<div class="card mb-4">
 	<div class="card-header">
@@ -112,7 +123,6 @@
 	</div>
 	</div>
 </section>
-
 <section>
 	<div class="card mb-4">
 	<div class="card-header">

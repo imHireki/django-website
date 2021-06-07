@@ -21,7 +21,7 @@
                     </li>
                     <li class="nav-item"><a class="nav-link active" href="/emojis/">Emojis</a></li>
                     <li class="nav-item"><a class="nav-link active" href="/emoticons/">Emoticons</a></li>
-                    {% if 'https://en.shadesapps.com/' == request.build_absolute_uri %}
+                    {% if 'https://en.shadesapps.com/' in request.build_absolute_uri %}
                     <li class="nav-item"><a class="nav-link active" href="/convert-case/">Convert Case</a></li>
                     {% else %}
                     <li class="nav-item"><a class="nav-link active" href="/letras-diferentes/">Letras Diferentes</a></li>
