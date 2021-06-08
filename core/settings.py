@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django_hosts',
     
+    'about',
     'cover',
     'home',
 
@@ -63,7 +64,7 @@ MIDDLEWARE = [
 
 ROOT_HOSTCONF = 'core.hosts'
 
-DEFAULT_HOST = 'es'
+DEFAULT_HOST = 'pt'
 PARENT_HOST = 'shadesapps.com'
 
 ROOT_URLCONF = 'core.urls'
