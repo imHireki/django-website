@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand m-0 p-0" href="/">
-                <img class="me-2" src="{% static 'assets/img/favicon/favicon-32x32.png' %}" alt="favicon-shadesapps">
+                <img class="me-2" src="{% static 'assets/img/favicon/favicon-32x32.png' %}" width="32" height="32" alt="favicon-shadesapps">
                 Shadesapps
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -20,15 +20,15 @@
                     <li class="nav-item"><a class="nav-link active" href="/letras-diferentes/">Letras Diferentes</a></li>
                     <li class="nav-item"><a class="nav-link active" href="/sobre/">Sobre</a></li>
                     {% endif %}
-                    <li class="nav-item">
-                        <a class="nav-link active">
-                            <form action="{% url 'dark' %}" method="POST" class="form-check form-switch m-0">{% csrf_token %}
+                    <li class="nav-item ml-1">
+                        <div class="p-2">
+                            <form action="{% url 'dark' %}" method="POST" class="text-white form-check form-switch m-0">{% csrf_token %}
                                 <input class="form-check-input bg-light" type="checkbox" id="flexSwitchCheckDefault" onChange="this.form.submit()" name="dark-mode" value="dark" {{ request.session.dark }}>
-                                <label class="form-check-label nav-link active d-inline" for="flexSwitchCheckDefault">
+                                <label class="form-check-label active d-inline" for="flexSwitchCheckDefault">
                                 {% if 'https://en.' in request.build_absolute_uri %}Dark Mode{% elif 'https://pt.' in request.build_absolute_uri %}Modo Escuro{% elif 'https://es.' in request.build_absolute_uri %}Modo Oscuro{% endif %}
                                 </label>
                             </form>
-                        </a>
+                        </div>
                     </li>
 
                 </ul>
