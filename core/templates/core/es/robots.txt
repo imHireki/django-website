@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /emojis/
+Allow: /emoticons/
+Allow: /letras-diferentes/
+Allow: /sobre/
+
+Sitemap: https://es.shadesapps.com/sitemap.xml

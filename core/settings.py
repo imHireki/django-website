@@ -35,9 +35,8 @@ INSTALLED_APPS = [
     'django_hosts',
     
     'about',
-    'cover',
+    'core',
     'home',
-
     'convertcase',
     'emojis',
     'emoticons',

@@ -1,5 +1,5 @@
 from django.urls import path
-from cover.views import Cover
+from .views import Cover
 
 
 urlpatterns = [
