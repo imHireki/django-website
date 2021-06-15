@@ -16,16 +16,17 @@ class ConvertCase(View):
         elif '//es.' in current_url:
             self.template_name = 'convertcase/es_convertcase.html'
 
-        self.context = {}
         return super().setup(*args, **kwargs)
 
     def get(self, *args, **kwargs):
         return render(self.request, self.template_name)
 
     def post(self, *args, **kwargs):
+       
         text_area_value = self.request.POST.get('text_area')
         button_value = self.request.POST.get('b_val')
 
+        self.context = {}
         
         if len(text_area_value) > 3000:
             text_area_value = text_area_value[:3000]
