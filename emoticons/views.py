@@ -8,8 +8,7 @@ class Emoticons(View):
     def setup(self, *args, **kwargs):
         super().setup(*args, **kwargs)
         
-        # current_url = reverse('convertcase')
-        current_url = self.request.build_absolute_uri()
+        current_url = reverse('convertcase')
         
         if '//en.' in current_url:
             self.template_name = 'emoticons/en_emoticons.html'

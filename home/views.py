@@ -8,8 +8,7 @@ class Home(View):
     def setup(self, *args, **kwargs):
         super().setup(*args, **kwargs)
 
-        # current_url = reverse('home')
-        current_url = self.request.build_absolute_uri()
+        current_url = reverse('home')
 
         if '//en.' in current_url:
             self.template_name = 'home/en_home.html'
@@ -17,8 +16,6 @@ class Home(View):
             self.template_name = 'home/pt_home.html'
         elif '//es.' in current_url:
             self.template_name = 'home/es_home.html'
-        
-        
     
     def get(self, *args, **kwargs):
         return render(self.request, self.template_name)

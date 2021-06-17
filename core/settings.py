@@ -26,14 +26,19 @@ SECRET_KEY = 'django-insecure-n51kidpd*slf)o_85sayx9#eu7#892efec%!x-s@w_aqiw+w=q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['34.73.190.191', 'en.shadesapps.com', 'pt.shadesapps.com', 'es.shadesapps.com', 'www.shadesapps.com']
+ALLOWED_HOSTS = [
+    'en.shadesapps.com',
+    'pt.shadesapps.com',
+    'es.shadesapps.com',
+    'www.shadesapps.com'
+]
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'django_hosts',
-    
+
     'about',
     'core',
     'home',
@@ -92,16 +97,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sa_mysql',
-        'USER': 'userdb',
-        'PASSWORD': 'password',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-    }
-}
+# ! DB on .local_settings.py !
 
 
 # Password validation
@@ -155,4 +151,13 @@ SESSION_COOKIE_AGE = 60 * 60 * 24 * 7
 
 # Salvar a cada requisição
 SESSION_SAVE_EVERY_REQUEST = False
+
 SECURE_SSL_REDIRECT = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass

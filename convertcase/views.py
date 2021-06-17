@@ -8,8 +8,7 @@ class ConvertCase(View):
     def setup(self, *args, **kwargs):
         super().setup(*args, **kwargs)
 
-        # current_url = reverse('convertcase')
-        current_url = self.request.build_absolute_uri()
+        current_url = reverse('convertcase')
 
         if '//en.' in current_url:
             self.template_name = 'convertcase/en_convertcase.html'
@@ -17,7 +16,6 @@ class ConvertCase(View):
             self.template_name = 'convertcase/pt_convertcase.html'
         elif '//es.' in current_url:
             self.template_name = 'convertcase/es_convertcase.html'
-
 
     def get(self, *args, **kwargs):
         return render(self.request, self.template_name)
