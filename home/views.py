@@ -4,7 +4,10 @@ from django.views.generic import View
 
 
 class Home(View): 
+    
     def setup(self, *args, **kwargs):
+        super().setup(*args, **kwargs)
+
         # current_url = reverse('home')
         current_url = self.request.build_absolute_uri()
 
@@ -15,7 +18,7 @@ class Home(View):
         elif '//es.' in current_url:
             self.template_name = 'home/es_home.html'
         
-        return super().setup(*args, **kwargs)
+        
     
     def get(self, *args, **kwargs):
         return render(self.request, self.template_name)

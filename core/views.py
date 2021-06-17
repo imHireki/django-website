@@ -32,6 +32,7 @@ class Cover(TemplateView):
 class SiteMap(View):
     def setup(self, *args, **kwargs):
         super().setup(*args, **kwargs)
+        
         current_subdomain = self.request.build_absolute_uri()
         # current_subdomain = resolvers.reverse('sitemap')
 
