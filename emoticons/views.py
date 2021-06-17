@@ -5,7 +5,8 @@ from django.views.generic import View
 
 class Emoticons(View):
     def setup(self, *args, **kwargs):
-        current_url = reverse('convertcase')
+        # current_url = reverse('convertcase')
+        current_url = self.request.build_absolute_uri()
         
         if '//en.' in current_url:
             self.template_name = 'emoticons/en_emoticons.html'

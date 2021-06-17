@@ -13,7 +13,7 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link active" href="/emojis/">Emojis</a></li>
                     <li class="nav-item"><a class="nav-link active" href="/emoticons/">Emoticons</a></li>
-                    {% if 'https://en.' in request.build_absolute_uri %}
+                    {% if '://en.' in request.build_absolute_uri %}
                     <li class="nav-item"><a class="nav-link active" href="/convert-case/">Convert Case</a></li>
                     <li class="nav-item"><a class="nav-link active" href="/about/">About</a></li>
                     {% else %}
@@ -25,7 +25,7 @@
                             <form action="{% url 'dark' %}" method="POST" class="text-white form-check form-switch m-0">{% csrf_token %}
                                 <input class="form-check-input bg-light" type="checkbox" id="flexSwitchCheckDefault" onChange="this.form.submit()" name="dark-mode" value="dark" {{ request.session.dark }}>
                                 <label class="form-check-label active d-inline" for="flexSwitchCheckDefault">
-                                {% if 'https://en.' in request.build_absolute_uri %}Dark Mode{% elif 'https://pt.' in request.build_absolute_uri %}Modo Escuro{% elif 'https://es.' in request.build_absolute_uri %}Modo Oscuro{% endif %}
+                                {% if '://en.' in request.build_absolute_uri %}Dark Mode{% elif '://pt.' in request.build_absolute_uri %}Modo Escuro{% elif '://es.' in request.build_absolute_uri %}Modo Oscuro{% endif %}
                                 </label>
                             </form>
                         </div>

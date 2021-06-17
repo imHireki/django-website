@@ -11,7 +11,8 @@ class Emojis(View):
         super().setup(*args, **kwargs)
 
         # reverse to the current emojis //en.shadesapps.com/emojis/
-        current_url = reverse('emojis')
+        # current_url = reverse('emojis')
+        current_url = self.request.build_absolute_uri()
         
         # Choosing template by language
         if '//en.' in current_url:

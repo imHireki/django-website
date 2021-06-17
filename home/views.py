@@ -5,7 +5,8 @@ from django.views.generic import View
 
 class Home(View): 
     def setup(self, *args, **kwargs):
-        current_url = reverse('home')
+        # current_url = reverse('home')
+        current_url = self.request.build_absolute_uri()
 
         if '//en.' in current_url:
             self.template_name = 'home/en_home.html'

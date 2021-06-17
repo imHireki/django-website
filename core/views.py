@@ -1,3 +1,4 @@
+from django_hosts import resolvers
 from django.views.generic import TemplateView
 from django.views.generic import View
 from django.urls import reverse
@@ -32,6 +33,7 @@ class SiteMap(View):
     def setup(self, *args, **kwargs):
         super().setup(*args, **kwargs)
         current_subdomain = self.request.build_absolute_uri()
+        # current_subdomain = resolvers.reverse('sitemap')
 
         if '//en.' in current_subdomain:
             self.template_name = 'core/en/sitemap.xml'
@@ -50,6 +52,7 @@ class RobotsTxt(View):
     def setup(self, *args, **kwargs):
         super().setup(*args, **kwargs)
 
+        # current_subdomain = resolvers.reverse('robots')
         current_subdomain = self.request.build_absolute_uri()
 
         if '//en.' in current_subdomain:

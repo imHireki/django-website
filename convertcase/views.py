@@ -7,7 +7,8 @@ from utils import convert
 class ConvertCase(View):
     def setup(self, *args, **kwargs):
 
-        current_url = reverse('convertcase')
+        # current_url = reverse('convertcase')
+        current_url = self.request.build_absolute_uri()
 
         if '//en.' in current_url:
             self.template_name = 'convertcase/en_convertcase.html'
