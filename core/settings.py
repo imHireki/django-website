@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-n51kidpd*slf)o_85sayx9#eu7#892efec%!x-s@w_aqiw+w=q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['34.73.190.191', 'en.shadesapps.com', 'pt.shadesapps.com', 'es.shadesapps.com', 'www.shadesapps.com']
 
 
 # Application definition
@@ -155,3 +155,4 @@ SESSION_COOKIE_AGE = 60 * 60 * 24 * 7
 
 # Salvar a cada requisição
 SESSION_SAVE_EVERY_REQUEST = False
+SECURE_SSL_REDIRECT = True
