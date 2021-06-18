@@ -33,7 +33,7 @@ class SiteMap(View):
     def setup(self, *args, **kwargs):
         super().setup(*args, **kwargs)
         
-        current_subdomain = resolvers.reverse('sitemap')
+        current_subdomain = self.request.build_absolute_uri()
 
         if '//en.' in current_subdomain:
             self.template_name = 'core/en/sitemap.xml'
@@ -41,7 +41,17 @@ class SiteMap(View):
             self.template_name = 'core/pt/sitemap.xml'
         elif '//es.' in current_subdomain:
             self.template_name = 'core/es/sitemap.xml'
-        
+
+        else:
+            current_subdomain = resolvers.reverse('sitemap')
+
+            if '//en.' in current_subdomain:
+                self.template_name = 'core/en/sitemap.xml'
+            elif '//pt.' in current_subdomain:
+                self.template_name = 'core/pt/sitemap.xml'
+            elif '//es.' in current_subdomain:
+                self.template_name = 'core/es/sitemap.xml'
+
     def get(self, *args, **kwargs):
         return render(
             self.request, self.template_name, content_type='text/xml'
@@ -52,7 +62,7 @@ class RobotsTxt(View):
     def setup(self, *args, **kwargs):
         super().setup(*args, **kwargs)
 
-        current_subdomain = resolvers.reverse('robots')
+        current_subdomain = self.request.build_absolute_uri()
 
         if '//en.' in current_subdomain:
             self.template_name = 'core/en/robots.txt'
@@ -61,6 +71,16 @@ class RobotsTxt(View):
         elif '//es.' in current_subdomain:
             self.template_name = 'core/es/robots.txt'
 
+        else:
+            current_subdomain = resolvers.reverse('robots')
+
+            if '//en.' in current_subdomain:
+                self.template_name = 'core/en/robots.txt'
+            elif '//pt.' in current_subdomain:
+                self.template_name = 'core/pt/robots.txt'
+            elif '//es.' in current_subdomain:
+                self.template_name = 'core/es/robots.txt'
+        
     def get(self, *args, **kwargs):
         return render(
             self.request, self.template_name, content_type='text/plain'

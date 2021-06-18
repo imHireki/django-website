@@ -5,21 +5,28 @@ from data import emojidicts
 
 
 class Emojis(View):
-    template_name = 'emojis/emojis.html'
     
     def setup(self, *args, **kwargs):
         super().setup(*args, **kwargs)
 
-        # reverse to the current emojis //en.shadesapps.com/emojis/
-        current_url = reverse('emojis')
-        
-        # Choosing template by language
+        current_url = self.request.build_absolute_uri()
+
         if '//en.' in current_url:
             self.template_name = 'emojis/en_emojis.html'
         elif '//pt.' in current_url:
             self.template_name = 'emojis/pt_emojis.html'
         elif '//es.' in current_url:
             self.template_name = 'emojis/es_emojis.html'
+
+        else:
+            current_url = reverse('emojis') # //en.shadesapps.com/emojis/
+
+            if '//en.' in current_url:
+                self.template_name = 'emojis/en_emojis.html'
+            elif '//pt.' in current_url:
+                self.template_name = 'emojis/pt_emojis.html'
+            elif '//es.' in current_url:
+                self.template_name = 'emojis/es_emojis.html'
 
         self.context = {
             'faces': emojidicts.faces,

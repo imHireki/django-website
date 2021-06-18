@@ -38,7 +38,7 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
     'django_hosts',
-
+    
     'about',
     'core',
     'home',
@@ -68,7 +68,7 @@ MIDDLEWARE = [
 
 ROOT_HOSTCONF = 'core.hosts'
 
-DEFAULT_HOST = 'pt'
+DEFAULT_HOST = 'en'
 PARENT_HOST = 'shadesapps.com'
 
 ROOT_URLCONF = 'core.urls'
@@ -97,8 +97,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# ! DB on .local_settings.py !
-
+# Db on .local_settings.py
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -152,8 +151,8 @@ SESSION_COOKIE_AGE = 60 * 60 * 24 * 7
 # Salvar a cada requisição
 SESSION_SAVE_EVERY_REQUEST = False
 
-SECURE_SSL_REDIRECT = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
