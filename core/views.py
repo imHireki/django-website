@@ -26,7 +26,7 @@ class SwitchDarkMode(View):
 
 
 class Cover(TemplateView):
-    template_name = 'core/cover.html'
+    template_name = 'core/www/cover.html'
 
 
 class SiteMap(View):
@@ -41,6 +41,8 @@ class SiteMap(View):
             self.template_name = 'core/pt/sitemap.xml'
         elif '//es.' in current_subdomain:
             self.template_name = 'core/es/sitemap.xml'
+        elif '//www.' in current_subdomain:
+            self.template_name = 'core/www/sitemap.xml'
 
         else:
             current_subdomain = resolvers.reverse('sitemap')
@@ -51,6 +53,8 @@ class SiteMap(View):
                 self.template_name = 'core/pt/sitemap.xml'
             elif '//es.' in current_subdomain:
                 self.template_name = 'core/es/sitemap.xml'
+            elif '//www.' in current_subdomain:
+                self.template_name = 'core/www/sitemap.xml'
 
     def get(self, *args, **kwargs):
         return render(
@@ -70,6 +74,8 @@ class RobotsTxt(View):
             self.template_name = 'core/pt/robots.txt'
         elif '//es.' in current_subdomain:
             self.template_name = 'core/es/robots.txt'
+        elif '//www.' in current_subdomain:
+            self.template_name = 'core/www/robots.txt'
 
         else:
             current_subdomain = resolvers.reverse('robots')
@@ -80,6 +86,8 @@ class RobotsTxt(View):
                 self.template_name = 'core/pt/robots.txt'
             elif '//es.' in current_subdomain:
                 self.template_name = 'core/es/robots.txt'
+            elif '//www.' in current_subdomain:
+                self.template_name = 'core/www/robots.txt'
         
     def get(self, *args, **kwargs):
         return render(
