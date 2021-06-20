@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /pt/emojis/
 
 Sitemap: https://www.shadesapps.com/sitemap.xml
